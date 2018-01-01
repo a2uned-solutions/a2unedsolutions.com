@@ -1,0 +1,46 @@
+//-------------------------//
+//-----> Variables
+//-------------------------//
+
+// Color Palette
+$cPrimary: #3f4041;
+$cSecondary: #f5f6f7;
+$cAction: #527435;
+$cAction2: #86be40;
+$cAction3: #bfd988;
+$cW: #ffffff;
+
+// Font Stack
+$fPrimary: 'Nunito Sans', sans-serif;
+
+// Breakpoints
+
+//-------------------------//
+//-----> Global
+//-------------------------//
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: $fPrimary;
+  color: $cPrimary;
+  font-size: 2.4rem;
+}
+
+.app {
+  text-align: center;
+  margin: 30px;
+}
+
+.logo {
+  //animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}

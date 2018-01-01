@@ -1,0 +1,22 @@
+html {
+  font-size: 62.5%; }
+
+body {
+  font-family: "Nunito Sans", sans-serif;
+  color: #3f4041;
+  font-size: 2.4rem; }
+
+.app {
+  text-align: center;
+  margin: 30px; }
+
+.logo {
+  height: 80px; }
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
+
+/*# sourceMappingURL=App.css.map */
