@@ -1,5 +1,14 @@
 import React, { Component } from 'react';
+
 import logo from './images/a2uned_solutions_logo.svg';
+import logoIcon from './images/a2uned_solutions_icon.svg';
+import nathan from './images/nathan.jpg';
+import micah from './images/micah.jpg';
+import btc from './images/crypto-icons/white/btc.svg';
+import ltc from './images/crypto-icons/white/ltc.svg';
+import eth from './images/crypto-icons/white/etc.svg';
+import doge from './images/crypto-icons/white/doge.svg';
+
 import './App.css';
 
 class App extends Component {
@@ -30,30 +39,136 @@ class App extends Component {
             </aside>
         </section>
         <section id="techstack">
-            <h2>User Experience <span className="thin">+</span> Full Stack Development</h2>
+            <h2>User Experience <span className="thin c-secondary-text">+</span> Full Stack Development</h2>
         </section>
-        <section className="content-bottom">
-            <ul className="no-list">
-                <li>&lt;- Contact</li>
-                <li>&lt;- Connect</li>
-                <li>&nbsp;</li>
+        <section id="team">
+            <h2>Our Team</h2>
+            <p>Experienced Designers & Developers from the ecommerce, web application, and content management system realm. <em>We're excited to dive head first</em> into the blockchain &amp; cryptocurrency space and have fun learning as we go.</p>
+            <ul className="team-list no-list">
+                <li>
+                    <div className="member-image">
+                        <img src={nathan} alt="Nathan Olmstead" />
+                    </div>
+                    <div className="member-info">
+                        <h3>Nathan Olmstead</h3>
+                        <h4>Partner</h4>
+                        <ul className="no-list">
+                            <li>User Interface Developer</li>
+                            <li>User Experience Designer</li>
+                        </ul>
+                        <ul className="social">
+                            <li className="social">
+                                <a href="https://www.linkedin.com/in/nathanolmstead/" target="_blank" rel="noopener noreferrer"  title="LinkedIn">
+                                    <i className="fa fa-linkedin" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div className="member-image">
+                        <img src={micah} alt="Micah Lunt" />
+                    </div>
+                    <div className="member-info">
+                        <h3>Micah Lunt</h3>
+                        <h4>Partner</h4>
+                        <ul className="no-list">
+                            <li>Software Engineer</li>
+                            <li>System Administrator</li>
+                        </ul>
+                        <ul className="social">
+                            <li>
+                                <a href="https://www.linkedin.com/in/micah-lunt-8322a752/" target="_blank" rel="noopener noreferrer"  title="LinkedIn">
+                                    <i className="fa fa-linkedin" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
             </ul>
+        </section>
+        <section id="payments-donations">
+            <h2>Payments <span className="thin">&amp;</span> Donations</h2>
+            <ul className="no-list crypto-addresses">
+                <li>
+                    <div className="crypto-asset">
+                        <img src={btc} alt="Bitcoin" />
+                        <h5>Bitcoin</h5>
+                    </div>
+                    <div className="input-action">
+                        <span className="address">199Rq8GkKCc2ZmkXM4y3Hz96q5hU2bUnM4</span>
+                        <i className="fa fa-clone" aria-hidden="true"></i>
+                    </div>
+                </li>
+                <li>
+                    <div className="crypto-asset">
+                        <img src={ltc} alt="Litecoin" />
+                        <h5>Litecoin</h5>
+                    </div>
+                    <div className="input-action">
+                        <span className="address">3HGv9eLV3EBPG6qSyC2t5bkLjXRWppAC7P </span>
+                        <i className="fa fa-clone" aria-hidden="true"></i>
+                    </div>
+                </li>
+                <li>
+                    <div className="crypto-asset">
+                        <img src={eth} alt="Ethereum" />
+                        <h5>Ethereum</h5>
+                    </div>
+                    <div className="input-action">
+                        <span className="address">0xeddaa7bbae3c014aef3905453e24845333e49709</span>
+                        <i className="fa fa-clone" aria-hidden="true"></i>
+                    </div>
+                </li>
+                <li>
+                    <div className="crypto-asset">
+                        <img src={doge} alt="Doge" />
+                        <h5>Doge <span className="thin">/ AKA Beer Money</span></h5>
+                    </div>
+                    <div className="input-action">
+                        <span className="address">A6zJuxpb7hC4T4Qs12XmDikgmECDyz7LSE</span>
+                        <i className="fa fa-clone" aria-hidden="true"></i>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section className="content-bottom vcard h-card">
+            <p>
+                <img src={logoIcon} className="logo-icon" alt="A2uned Solutions" />
+                <span className="org p-org">A2uned Solutions LLC</span>
+                <span className="adr location"> /&nbsp;
+                    <span className="region p-region">Michigan</span> /&nbsp;
+                    <span className="country-name p-country-name">USA</span>
+                </span>
+            </p>
         </section>
         <footer>
             <ul className="connect no-list">
                 <li>
                     <a href="https://t.me/a2uned" target="_blank" rel="noopener noreferrer" title="Telegram">
                         <i className="fa fa-telegram" aria-hidden="true"></i>
+                        <span className="connect-info">
+                            <strong>Telegram </strong>/
+                            a2uned
+                        </span>
                     </a>
                 </li>
                 <li>
                     <a href="https://twitter.com/a2uned" target="_blank" rel="noopener noreferrer" title="Twitter">
                         <i className="fa fa-twitter-square" aria-hidden="true"></i>
+                        <span className="connect-info">
+                            <strong>Twitter </strong>/
+                            @a2uned
+                        </span>
                     </a>
                 </li>
                 <li>
                     <a href="https://github.com/a2uned-solutions" target="_blank" rel="noopener noreferrer" title="GitHub">
                         <i className="fa fa-github" aria-hidden="true"></i>
+                        <span className="connect-info">
+                            <strong>GitHub </strong>/
+                            a2uned-solutions
+                        </span>
                     </a>
                 </li>
                 {/*<li>*/}

@@ -1,5 +1,7 @@
 html {
-  font-size: 62.5%; }
+  font-size: 62.5%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
 
 body {
   font-family: "Nunito Sans", sans-serif;
@@ -16,6 +18,12 @@ h1 {
 h2 {
   font-size: 2.8rem;
   margin: 0 0 20px 0; }
+
+h3 {
+  font-size: 2rem; }
+
+h4 {
+  font-size: 1.8rem; }
 
 a {
   color: #527435; }
@@ -69,34 +77,56 @@ footer {
   left: 0;
   height: 100%;
   width: 71px;
-  opacity: 0.6;
   background: url("images/border.png") right top repeat-y;
   z-index: 2; }
   footer .connect {
     font-size: 3.6rem;
     position: absolute;
     bottom: 6px; }
-    footer .connect li {
-      display: inline-block;
-      margin: 2px 17px; }
-      footer .connect li:first-child a {
-        padding: 0 0 2px 0;
-        font-size: 3.4rem; }
+    footer .connect li a {
+      position: relative;
+      height: 45px;
+      padding: 2px 17px;
+      display: block; }
+      footer .connect li a i {
+        z-index: 3;
+        position: relative; }
+      footer .connect li a .connect-info {
+        background: #ffffff;
+        font-size: 1.2rem;
+        padding: 17px 0 0 80px;
+        height: 34px;
+        position: absolute;
+        top: 0;
+        left: -400px;
+        width: 160px;
+        z-index: 2;
+        border: 1px solid #f5f6f7;
+        border-left: none; }
+      footer .connect li a:hover .connect-info {
+        left: 0; }
+
+section {
+  overflow: hidden;
+  background: #f5f6f7; }
 
 #hero {
   background: #000 url("images/hero.jpg") left top no-repeat;
   background-size: cover;
-  padding: 160px 30px 110px 90px;
-  overflow: hidden; }
+  padding: 160px 30px 110px 90px; }
   #hero h1 {
     color: #fff;
-    display: inline-block; }
+    display: inline-block;
+    line-height: 1.2; }
+    #hero h1 .small-title-caps {
+      margin: 0 0 10px 0; }
+      #hero h1 .small-title-caps.align-right {
+        margin: 0; }
 
 #intro {
   background: #f5f6f7 url("images/decentralized-network.png") 95% center no-repeat;
   background-size: 30%;
-  overflow: hidden;
-  padding: 50px 0 50px 90px; }
+  padding: 100px 0 100px 90px; }
   #intro .content {
     width: 50%; }
 
@@ -113,16 +143,107 @@ footer {
   /* IE6-9 */ }
   #techstack h2 {
     color: #ffffff;
+    font-weight: 900;
     line-height: 0;
-    margin: 0; }
+    margin: 0;
+    font-size: 3.2rem;
+    letter-spacing: 1px; }
+
+#team {
+  text-align: center;
+  padding: 100px 0 100px 90px; }
+  #team h2 {
+    background: url("images/border-horizontal.png") center bottom repeat-x;
+    max-width: 230px;
+    margin: 0 auto 25px auto;
+    padding: 0 0 10px 0; }
+  #team p {
+    font-size: 1.6rem;
+    width: 80%;
+    max-width: 800px;
+    margin: 10px auto;
+    line-height: 1.5; }
+  #team .team-list {
+    overflow: hidden;
+    text-align: left;
+    margin: 30px 20px; }
+    #team .team-list > li {
+      float: left;
+      width: 47%;
+      margin: 0 1%;
+      border: 1px solid #d2d2d2;
+      overflow: hidden;
+      background: #ffffff; }
+      #team .team-list > li .member-image {
+        float: left;
+        max-width: 200px;
+        width: 30%; }
+        #team .team-list > li .member-image img {
+          display: block;
+          width: 100%; }
+      #team .team-list > li .member-info {
+        float: left;
+        position: relative;
+        padding: 4%;
+        width: 62%;
+        font-size: 1.4rem; }
+        #team .team-list > li .member-info h3 {
+          margin: 0;
+          padding: 0;
+          line-height: 1.1;
+          font-size: 1.8rem; }
+        #team .team-list > li .member-info h4 {
+          margin: 0 0 10px 0;
+          padding: 0;
+          font-size: 1.6rem;
+          font-style: oblique;
+          font-weight: 300; }
+        #team .team-list > li .member-info ul {
+          list-style: square;
+          margin: 0 0 0 10px;
+          padding: 0 0 0 10px; }
+          #team .team-list > li .member-info ul li {
+            margin: 0 0 7px 0; }
+            #team .team-list > li .member-info ul li:last-child {
+              margin: 0; }
+        #team .team-list > li .member-info .social {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+          position: absolute;
+          top: 9%;
+          right: 6%;
+          font-size: 2.0rem; }
+
+#payments-donations {
+  background: #3f4041;
+  text-align: center;
+  padding: 50px 0 50px 90px; }
+  #payments-donations h2 {
+    color: #ffffff; }
+  #payments-donations .crypto-addresses {
+    overflow: hidden; }
+    #payments-donations .crypto-addresses li {
+      float: left;
+      width: 48%;
+      margin: 1%;
+      color: #ffffff; }
 
 .content-bottom {
   background: #f5f6f7 url("images/hexagon-footer.png") right bottom no-repeat;
-  background-size: 30%;
-  padding: 43px 0 0px 90px;
-  overflow: hidden; }
-  .content-bottom > ul li {
-    margin: 0 0 26px 0; }
+  background-size: 26%;
+  padding: 0 0 0 90px;
+  position: relative; }
+  .content-bottom p {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin: 180px 15px 20px 0;
+    line-height: 1;
+    text-align: center; }
+    .content-bottom p .logo-icon {
+      width: 15px;
+      display: inline-block;
+      margin: 0 9px -5px 0; }
 
 @keyframes App-logo-spin {
   from {

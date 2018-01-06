@@ -25,6 +25,8 @@ $fPrimary: 'Nunito Sans', sans-serif;
 
 html {
   font-size: 62.5%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
@@ -44,6 +46,14 @@ h1 {
 h2 {
   font-size: 2.8rem;
   margin: 0 0 20px 0;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 1.8rem;
 }
 
 a {
@@ -115,7 +125,7 @@ footer {
   left: 0;
   height: 100%;
   width: 71px;
-  opacity: 0.6;
+  //opacity: 0.6;
   background: url("images/border.png") right top repeat-y;
   z-index: 2;
 
@@ -125,14 +135,41 @@ footer {
     bottom: 6px;
 
     li {
-      display: inline-block;
-      margin: 2px 17px;
 
       &:first-child {
 
-        a {
-          padding: 0 0 2px 0;
-          font-size: 3.4rem;
+      }
+
+      a {
+        position: relative;
+        height: 45px;
+        padding: 2px 17px;
+        display: block;
+
+        i {
+          z-index: 3;
+          position: relative;
+        }
+
+        .connect-info {
+          background: $cW;
+          font-size: 1.2rem;
+          padding: 17px 0 0 80px;
+          height: 34px;
+          position: absolute;
+          top: 0;
+          left: -400px;
+          width: 160px;
+          z-index: 2;
+          border: 1px solid $cSecondary;
+          border-left: none;
+        }
+
+        &:hover {
+
+          .connect-info {
+            left: 0;
+          }
         }
       }
     }
@@ -142,23 +179,35 @@ footer {
 //-------------------------//
 //-----> Sections
 //-------------------------//
+section {
+  overflow: hidden;
+  background: $cSecondary;
+}
+
 #hero {
   background: #000 url("images/hero.jpg") left top no-repeat;
   background-size: cover;
   padding: 160px 30px 110px $lColSpace;
-  overflow: hidden;
 
   h1 {
     color: #fff;
     display: inline-block;
+    line-height: 1.2;
+
+    .small-title-caps {
+      margin: 0 0 10px 0;
+
+      &.align-right {
+        margin: 0;
+      }
+    }
   }
 }
 
 #intro {
   background: $cSecondary url("images/decentralized-network.png") 95% center no-repeat;
   background-size: 30%;
-  overflow: hidden;
-  padding: 50px 0 50px $lColSpace;
+  padding: 100px 0 100px $lColSpace;
 
   .content {
     width: 50%;
@@ -175,21 +224,145 @@ footer {
 
   h2 {
     color: $cW;
+    font-weight: 900;
     line-height: 0;
     margin: 0;
+    font-size: 3.2rem;
+    letter-spacing: 1px;
+  }
+}
+
+#team {
+  text-align: center;
+  padding: 100px 0 100px $lColSpace;
+
+  h2 {
+    background: url("images/border-horizontal.png") center bottom repeat-x;
+    max-width: 230px;
+    margin: 0 auto 25px auto;
+    padding: 0 0 10px 0;
+  }
+
+  p {
+    font-size: 1.6rem;
+    width: 80%;
+    max-width: 800px;
+    margin: 10px auto;
+    line-height: 1.5;
+  }
+
+  .team-list {
+    overflow: hidden;
+    text-align: left;
+    margin: 30px 20px;
+
+    > li {
+      float: left;
+      width: 47%;
+      margin: 0 1%;
+      border: 1px solid $cSecondaryText;
+      overflow: hidden;
+      background: $cW;
+
+      .member-image {
+        float: left;
+        max-width: 200px;
+        width: 30%;
+
+        img {
+          display: block;
+          width: 100%;
+        }
+      }
+
+      .member-info {
+        float: left;
+        position: relative;
+        padding: 4%;
+        width: 62%;
+        font-size: 1.4rem;
+
+        h3 {
+          margin: 0;
+          padding: 0;
+          line-height: 1.1;
+          font-size: 1.8rem;
+        }
+
+        h4 {
+          margin: 0 0 10px 0;
+          padding: 0;
+          font-size: 1.6rem;
+          font-style: oblique;
+          font-weight: 300;
+        }
+
+        ul {
+          list-style: square;
+          margin: 0 0 0 10px;
+          padding: 0 0 0 10px;
+
+          li {
+            margin: 0 0 7px 0;
+
+            &:last-child {
+              margin: 0;
+            }
+          }
+        }
+
+        .social {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+          position: absolute;
+          top: 9%;
+          right: 6%;
+          font-size: 2.0rem;
+        }
+      }
+    }
+  }
+}
+
+#payments-donations {
+  background: $cPrimary;
+  text-align: center;
+  padding: 50px 0 50px $lColSpace;
+
+  h2 {
+    color: $cW;
+  }
+
+  .crypto-addresses {
+    overflow: hidden;
+
+    li {
+      float: left;
+      width: 48%;
+      margin: 1%;
+      color: $cW;
+    }
   }
 }
 
 .content-bottom {
   background: $cSecondary url("images/hexagon-footer.png") right bottom no-repeat;
-  background-size: 30%;
-  padding: 43px 0 0px $lColSpace;
-  overflow: hidden;
+  background-size: 26%;
+  padding: 0 0 0 $lColSpace;
+  position: relative;
 
-  > ul {
+  p {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin: 180px 15px 20px 0;
+    line-height: 1;
+    text-align: center;
 
-    li {
-      margin: 0 0 26px 0;
+    .logo-icon {
+      width: 15px;
+      display: inline-block;
+      margin: 0 9px -5px 0;
     }
   }
 }
