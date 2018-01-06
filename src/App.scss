@@ -5,10 +5,14 @@
 // Color Palette
 $cPrimary: #3f4041;
 $cSecondary: #f5f6f7;
+$cSecondaryText: #d2d2d2;
 $cAction: #527435;
 $cAction2: #86be40;
 $cAction3: #bfd988;
 $cW: #ffffff;
+
+// Spacing and Columns
+$lColSpace: 90px;
 
 // Font Stack
 $fPrimary: 'Nunito Sans', sans-serif;
@@ -26,18 +30,20 @@ html {
 body {
   font-family: $fPrimary;
   color: $cPrimary;
-  font-size: 2.4rem;
+  font-size: 1.8rem;
   font-weight: 300;
   line-height: 1.4;
 }
 
 h1 {
   font-weight: 900;
-  font-size: 3.4rem;
+  font-size: 4.8rem;
+  margin: 0;
 }
 
 h2 {
   font-size: 2.8rem;
+  margin: 0 0 20px 0;
 }
 
 a {
@@ -45,10 +51,18 @@ a {
 }
 
 // Helper Classes
+.block {
+  display: block;
+}
+
 .no-list {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+.align-right {
+  text-align: right;
 }
 
 .thin {
@@ -57,44 +71,128 @@ a {
 
 .small-title-caps {
   font-weight: 300;
+  font-size: 1.6rem;
   text-transform: uppercase;
   display: block;
 }
 
 .c-secondary {
-  //color: $cSecondary;
+   color: $cSecondary;
+ }
+
+.c-secondary-text {
+  color: $cSecondaryText;
 }
 
 //-------------------------//
 //-----> Layout
 //-------------------------//
+.app {
+  text-align: left;
+  background: url("images/techstack.jpg") fixed;
+  background-size: contain;
+}
 
 header {
-  background: rgba(256, 256, 256, 0.5);
+  background: rgba(256, 256, 256, 0.8);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+
+  .logo {
+    //animation: App-logo-spin infinite 20s linear;
+    max-width: 240px;
+    padding: 20px;
+    display: block;
+  }
 }
 
 footer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 71px;
+  opacity: 0.6;
+  background: url("images/border.png") right top repeat-y;
+  z-index: 2;
 
   .connect {
     font-size: 3.6rem;
+    position: absolute;
+    bottom: 6px;
 
     li {
       display: inline-block;
-      margin: 0 15px;
+      margin: 2px 17px;
+
+      &:first-child {
+
+        a {
+          padding: 0 0 2px 0;
+          font-size: 3.4rem;
+        }
+      }
     }
   }
 }
 
-.app {
+//-------------------------//
+//-----> Sections
+//-------------------------//
+#hero {
+  background: #000 url("images/hero.jpg") left top no-repeat;
+  background-size: cover;
+  padding: 160px 30px 110px $lColSpace;
+  overflow: hidden;
+
+  h1 {
+    color: #fff;
+    display: inline-block;
+  }
+}
+
+#intro {
+  background: $cSecondary url("images/decentralized-network.png") 95% center no-repeat;
+  background-size: 30%;
+  overflow: hidden;
+  padding: 50px 0 50px $lColSpace;
+
+  .content {
+    width: 50%;
+  }
+}
+
+#techstack {
   text-align: center;
-  margin: 30px;
+  padding: 100px 50px;
+  background: -moz-linear-gradient(top, rgba(82,116,53,1) 0%, rgba(82,116,53,0.15) 50%, rgba(82,116,53,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(82,116,53,1) 0%,rgba(82,116,53,0.15) 50%,rgba(82,116,53,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(82,116,53,1) 0%,rgba(82,116,53,0.15) 50%,rgba(82,116,53,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#527435', endColorstr='#527435',GradientType=0 ); /* IE6-9 */
+
+  h2 {
+    color: $cW;
+    line-height: 0;
+    margin: 0;
+  }
 }
 
-.logo {
-  //animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
+.content-bottom {
+  background: $cSecondary url("images/hexagon-footer.png") right bottom no-repeat;
+  background-size: 30%;
+  padding: 43px 0 0px $lColSpace;
+  overflow: hidden;
 
+  > ul {
+
+    li {
+      margin: 0 0 26px 0;
+    }
+  }
+}
 
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }

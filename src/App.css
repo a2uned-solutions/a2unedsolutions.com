@@ -4,48 +4,125 @@ html {
 body {
   font-family: "Nunito Sans", sans-serif;
   color: #3f4041;
-  font-size: 2.4rem;
+  font-size: 1.8rem;
   font-weight: 300;
   line-height: 1.4; }
 
 h1 {
   font-weight: 900;
-  font-size: 3.4rem; }
+  font-size: 4.8rem;
+  margin: 0; }
 
 h2 {
-  font-size: 2.8rem; }
+  font-size: 2.8rem;
+  margin: 0 0 20px 0; }
 
 a {
   color: #527435; }
+
+.block {
+  display: block; }
 
 .no-list {
   list-style: none;
   margin: 0;
   padding: 0; }
 
+.align-right {
+  text-align: right; }
+
 .thin {
   font-weight: 300; }
 
 .small-title-caps {
   font-weight: 300;
+  font-size: 1.6rem;
   text-transform: uppercase;
   display: block; }
 
-header {
-  background: rgba(255, 255, 255, 0.5); }
+.c-secondary {
+  color: #f5f6f7; }
 
-footer .connect {
-  font-size: 3.6rem; }
-  footer .connect li {
-    display: inline-block;
-    margin: 0 15px; }
+.c-secondary-text {
+  color: #d2d2d2; }
 
 .app {
-  text-align: center;
-  margin: 30px; }
+  text-align: left;
+  background: url("images/techstack.jpg") fixed;
+  background-size: contain; }
 
-.logo {
-  height: 80px; }
+header {
+  background: rgba(255, 255, 255, 0.8);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10; }
+  header .logo {
+    max-width: 240px;
+    padding: 20px;
+    display: block; }
+
+footer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 71px;
+  opacity: 0.6;
+  background: url("images/border.png") right top repeat-y;
+  z-index: 2; }
+  footer .connect {
+    font-size: 3.6rem;
+    position: absolute;
+    bottom: 6px; }
+    footer .connect li {
+      display: inline-block;
+      margin: 2px 17px; }
+      footer .connect li:first-child a {
+        padding: 0 0 2px 0;
+        font-size: 3.4rem; }
+
+#hero {
+  background: #000 url("images/hero.jpg") left top no-repeat;
+  background-size: cover;
+  padding: 160px 30px 110px 90px;
+  overflow: hidden; }
+  #hero h1 {
+    color: #fff;
+    display: inline-block; }
+
+#intro {
+  background: #f5f6f7 url("images/decentralized-network.png") 95% center no-repeat;
+  background-size: 30%;
+  overflow: hidden;
+  padding: 50px 0 50px 90px; }
+  #intro .content {
+    width: 50%; }
+
+#techstack {
+  text-align: center;
+  padding: 100px 50px;
+  background: -moz-linear-gradient(top, #527435 0%, rgba(82, 116, 53, 0.15) 50%, #527435 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #527435 0%, rgba(82, 116, 53, 0.15) 50%, #527435 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #527435 0%, rgba(82, 116, 53, 0.15) 50%, #527435 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#527435', endColorstr='#527435',GradientType=0 );
+  /* IE6-9 */ }
+  #techstack h2 {
+    color: #ffffff;
+    line-height: 0;
+    margin: 0; }
+
+.content-bottom {
+  background: #f5f6f7 url("images/hexagon-footer.png") right bottom no-repeat;
+  background-size: 30%;
+  padding: 43px 0 0px 90px;
+  overflow: hidden; }
+  .content-bottom > ul li {
+    margin: 0 0 26px 0; }
 
 @keyframes App-logo-spin {
   from {
