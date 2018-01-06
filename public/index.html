@@ -37,6 +37,20 @@
     <meta name="description" content="Full stack developers and User Experience Designers. Decentralized Web Applications and Blockchain Technology. We love to Design and Code.">
 
     <script src="https://use.fontawesome.com/d0fa37769d.js"></script>
+    <script>
+        window.onscroll = function() {
+            var d = document.documentElement;
+            var offset = d.scrollTop + window.innerHeight;
+            var height = d.offsetHeight;
+            var rootDiv = document.getElementById('root');
+
+            if (offset === height) {
+                rootDiv.className = 'at-bottom';
+            } else {
+                rootDiv.className = '';
+            }
+        };
+    </script>
   </head>
   <body>
     <noscript>

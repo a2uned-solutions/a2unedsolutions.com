@@ -56,8 +56,23 @@ h4 {
   font-size: 1.8rem;
 }
 
+h5 {
+  font-size: 1.8rem;
+  margin: 0 0 8px 0;
+}
+
 a {
   color: $cAction;
+}
+
+button {
+  background: $cAction;
+  color: $cW;
+  border: none;
+  outline: none;
+  padding: 5px 8px;
+  text-align: center;
+  cursor: pointer;
 }
 
 // Helper Classes
@@ -133,6 +148,7 @@ footer {
     font-size: 3.6rem;
     position: absolute;
     bottom: 6px;
+    padding: 9px 1px 0 0;
 
     li {
 
@@ -171,6 +187,28 @@ footer {
             left: 0;
           }
         }
+      }
+    }
+  }
+}
+
+.at-bottom {
+
+  footer .connect {
+    background: $cSecondary;
+
+    li a {
+
+      &:hover {
+
+        .connect-info {
+          background: $cW;
+        }
+      }
+
+      .connect-info {
+        left: 0;
+        background: $cSecondary;
       }
     }
   }
@@ -229,12 +267,13 @@ section {
     margin: 0;
     font-size: 3.2rem;
     letter-spacing: 1px;
+    padding-left: $lColSpace;
   }
 }
 
 #team {
   text-align: center;
-  padding: 100px 0 100px $lColSpace;
+  padding: 80px 0 80px $lColSpace;
 
   h2 {
     background: url("images/border-horizontal.png") center bottom repeat-x;
@@ -266,8 +305,8 @@ section {
 
       .member-image {
         float: left;
-        max-width: 200px;
-        width: 30%;
+        width: 29%;
+        border-right: 1px solid $cSecondaryText;
 
         img {
           display: block;
@@ -292,9 +331,10 @@ section {
         h4 {
           margin: 0 0 10px 0;
           padding: 0;
-          font-size: 1.6rem;
-          font-style: oblique;
+          font-size: 1.4rem;
           font-weight: 300;
+          text-transform: uppercase;
+          color: $cAction;
         }
 
         ul {
@@ -340,8 +380,48 @@ section {
     li {
       float: left;
       width: 48%;
-      margin: 1%;
+      margin: 2% 1%;
       color: $cW;
+      text-align: left;
+    }
+
+    .crypto-asset {
+
+      img {
+        display: inline-block;
+        width: 20px;
+        margin: 0 0 -4px;
+      }
+
+      h5 {
+        display: inline-block;
+        padding: 0 10px;
+      }
+    }
+
+    .input-action {
+      border: 1px solid$cSecondaryText;
+      background: $cSecondary;
+      position: relative;
+
+      .address {
+        padding: 8px 40px 8px 8px;
+        display: block;
+        position: relative;
+        font-size: 1.4rem;
+        font-weight: 400;
+        color: $cPrimary;
+      }
+
+      button {
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100%;
+        display: block;
+        z-index: 2;
+        padding: 5px 10px 5px 12px;
+      }
     }
   }
 }
@@ -355,7 +435,7 @@ section {
   p {
     font-size: 1.2rem;
     font-weight: 400;
-    margin: 180px 15px 20px 0;
+    margin: 126px 15px 24px 0;
     line-height: 1;
     text-align: center;
 
@@ -363,6 +443,7 @@ section {
       width: 15px;
       display: inline-block;
       margin: 0 9px -5px 0;
+      opacity: 0.4;
     }
   }
 }
