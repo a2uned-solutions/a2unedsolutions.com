@@ -91,11 +91,17 @@
   .content-bottom p {
     margin: 110px 15px 24px 0; } }
 @media screen and (max-width: 764px) {
+  body {
+    font-size: 1.4rem; }
+
   h1 {
     font-size: 2.5rem; }
 
   h2 {
     font-size: 1.8rem; }
+
+  footer .connect {
+    padding: 30px 1px 0 0; }
 
   #hero {
     padding: 100px 10px 60px 60px; }
@@ -117,6 +123,8 @@
 
   #team {
     padding: 30px 10px 20px 60px; }
+    #team > p {
+      display: none; }
     #team .team-list > li {
       width: 99%;
       float: none;
@@ -126,6 +134,8 @@
     float: none;
     width: 100%;
     margin: 0 0 22px 0; }
+    #payments-donations .crypto-addresses li .input-action .address {
+      font-size: 1rem; }
 
   .content-bottom p {
     font-size: 0.9rem;

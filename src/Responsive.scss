@@ -185,12 +185,20 @@ $lColSpace: 60px;
 // Mobile
 @media screen and (max-width: $bpTabletPortrait - 4) {
 
+  body {
+    font-size: 1.4rem;
+  }
+
   h1 {
     font-size: 2.5rem;
   }
 
   h2 {
     font-size: 1.8rem;
+  }
+
+  footer .connect {
+    padding: 30px 1px 0 0;
   }
 
   #hero {
@@ -223,6 +231,10 @@ $lColSpace: 60px;
   #team {
     padding: 30px 10px 20px 60px;
 
+    > p {
+      display: none;
+    }
+
     .team-list {
 
       > li {
@@ -237,6 +249,13 @@ $lColSpace: 60px;
     float: none;
     width: 100%;
     margin: 0 0 22px 0;
+
+    .input-action {
+
+      .address {
+        font-size: 1rem;
+      }
+    }
   }
 
   .content-bottom {
