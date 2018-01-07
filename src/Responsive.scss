@@ -1,0 +1,253 @@
+//-------------------------//
+//-----> Variables
+//-------------------------//
+
+// Breakpoints
+$bpTabletLandscape: 1024px;
+$bpTabletMedium: 876px;
+$bpTabletPortrait: 768px;
+
+// Spacing and Columns
+$lColSpace: 60px;
+
+// iOS Double Tap Bug Fix
+@media screen and (min-width: $bpTabletLandscape + 1) {
+
+  footer .connect li a:hover .connect-info {
+    left: 0;
+  }
+
+  .at-bottom footer .connect li a:hover .connect-info {
+    background: #fff;
+  }
+}
+
+@media screen and (max-width: $bpTabletLandscape) {
+
+  #intro {
+    padding: 75px 0 75px 90px;
+    background-size: 25%;
+
+    .content {
+      width: 60%;
+    }
+  }
+
+  #team {
+    padding: 50px 0 50px 90px;
+
+    .team-list > li .member-info {
+
+      h3 {
+        font-size: 1.4rem;
+      }
+
+      h4 {
+        font-size: 1.2rem;
+      }
+
+      ul li {
+        margin: 0 0 2px 0;
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  #payments-donations .crypto-addresses .input-action .address {
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (max-width: $bpTabletMedium) {
+
+  body {
+    font-size: 1.6rem;
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  h5 {
+    font-size: 1.6rem;
+  }
+
+  header {
+
+    .logo {
+      max-width: 140px;
+      padding: 15px;
+    }
+  }
+
+  footer {
+    width: 45px;
+
+    .connect {
+      font-size: 2.2rem;
+      bottom: -3px;
+      padding: 30px 1px 0 0;
+
+      li {
+
+        a {
+          height: 45px;
+          padding: 0 11px;
+
+          .connect-info {
+            padding: 5px 0 0 65px;
+          }
+        }
+      }
+    }
+  }
+
+  #hero {
+    padding: 100px 0 $lColSpace $lColSpace;
+  }
+
+  #intro {
+    padding: $lColSpace;
+
+    .content {
+      width: 70%;
+
+      h2 {
+        font-size: 2.2rem;
+        margin: 0 0 15px 0;
+      }
+    }
+  }
+
+  #techstack {
+
+    h2 {
+      padding-left: $lColSpace;
+      font-size: 2.8rem;
+    }
+  }
+
+  #team {
+    padding: 40px 0 40px $lColSpace;
+
+    p {
+      font-size: 1.4rem;
+    }
+
+    .team-list {
+      margin: 30px 0;
+    }
+  }
+
+  #payments-donations {
+    padding: 40px 0 40px $lColSpace;
+
+    .crypto-addresses {
+
+      .crypto-asset {
+
+        img {
+          width: 17px;
+          margin: 0 0 -3px;
+        }
+      }
+
+      .input-action .address {
+        padding: 5px 40px 5px 4px;
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $bpTabletPortrait - 1) {
+
+  footer .connect {
+    padding: 29px 1px 0 0;
+
+    li a {
+      height: 40px;
+    }
+  }
+
+  #techstack {
+    padding: 75px 50px;
+  }
+
+  .content-bottom {
+
+    p {
+      margin: 110px 15px 24px 0;
+    }
+  }
+}
+
+// Mobile
+@media screen and (max-width: $bpTabletPortrait - 4) {
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  #hero {
+    padding: 100px 10px 60px 60px;
+  }
+
+  #intro {
+    padding: 30px 10px 30px 60px;
+    background-image: none;
+
+    .content {
+      width: 100%;
+
+      h2 {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  #techstack {
+    padding: 40px;
+
+    h2 {
+      font-size: 2rem;
+      padding: 0;
+      line-height: 1.2;
+    }
+  }
+
+  #team {
+    padding: 30px 10px 20px 60px;
+
+    .team-list {
+
+      > li {
+        width: 99%;
+        float: none;
+        margin: 2% 0;
+      }
+    }
+  }
+
+  #payments-donations .crypto-addresses li {
+    float: none;
+    width: 100%;
+    margin: 0 0 22px 0;
+  }
+
+  .content-bottom {
+
+    p {
+      font-size: 0.9rem;
+      text-align: right;
+      margin: 116px 15px 10px 0;
+      float: right;
+      width: 50%;
+      line-height: 1.2;
+    }
+  }
+}

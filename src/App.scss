@@ -17,8 +17,6 @@ $lColSpace: 90px;
 // Font Stack
 $fPrimary: 'Nunito Sans', sans-serif;
 
-// Breakpoints
-
 //-------------------------//
 //-----> Global
 //-------------------------//
@@ -152,10 +150,6 @@ footer {
 
     li {
 
-      &:first-child {
-
-      }
-
       a {
         position: relative;
         height: 45px;
@@ -180,13 +174,6 @@ footer {
           border: 1px solid $cSecondary;
           border-left: none;
         }
-
-        &:hover {
-
-          .connect-info {
-            left: 0;
-          }
-        }
       }
     }
   }
@@ -198,13 +185,6 @@ footer {
     background: $cSecondary;
 
     li a {
-
-      &:hover {
-
-        .connect-info {
-          background: $cW;
-        }
-      }
 
       .connect-info {
         left: 0;
@@ -249,6 +229,10 @@ section {
 
   .content {
     width: 50%;
+
+    h2 {
+      font-size: 2.4rem;
+    }
   }
 }
 
@@ -273,7 +257,7 @@ section {
 
 #team {
   text-align: center;
-  padding: 80px 0 80px $lColSpace;
+  padding: 70px 0 80px $lColSpace;
 
   h2 {
     background: url("images/border-horizontal.png") center bottom repeat-x;
@@ -329,7 +313,7 @@ section {
         }
 
         h4 {
-          margin: 0 0 10px 0;
+          margin: 0 0 5px 0;
           padding: 0;
           font-size: 1.4rem;
           font-weight: 300;
@@ -376,6 +360,7 @@ section {
 
   .crypto-addresses {
     overflow: hidden;
+    margin-right: 20px;
 
     li {
       float: left;

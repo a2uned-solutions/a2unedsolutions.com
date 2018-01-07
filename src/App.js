@@ -11,6 +11,7 @@ import eth from './images/crypto-icons/white/etc.svg';
 import doge from './images/crypto-icons/white/doge.svg';
 
 import './App.css';
+import './Responsive.css';
 
 class App extends Component {
 
@@ -69,7 +70,7 @@ class App extends Component {
                             <li>User Experience Designer</li>
                         </Fade>
                         <ul className="social">
-                            <li className="social">
+                            <li>
                                 <a href="https://www.linkedin.com/in/nathanolmstead/" target="_blank" rel="noopener noreferrer"  title="LinkedIn">
                                     <i className="fa fa-linkedin" aria-hidden="true"></i>
                                 </a>
