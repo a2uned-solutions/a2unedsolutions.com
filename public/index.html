@@ -24,6 +24,8 @@
     <meta name="msapplication-TileColor" content="#f5f6f7">
     <meta name="msapplication-TileImage" content="%PUBLIC_URL%/icons/ms-icon-144x144.png">
     <meta name="theme-color" content="#f5f6f7">
+
+      <meta name="msvalidate.01" content="E6204F3A68E2C16372DC46BE093BB8B2" />
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
@@ -50,6 +52,15 @@
                 rootDiv.className = '';
             }
         };
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112084957-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-112084957-1');
     </script>
   </head>
   <body>
