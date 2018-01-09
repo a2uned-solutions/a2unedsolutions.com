@@ -1,4 +1,4 @@
-[logo]: https://github.com/a2uned-solutions/a2unedsolutions.com/blob/master/src/images/a2uned_solutions_logo.svg
+[logo]: (https://github.com/a2uned-solutions/a2unedsolutions.com/blob/master/src/images/a2uned_solutions_logo.svg)
 
 # A2uned Solutions
 [a2unedsolutions.com](https://a2unedsolutions.com) was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
