@@ -41,8 +41,7 @@
     width: 45px; }
     footer .connect {
       font-size: 2.2rem;
-      bottom: -3px;
-      padding: 30px 1px 0 0; }
+      padding: 20px 1px 0 0; }
       footer .connect li a {
         height: 45px;
         padding: 0 11px; }
@@ -81,7 +80,7 @@
       font-size: 1.2rem; } }
 @media screen and (max-width: 767px) {
   footer .connect {
-    padding: 29px 1px 0 0; }
+    padding: 20px 1px 0 0; }
     footer .connect li a {
       height: 40px; }
 
@@ -101,7 +100,7 @@
     font-size: 1.8rem; }
 
   footer .connect {
-    padding: 30px 1px 0 0; }
+    padding: 12px 1px 0 0; }
 
   #hero {
     padding: 100px 10px 60px 60px; }

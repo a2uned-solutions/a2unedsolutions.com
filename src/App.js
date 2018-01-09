@@ -15,13 +15,13 @@ import './Responsive.css';
 
 class App extends Component {
 
-    copyAddressClick(id) {
-        let copyText = document.getElementById(id);
-        let coinName = copyText.name;
-        copyText.select();
-        document.execCommand("Copy");
-        alert(coinName + " Address Copied " + copyText.value);
-    }
+  copyAddressClick(id) {
+      let copyText = document.getElementById(id);
+      let coinName = copyText.name;
+      copyText.select();
+      document.execCommand('copy');
+      alert(coinName + " Address Copied " + copyText.value);
+  }
 
   render() {
     return (
@@ -109,8 +109,7 @@ class App extends Component {
                         <h5>Bitcoin</h5>
                     </div>
                     <div className="input-action">
-                        <span className="address">199Rq8GkKCc2ZmkXM4y3Hz96q5hU2bUnM4</span>
-                        <input type="hidden" name="Bitcoin" defaultValue="199Rq8GkKCc2ZmkXM4y3Hz96q5hU2bUnM4" id="btcAddress" />
+                        <input type="text" name="Bitcoin" defaultValue="199Rq8GkKCc2ZmkXM4y3Hz96q5hU2bUnM4" id="btcAddress" />
                         <button onClick={() => {this.copyAddressClick('btcAddress')}} title="Copy">
                             <i className="fa fa-clone" aria-hidden="true"></i>
                         </button>
@@ -122,8 +121,7 @@ class App extends Component {
                         <h5>Litecoin</h5>
                     </div>
                     <div className="input-action">
-                        <span className="address">3HGv9eLV3EBPG6qSyC2t5bkLjXRWppAC7P </span>
-                        <input type="hidden" name="Litecoin" defaultValue="3HGv9eLV3EBPG6qSyC2t5bkLjXRWppAC7P" id="ltcAddress" />
+                        <input type="text" name="Litecoin" defaultValue="3HGv9eLV3EBPG6qSyC2t5bkLjXRWppAC7P" id="ltcAddress" />
                         <button onClick={() => {this.copyAddressClick('ltcAddress')}} title="Copy">
                             <i className="fa fa-clone" aria-hidden="true"></i>
                         </button>
@@ -135,8 +133,7 @@ class App extends Component {
                         <h5>Ethereum</h5>
                     </div>
                     <div className="input-action">
-                        <span className="address">0xeddaa7bbae3c014aef3905453e24845333e49709</span>
-                        <input type="hidden" name="Ethereum" defaultValue="0xeddaa7bbae3c014aef3905453e24845333e49709" id="ethAddress" />
+                        <input type="text" name="Ethereum" defaultValue="0xeddaa7bbae3c014aef3905453e24845333e49709" id="ethAddress" />
                         <button onClick={() => {this.copyAddressClick('ethAddress')}} title="Copy">
                             <i className="fa fa-clone" aria-hidden="true"></i>
                         </button>
@@ -148,8 +145,7 @@ class App extends Component {
                         <h5>Doge <span className="thin">/ aka Beer Money</span></h5>
                     </div>
                     <div className="input-action">
-                        <span className="address">A6zJuxpb7hC4T4Qs12XmDikgmECDyz7LSE</span>
-                        <input type="hidden" name="Doge Coin" defaultValue="A6zJuxpb7hC4T4Qs12XmDikgmECDyz7LSE" id="dogeAddress" />
+                        <input type="text" name="Doge Coin" defaultValue="A6zJuxpb7hC4T4Qs12XmDikgmECDyz7LSE" id="dogeAddress" />
                         <button onClick={() => {this.copyAddressClick('dogeAddress')}} title="Copy">
                             <i className="fa fa-clone" aria-hidden="true"></i>
                         </button>

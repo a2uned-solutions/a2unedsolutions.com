@@ -224,7 +224,7 @@ section {
 
 #intro {
   background: $cSecondary url("images/decentralized-network.png") 95% center no-repeat;
-  background-size: 30%;
+  background-size: 28%;
   padding: 100px 0 100px $lColSpace;
 
   .content {
@@ -342,7 +342,10 @@ section {
           position: absolute;
           top: 9%;
           right: 6%;
-          font-size: 2.0rem;
+
+          li {
+            font-size: 2.0rem;
+          }
         }
       }
     }
@@ -381,6 +384,10 @@ section {
       h5 {
         display: inline-block;
         padding: 0 10px;
+
+        > span {
+          font-size: 1.3rem;
+        }
       }
     }
 
@@ -388,14 +395,19 @@ section {
       border: 1px solid$cSecondaryText;
       background: $cSecondary;
       position: relative;
+      overflow: hidden;
 
-      .address {
+      .address,
+      input {
         padding: 8px 40px 8px 8px;
         display: block;
         position: relative;
-        font-size: 1.4rem;
+        font-size: 1.1rem;
         font-weight: 400;
         color: $cPrimary;
+        width: 100%;
+        border: none;
+        outline: none;
       }
 
       button {
