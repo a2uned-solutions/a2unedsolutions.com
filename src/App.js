@@ -48,7 +48,7 @@ class App extends Component {
         <section id="intro">
             <aside className="content">
                 <h2>Growing with Decentralized Applications</h2>
-                <p>With the rise of Bitcoin and the Ethereum Network, we believe the disruptive power of blockchain technology has just begun. <em>Our goal</em> is to create engaging and accessible user interfaces that seamlessly connect with back-end API’s. Many of our projects will be built on decentralized networks, utilize blockchain technology, and work with crytpocurrencies.</p>
+                <p>With the rise of Bitcoin and the Ethereum Network, we believe the disruptive power of blockchain technology has just begun. <em>Our goal</em> is to create engaging and accessible user interfaces that seamlessly connect with back-end API’s. Many of our projects will be built on decentralized networks, utilize blockchain technology, and work with cryptocurrencies.</p>
             </aside>
         </section>
         <section id="techstack">
