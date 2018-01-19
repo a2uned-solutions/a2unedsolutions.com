@@ -200,6 +200,12 @@ $lColSpace: 60px;
     padding: 12px 1px 0 0;
   }
 
+  #message {
+    padding: 10px 0;
+    font-size: 1.7rem;
+    z-index: 9;
+  }
+
   #hero {
     padding: 100px 10px 60px 60px;
   }
@@ -240,6 +246,10 @@ $lColSpace: 60px;
         width: 99%;
         float: none;
         margin: 2% 0;
+
+        .member-info {
+          padding: 2% 3%;
+        }
       }
     }
   }
@@ -253,6 +263,10 @@ $lColSpace: 60px;
 
       .address {
         font-size: 1rem;
+      }
+
+      input {
+        padding: 7px 40px 7px 6px;
       }
     }
   }

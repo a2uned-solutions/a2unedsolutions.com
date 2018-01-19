@@ -102,6 +102,11 @@
   footer .connect {
     padding: 12px 1px 0 0; }
 
+  #message {
+    padding: 10px 0;
+    font-size: 1.7rem;
+    z-index: 9; }
+
   #hero {
     padding: 100px 10px 60px 60px; }
 
@@ -128,6 +133,8 @@
       width: 99%;
       float: none;
       margin: 2% 0; }
+      #team .team-list > li .member-info {
+        padding: 2% 3%; }
 
   #payments-donations .crypto-addresses li {
     float: none;
@@ -135,6 +142,8 @@
     margin: 0 0 22px 0; }
     #payments-donations .crypto-addresses li .input-action .address {
       font-size: 1rem; }
+    #payments-donations .crypto-addresses li .input-action input {
+      padding: 7px 40px 7px 6px; }
 
   .content-bottom p {
     font-size: 0.9rem;

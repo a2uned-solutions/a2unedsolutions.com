@@ -56,7 +56,7 @@ export default class WalletAddresses extends React.Component {
         messageActive: false,
         copiedWallet: ''
       });
-    }, 1500)
+    }, 1750)
   }
 
   render() {
