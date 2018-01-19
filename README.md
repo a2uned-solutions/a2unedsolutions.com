@@ -1,7 +1,10 @@
-[logo]: (https://github.com/a2uned-solutions/a2unedsolutions.com/blob/master/src/images/a2uned_solutions_logo.svg)
+![Logo](https://a2unedsolutions.com/static/media/a2uned_solutions_logo.3e79b34d.svg)
 
-# A2uned Solutions
+# A2uned Solutions Web Application
 [a2unedsolutions.com](https://a2unedsolutions.com) was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
-Below you will find some information on how to perform common tasks.<br>
-You can find the most recent version of this guide [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
+### Quick Overview
+```sh
+cd TO_YOUR_PROJECT_DIRECTORY
+npm start
+```
