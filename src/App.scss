@@ -155,9 +155,16 @@ footer {
   left: 0;
   height: 100%;
   width: 71px;
-  //opacity: 0.6;
-  background: url("images/border.png") right top repeat-y;
   z-index: 2;
+
+  .dashed-border {
+    opacity: 0.33;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    background: url("images/border.png") right top repeat-y;
+  }
 
   .connect {
     font-size: 3.6rem;

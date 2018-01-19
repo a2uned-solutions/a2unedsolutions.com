@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import Fade from 'react-reveal/Fade';
+
 import Header from './layoutComponents/Header';
 import Footer from './layoutComponents/Footer';
 import WalletAddresses from './components/WalletAddresses';
 
-import logo from './images/a2uned_solutions_logo.svg';
 import logoIcon from './images/a2uned_solutions_icon.svg';
 import nathan from './images/nathan.jpg';
 import micah from './images/micah.jpg';
@@ -17,7 +17,7 @@ class App extends Component {
   render() {
     return (
       <div className="app">
-        <Header logo={logo} />
+        <Header/>
         <section id="hero">
             <h1>
                 <span className="small-title-caps">We design &amp; develop</span>
@@ -89,9 +89,7 @@ class App extends Component {
                 </li>
             </ul>
         </section>
-
         <WalletAddresses/>
-
         <section className="content-bottom vcard h-card">
             <p>
                 <img src={logoIcon} className="logo-icon" alt="A2uned Solutions" />
@@ -102,7 +100,7 @@ class App extends Component {
                 </span>
             </p>
         </section>
-        <Footer />
+        <Footer/>
       </div>
     );
   }

@@ -104,8 +104,14 @@ footer {
   left: 0;
   height: 100%;
   width: 71px;
-  background: url("images/border.png") right top repeat-y;
   z-index: 2; }
+  footer .dashed-border {
+    opacity: 0.33;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    background: url("images/border.png") right top repeat-y; }
   footer .connect {
     font-size: 3.6rem;
     position: absolute;

@@ -1,34 +1,35 @@
 import React from 'react';
 
-export default function Footer(props) {
+export default function Footer() {
   return (
     <footer>
+      <span className="dashed-border">&nbsp;</span>
       <ul className="connect no-list">
         <li>
           <a href="https://t.me/a2uned" target="_blank" rel="noopener noreferrer" title="Telegram">
             <i className="fa fa-telegram" aria-hidden="true"></i>
             <span className="connect-info">
-                            <strong>Telegram </strong>/
-                            a2uned
-                        </span>
+                <strong>Telegram </strong>/
+                a2uned
+            </span>
           </a>
         </li>
         <li>
           <a href="https://twitter.com/a2uned" target="_blank" rel="noopener noreferrer" title="Twitter">
             <i className="fa fa-twitter-square" aria-hidden="true"></i>
             <span className="connect-info">
-                            <strong>Twitter </strong>/
-                            @a2uned
-                        </span>
+                <strong>Twitter </strong>/
+                @a2uned
+            </span>
           </a>
         </li>
         <li>
           <a href="https://github.com/a2uned-solutions" target="_blank" rel="noopener noreferrer" title="GitHub">
             <i className="fa fa-github" aria-hidden="true"></i>
             <span className="connect-info">
-                            <strong>GitHub </strong>/
-                            a2uned-solutions
-                        </span>
+                <strong>GitHub </strong>/
+                a2uned-solutions
+            </span>
           </a>
         </li>
         {/*<li>*/}
