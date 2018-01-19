@@ -107,7 +107,22 @@ button {
   color: $cSecondaryText;
 }
 
-.message {}
+#message {
+  position: fixed;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  background: $cAction;
+  color: $cW;
+  margin: 0;
+  padding: 10px;
+  font-weight: 300;
+  transition: top 0.25s;
+
+  &.visible {
+    top: 0;
+  }
+}
 
 //-------------------------//
 //-----> Layout

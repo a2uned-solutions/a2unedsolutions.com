@@ -67,6 +67,20 @@ button {
 .c-secondary-text {
   color: #d2d2d2; }
 
+#message {
+  position: fixed;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  background: #527435;
+  color: #ffffff;
+  margin: 0;
+  padding: 10px;
+  font-weight: 300;
+  transition: top 0.25s; }
+  #message.visible {
+    top: 0; }
+
 .app {
   text-align: left;
   background: url("images/techstack.jpg") fixed;

@@ -8,6 +8,8 @@ export default class WalletAddresses extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      active: false,
+      copiedWallet: '',
       wallets : [
         {
           name: 'Bitcoin',
@@ -40,20 +42,29 @@ export default class WalletAddresses extends React.Component {
   copyAddressClick(id) {
     let copyText = document.getElementById(id);
     let coinName = copyText.name;
+
     copyText.select();
     document.execCommand('copy');
 
-    // let message = document.getElementsByClassName(id);
+    this.setState({
+      messageActive: true,
+      copiedWallet: coinName
+    });
 
-    alert(coinName + " Address Copied " + copyText.value);
+    setTimeout(() => {
+      this.setState({
+        messageActive: false,
+        copiedWallet: ''
+      });
+    }, 1500)
   }
 
   render() {
     const wallets = this.state.wallets;
 
-    const wallet = wallets.map((item) => {
+    const walletList = wallets.map((item) => {
       return (
-        <li>
+        <li  key={item.symbol}>
           <div className="crypto-asset">
             <img src={item.icon} alt={item.name} />
             <h5>{item.name}</h5>
@@ -63,9 +74,6 @@ export default class WalletAddresses extends React.Component {
             <button onClick={() => this.copyAddressClick(item.symbol)} title="Copy">
               <i className="fa fa-clone" aria-hidden="true"></i>
             </button>
-            {/*<span className={`${item.symbol} message success`}>*/}
-              {/*{`${item.name} Address Copied to Clipboard`}*/}
-            {/*</span>*/}
           </div>
         </li>
       )
@@ -73,9 +81,10 @@ export default class WalletAddresses extends React.Component {
 
     return (
         <section id="payments-donations">
+          <h3 id="message" className={this.state.messageActive ? 'visible' : 'hidden'}>{`${this.state.copiedWallet} Address Copied to Clipboard`}</h3>
           <h2>Payments <span className="thin">&amp;</span> Donations</h2>
           <ul className="no-list crypto-addresses">
-            {wallet}
+            {walletList}
           </ul>
         </section>
     );
