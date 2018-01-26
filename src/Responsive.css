@@ -36,6 +36,11 @@
   header .logo {
     max-width: 140px;
     padding: 15px; }
+  header .blog-link {
+    width: 61px;
+    font-size: 1.4rem;
+    top: 10px;
+    right: -11px; }
 
   footer {
     width: 45px; }

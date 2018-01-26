@@ -30,16 +30,27 @@ h5 {
   margin: 0 0 8px 0; }
 
 a {
-  color: #527435; }
+  color: #527435;
+  text-decoration: none;
+  transition: color 0.5s; }
+  a:hover, a:focus {
+    color: #86be40; }
 
+.button,
 button {
-  background: #527435;
+  background-color: #527435;
   color: #ffffff;
   border: none;
   outline: none;
   padding: 5px 8px;
   text-align: center;
-  cursor: pointer; }
+  cursor: pointer;
+  transition: background-color 0.5s; }
+  .button:hover, .button:focus,
+  button:hover,
+  button:focus {
+    background: #86be40;
+    color: #ffffff; }
 
 .block {
   display: block; }
@@ -97,6 +108,22 @@ header {
     max-width: 240px;
     padding: 20px;
     display: block; }
+  header .blog-link {
+    display: block;
+    background: #fff;
+    position: absolute;
+    top: 25px;
+    right: -25px;
+    font-weight: 900;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    -webkit-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    transform: rotate(270deg);
+    z-index: 999;
+    padding: 10px 0;
+    width: 92px;
+    text-align: center; }
 
 footer {
   position: fixed;
@@ -265,6 +292,17 @@ section {
   padding: 50px 0 50px 90px; }
   #payments-donations h2 {
     color: #ffffff; }
+  #payments-donations .referral-action {
+    padding: 30px 0 0 0;
+    font-weight: 400;
+    font-size: 1.3rem; }
+    #payments-donations .referral-action a {
+      padding: 7px 10px;
+      width: 100%;
+      display: block; }
+    #payments-donations .referral-action .referral {
+      font-weight: 300;
+      padding: 0 0 0 10px; }
   #payments-donations .crypto-addresses {
     overflow: hidden;
     margin-right: 20px; }

@@ -3,6 +3,7 @@ import btc from '../images/crypto-icons/white/btc.svg';
 import ltc from '../images/crypto-icons/white/ltc.svg';
 import eth from '../images/crypto-icons/white/etc.svg';
 import doge from '../images/crypto-icons/white/doge.svg';
+import bts from '../images/crypto-icons/white/bts.svg';
 
 export default class WalletAddresses extends React.Component {
   constructor(props) {
@@ -34,6 +35,12 @@ export default class WalletAddresses extends React.Component {
           symbol: 'doge',
           icon: doge,
           address: 'A6zJuxpb7hC4T4Qs12XmDikgmECDyz7LSE'
+        },
+        {
+          name: 'BitShares Username',
+          symbol: 'bts',
+          icon: bts,
+          address: 'a2uned'
         }
       ]
     };
@@ -85,6 +92,12 @@ export default class WalletAddresses extends React.Component {
           <h2>Payments <span className="thin">&amp;</span> Donations</h2>
           <ul className="no-list crypto-addresses">
             {walletList}
+            <li className="referral-action">
+              <a href="https://wallet.bitshares.org/?r=a2uned" target="_blank" rel="noopener noreferrer" className="button">
+                <span>Create A Free BitShares Account </span>
+                <span className="referral">(Referral)</span>
+              </a>
+            </li>
           </ul>
         </section>
     );

@@ -61,16 +61,31 @@ h5 {
 
 a {
   color: $cAction;
+  text-decoration: none;
+  transition: color 0.5s;
+
+  &:hover,
+  &:focus {
+    color: $cAction2;
+  }
 }
 
+.button,
 button {
-  background: $cAction;
+  background-color: $cAction;
   color: $cW;
   border: none;
   outline: none;
   padding: 5px 8px;
   text-align: center;
   cursor: pointer;
+  transition: background-color 0.5s;
+
+  &:hover,
+  &:focus {
+    background: $cAction2;
+    color: $cW;
+  }
 }
 
 // Helper Classes
@@ -146,6 +161,24 @@ header {
     max-width: 240px;
     padding: 20px;
     display: block;
+  }
+
+  .blog-link {
+    display: block;
+    background: #fff;
+    position: absolute;
+    top: 25px;
+    right: -25px;
+    font-weight: 900;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    -webkit-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    transform: rotate(270deg);
+    z-index: 999;
+    padding: 10px 0;
+    width: 92px;
+    text-align: center;
   }
 }
 
@@ -384,6 +417,23 @@ section {
 
   h2 {
     color: $cW;
+  }
+
+  .referral-action {
+    padding: 30px 0 0 0;
+    font-weight: 400;
+    font-size: 1.3rem;
+
+    a {
+      padding: 7px 10px;
+      width: 100%;
+      display: block;
+    }
+
+    .referral {
+      font-weight: 300;
+      padding: 0 0 0 10px;
+    }
   }
 
   .crypto-addresses {
