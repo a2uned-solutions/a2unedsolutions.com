@@ -28,7 +28,7 @@ export default class WalletAddresses extends React.Component {
           name: 'Ethereum',
           symbol: 'etc',
           icon: eth,
-          address: '0xeddaa7bbae3c014aef3905453e24845333e49709'
+          address: '0xAfddF58005bAe8E79fb4E15c691519C6d05Ef989'
         },
         {
           name: 'Dogecoin',
@@ -94,7 +94,7 @@ export default class WalletAddresses extends React.Component {
             {walletList}
             <li className="referral-action">
               <a href="https://wallet.bitshares.org/?r=a2uned" target="_blank" rel="noopener noreferrer" className="button">
-                <span>Create A Free BitShares Account </span>
+                <span>Create A BitShares Account </span>
                 <span className="referral">(Referral)</span>
               </a>
             </li>
