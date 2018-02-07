@@ -38,6 +38,9 @@ class App extends Component {
             <aside className="content">
                 <h2>Growing with Decentralized Applications</h2>
                 <p>With the rise of Bitcoin and the Ethereum Network, we believe the disruptive power of blockchain technology has just begun. <em>Our goal</em> is to create engaging and accessible user interfaces that seamlessly connect with back-end API’s. Many of our projects will be built on decentralized networks, utilize blockchain technology, and work with cryptocurrencies.</p>
+                <p>
+                  <a href="https://blog.a2unedsolutions.com" className="button">Checkout Our Blog</a>
+                </p>
             </aside>
         </section>
         <section id="techstack">
