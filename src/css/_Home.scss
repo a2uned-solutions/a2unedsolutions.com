@@ -1,0 +1,64 @@
+.home {
+
+}
+
+.hero {
+  position: relative;
+
+  h1 {
+    position: relative;
+    font-size: 9vw;
+    color: #fff;
+    z-index: 9;
+    padding: 13% 3%;
+    text-align: left;
+
+    > span {
+      display: flex;
+      align-items: center;
+    }
+
+    .title {
+      display: block;
+    }
+
+    .sub-title {
+      font-size: 5vw;
+      margin: -8px 0 0 17vw;
+
+      .thin {
+        margin: 0 10px 0 15px;
+      }
+    }
+
+    .thin {
+      font-weight: 300;
+
+      &.small {
+        font-size: 4vw;
+        position: relative;
+        top: -15px;
+      }
+    }
+
+    .action {
+      text-transform: uppercase;
+      color: $cW;
+      background: rgba($cAction2, 0.8);
+      padding: 5px 15px;
+      line-height: 1;
+      display: inline-block;
+      margin: 0px 0 -8px 12px;
+      font-size: 7vw;
+      font-weight: 400;
+    }
+  }
+
+  .hero-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 0;
+  }
+}

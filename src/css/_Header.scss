@@ -1,0 +1,78 @@
+//-------------------------//
+//-----> Header
+//-------------------------//
+.app-header {
+  z-index: 9;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba($cW, 0.3);
+  width: 100%;
+  height: 78px;
+  overflow: hidden;
+
+  .branding {
+    background: $cW;
+    padding: 15px 25px 12px 25px;
+    margin: 0;
+    max-width: 200px;
+  }
+
+  .logo {
+    width: 100%;
+  }
+
+  nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+
+    ul {
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+      display: inline-block;
+
+      //&:after {
+      //  display: block;
+      //  content: '';
+      //  border-top: 1px solid rgba($cAction, 0.3);
+      //  border-bottom: 1px solid rgba($cW, 0.3);
+      //  height: 1px;
+      //  position: relative;
+      //  top: -18px;
+      //}
+      //
+      //&:last-child {
+      //
+      //  &:after {
+      //    border: none;
+      //  }
+      //
+      //  a {
+      //    margin-right: 0;
+      //  }
+      //}
+
+      a {
+        display: block;
+        line-height: 1;
+        font-weight: 400;
+        z-index: 5;
+        position: relative;
+        border-left: 1px solid rgba($cAction, 0.6);
+        //border-right: 1px solid rgba($cW, 0.6);
+        //border-top: 1px solid rgba($cAction, 0.6);
+        //border-top: 1px solid rgba($cAction, 0.6);
+        background: $cW;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        padding: 33px 25px;
+        //margin-right: 20px;
+      }
+    }
+  }
+}

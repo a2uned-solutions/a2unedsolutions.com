@@ -1,0 +1,178 @@
+html {
+  font-size: 62.5%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+body {
+  font-family: "Nunito Sans", sans-serif;
+  color: #3f4041;
+  font-size: 1.8rem;
+  font-weight: 300;
+  line-height: 1.4; }
+
+h1 {
+  font-weight: 900;
+  font-size: 4.8rem;
+  margin: 0; }
+
+h2 {
+  font-size: 2.8rem;
+  margin: 0 0 20px 0; }
+
+h3 {
+  font-size: 2rem; }
+
+h4 {
+  font-size: 1.8rem; }
+
+h5 {
+  font-size: 1.8rem;
+  margin: 0 0 8px 0; }
+
+a {
+  color: #527435;
+  text-decoration: none;
+  transition: color 0.5s; }
+  a:hover, a:focus {
+    color: #86be40; }
+
+.button,
+button {
+  background-color: #527435;
+  color: #ffffff;
+  border: none;
+  outline: none;
+  padding: 5px 8px;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.5s; }
+  .button:hover, .button:focus,
+  button:hover,
+  button:focus {
+    background: #86be40;
+    color: #ffffff; }
+
+.block {
+  display: block; }
+
+.no-list {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+.align-right {
+  text-align: right; }
+
+.thin {
+  font-weight: 300; }
+
+.small-title-caps {
+  font-weight: 300;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  display: block; }
+
+.blue,
+.green,
+.red {
+  width: 150px;
+  height: 150px;
+  background: blue;
+  display: inline-block;
+  margin: 0 20px 0 0; }
+
+.green {
+  background: green; }
+
+.red {
+  background: red; }
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px; }
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
+
+.app-header {
+  z-index: 9;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.3);
+  width: 100%;
+  height: 78px;
+  overflow: hidden; }
+  .app-header .branding {
+    background: #ffffff;
+    padding: 15px 25px 12px 25px;
+    margin: 0;
+    max-width: 200px; }
+  .app-header .logo {
+    width: 100%; }
+  .app-header nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%; }
+    .app-header nav ul {
+      margin: 0;
+      padding: 0; }
+    .app-header nav li {
+      display: inline-block; }
+      .app-header nav li a {
+        display: block;
+        line-height: 1;
+        font-weight: 400;
+        z-index: 5;
+        position: relative;
+        border-left: 1px solid rgba(82, 116, 53, 0.6);
+        background: #ffffff;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        padding: 33px 25px; }
+
+.hero {
+  position: relative; }
+  .hero h1 {
+    position: relative;
+    font-size: 9vw;
+    color: #fff;
+    z-index: 9;
+    padding: 13% 3%;
+    text-align: left; }
+    .hero h1 > span {
+      display: flex;
+      align-items: center; }
+    .hero h1 .title {
+      display: block; }
+    .hero h1 .sub-title {
+      font-size: 5vw;
+      margin: -8px 0 0 17vw; }
+      .hero h1 .sub-title .thin {
+        margin: 0 10px 0 15px; }
+    .hero h1 .thin {
+      font-weight: 300; }
+      .hero h1 .thin.small {
+        font-size: 4vw;
+        position: relative;
+        top: -15px; }
+    .hero h1 .action {
+      text-transform: uppercase;
+      color: #ffffff;
+      background: rgba(134, 190, 64, 0.8);
+      padding: 5px 15px;
+      line-height: 1;
+      display: inline-block;
+      margin: 0px 0 -8px 12px;
+      font-size: 7vw;
+      font-weight: 400; }
+  .hero .hero-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 0; }
