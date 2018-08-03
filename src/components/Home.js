@@ -12,6 +12,9 @@ class Home extends Component {
           </h1>
           <img src={hero} className="hero-img" alt="Michigan Web Design" />
         </div>
+        <div className="service-intro">
+
+        </div>
       </section>
     );
   }
