@@ -13,7 +13,31 @@ class Home extends Component {
           <img src={hero} className="hero-img" alt="Michigan Web Design" />
         </div>
         <div className="service-intro">
-
+          <ul>
+            <li>
+              <h2>Websites or Applications?</h2>
+              <p>Yes. We build websites that behave like apps. Single page applications (SPA) built with the latest front-end technology. Take your users experiences to the next level.</p>
+              <p className="cta">
+                <a href="#">Drop us a line</a>
+              </p>
+            </li>
+            <li>
+              <h2>So Much More</h2>
+              <p>Development is only part of the process. Here are a few of the services that our grizzled veteran team provides:</p>
+              <ul>
+                <li>Branding Design</li>
+                <li>Search Engine Optimization (SEO) Audit</li>
+                <li>User Interface Specifications</li>
+              </ul>
+              <p className="cta cta-secondary">
+                <a href="#">Checkout the rest of services</a>
+              </p>
+            </li>
+            <li>
+              <h2>Take Control of Your Content</h2>
+              <p>We build custom content management systems that make it easier to manage your online presence. We also provide services that make your content work for you, because in the end content always has been and always will be King.</p>
+            </li>
+          </ul>
         </div>
       </section>
     );
