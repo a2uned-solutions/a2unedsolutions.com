@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './css/app.css';
 import Header from './components/Header';
 import Home from './components/Home';
+import ContactFrom from './components/ContactForm';
 
 class App extends Component {
 
@@ -11,6 +12,7 @@ class App extends Component {
         <Header />
         <main>
           <Home />
+          <ContactFrom />
           <section>
             <h2>Services</h2>
             <ul>
