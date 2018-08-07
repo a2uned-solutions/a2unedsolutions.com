@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import logo from '../images/a2uned_solutions_logo.svg';
 import TextField from '@material-ui/core/TextField';
+import Drawer from '@material-ui/core/Drawer';
+import Button from '@material-ui/core/Button';
 
 class ContactForm extends Component {
 
@@ -14,22 +16,38 @@ class ContactForm extends Component {
     });
   };
 
+  toggleDrawer = (side, open) => () => {
+    this.setState({
+      [side]: open,
+    });
+  };
+
   render() {
     return (
       <aside>
-        <form>
-          <ul>
-            <li>
-              <TextField
-                id="name"
-                label="Name"
-                value={this.state.name}
-                onChange={this.handleChange('name')}
-                margin="normal"
-              />
-            </li>
-          </ul>
-        </form>
+        <Button onClick={this.toggleDrawer('right', true)}>Open Right</Button>
+        <Drawer anchor="right" open={this.state.right} onClose={this.toggleDrawer('right', false)}>
+          <div
+            tabIndex={0}
+            role="button"
+            onClick={this.toggleDrawer('right', false)}
+            onKeyDown={this.toggleDrawer('right', false)}
+          >
+            <form>
+              <ul>
+                <li>
+                  <TextField
+                    id="name"
+                    label="Name"
+                    value={this.state.name}
+                    onChange={this.handleChange('name')}
+                    margin="normal"
+                  />
+                </li>
+              </ul>
+            </form>
+          </div>
+        </Drawer>
       </aside>
     );
   }

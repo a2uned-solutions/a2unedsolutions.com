@@ -96,7 +96,6 @@ button {
     transform: rotate(0deg); }
   to {
     transform: rotate(360deg); } }
-
 .app-header {
   z-index: 9;
   position: absolute;
@@ -135,6 +134,34 @@ button {
         text-transform: uppercase;
         padding: 33px 25px; }
 
+.home .service-intro {
+  position: relative;
+  top: -40px;
+  z-index: 10;
+  font-size: 1.4rem;
+  line-height: 1.7;
+  padding: 5% 0;
+  background: repeating-linear-gradient(45deg, rgba(210, 210, 210, 0.3) 0%, rgba(210, 210, 210, 0.3) 10%, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.3) 50%) 0/15px 15px; }
+  .home .service-intro > ul {
+    list-style: none;
+    margin: 0 auto;
+    padding: 0 5%;
+    display: flex; }
+    .home .service-intro > ul > li {
+      margin: 0 10px;
+      padding: 20px;
+      background: #ffffff;
+      width: 32%;
+      box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.2); }
+  .home .service-intro h2 {
+    text-transform: uppercase;
+    font-size: 1.3vw;
+    font-weight: 600;
+    line-height: 1.4;
+    border-bottom: 1px solid rgba(210, 210, 210, 0.3);
+    padding: 0 0 8px 0;
+    margin: 0 0 10px 0; }
+
 .hero {
   position: relative; }
   .hero h1 {
@@ -171,8 +198,10 @@ button {
       font-size: 7vw;
       font-weight: 400; }
   .hero .hero-img {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 0; }
+
+/*# sourceMappingURL=app.css.map */
