@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from '../images/a2uned_solutions_logo.svg';
 import TextField from '@material-ui/core/TextField';
 import Drawer from '@material-ui/core/Drawer';
 import Button from '@material-ui/core/Button';

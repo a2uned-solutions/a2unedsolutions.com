@@ -29,6 +29,13 @@ h5 {
   font-size: 1.8rem;
   margin: 0 0 8px 0; }
 
+p {
+  margin: 0 0 15px 0; }
+
+ul {
+  margin: 0 0 15px 0;
+  list-style: disc; }
+
 a {
   color: #527435;
   text-decoration: none;
@@ -36,21 +43,23 @@ a {
   a:hover, a:focus {
     color: #86be40; }
 
-.button,
-button {
-  background-color: #527435;
-  color: #ffffff;
-  border: none;
-  outline: none;
-  padding: 5px 8px;
+body button[type=button] {
+  border-radius: 0;
+  margin: 15px 0; }
+  body button[type=button] span {
+    font-size: 1.2rem; }
+
+footer {
   text-align: center;
-  cursor: pointer;
-  transition: background-color 0.5s; }
-  .button:hover, .button:focus,
-  button:hover,
-  button:focus {
-    background: #86be40;
-    color: #ffffff; }
+  position: relative;
+  padding: 5px;
+  background: #ffffff repeating-linear-gradient(45deg, rgba(210, 210, 210, 0.3) 0%, rgba(210, 210, 210, 0.3) 10%, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.3) 50%) 0/15px 15px; }
+  footer .footer-container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 10px; }
+  footer p {
+    margin: 0;
+    padding: 0; }
 
 .block {
   display: block; }
@@ -145,14 +154,27 @@ button {
   .home .service-intro > ul {
     list-style: none;
     margin: 0 auto;
-    padding: 0 5%;
+    padding: 0 4%;
     display: flex; }
     .home .service-intro > ul > li {
       margin: 0 10px;
       padding: 20px;
       background: #ffffff;
-      width: 32%;
+      width: 34%;
+      position: relative;
       box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.2); }
+      .home .service-intro > ul > li p {
+        z-index: 9;
+        position: relative; }
+      .home .service-intro > ul > li:last-child {
+        background: #f5f6f7; }
+        .home .service-intro > ul > li:last-child i.fas {
+          position: absolute;
+          font-size: 104px;
+          bottom: 0;
+          right: 35%;
+          color: #fff;
+          z-index: 0; }
   .home .service-intro h2 {
     text-transform: uppercase;
     font-size: 1.3vw;
@@ -161,6 +183,14 @@ button {
     border-bottom: 1px solid rgba(210, 210, 210, 0.3);
     padding: 0 0 8px 0;
     margin: 0 0 10px 0; }
+.home .about-intro {
+  background: #ffffff;
+  z-index: 10;
+  top: -40px;
+  position: relative;
+  padding: 100px 4%; }
+  .home .about-intro .content-right {
+    width: 60%; }
 
 .hero {
   position: relative; }

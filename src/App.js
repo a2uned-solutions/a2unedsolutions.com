@@ -12,51 +12,49 @@ class App extends Component {
         <Header />
         <main>
           <Home />
-          <ContactFrom />
-          <section>
-            <h2>Services</h2>
-            <ul>
-              <li>Engaging User Interfaces</li>
-              <li>Custom Content Management</li>
-              <li>Search Engine Optimization</li>
-            </ul>
-            <h3>Deliverables</h3>
-            <ul>
-              <li>SEO Audit</li>
-              <li>Accessibility Audit</li>
-            </ul>
-            <h4>Heuristic evaluation, user research, personas, competitive analysis. Design: Wireframes, annotations and specifications, sitemap, prototype, user testing, a/b testing</h4>
-          </section>
-          <section>
-            <h2>Clients</h2>
-            <ul>
-              <li>Lakewares</li>
-              <li>Disrupting Nate</li>
-              <li>Metzger's</li>
-              <li>Fraza</li>
-              <li>Artline</li>
-              <li>HL7</li>
-            </ul>
-          </section>
-          <section>
-            <h2>About Us</h2>
-            <p>Over ten years of experience designing and developing web applications. We enjoy bringing interactive single page applications to life.</p>
-            <ul>
-              <li>
-                <h3>Nathan Olmstead</h3>
-              </li>
-              <li>
-                <h3>Micah Lunt</h3>
-              </li>
-            </ul>
-          </section>
-          <section>
-            <h2>Contact Us</h2>
-            <p>Interested in working with us?</p>
-          </section>
+          {/*<ContactFrom />*/}
+          {/*<section>*/}
+            {/*<h2>Services</h2>*/}
+            {/*<ul>*/}
+              {/*<li>Engaging User Interfaces</li>*/}
+              {/*<li>Custom Content Management</li>*/}
+              {/*<li>Search Engine Optimization</li>*/}
+            {/*</ul>*/}
+            {/*<h3>Deliverables</h3>*/}
+            {/*<ul>*/}
+              {/*<li>SEO Audit</li>*/}
+              {/*<li>Accessibility Audit</li>*/}
+            {/*</ul>*/}
+            {/*<h4>Heuristic evaluation, user research, personas, competitive analysis. Design: Wireframes, annotations and specifications, sitemap, prototype, user testing, a/b testing</h4>*/}
+          {/*</section>*/}
+          {/*<section>*/}
+            {/*<h2>Clients</h2>*/}
+            {/*<ul>*/}
+              {/*<li>Lakewares</li>*/}
+              {/*<li>Disrupting Nate</li>*/}
+              {/*<li>Metzger's</li>*/}
+              {/*<li>Fraza</li>*/}
+              {/*<li>Artline</li>*/}
+              {/*<li>HL7</li>*/}
+            {/*</ul>*/}
+          {/*</section>*/}
+          {/*<section>*/}
+            {/*<h2>About Us</h2>*/}
+            {/*<p>Over ten years of experience designing and developing web applications. We enjoy bringing interactive single page applications to life.</p>*/}
+            {/*<ul>*/}
+              {/*<li>*/}
+                {/*<h3>Nathan Olmstead</h3>*/}
+              {/*</li>*/}
+              {/*<li>*/}
+                {/*<h3>Micah Lunt</h3>*/}
+              {/*</li>*/}
+            {/*</ul>*/}
+          {/*</section>*/}
         </main>
         <footer>
-          <p>&copy; A2uned Solutions LLC</p>
+          <div className="footer-container">
+            <p>&copy; A2uned Solutions LLC</p>
+          </div>
         </footer>
       </div>
     );

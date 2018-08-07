@@ -40,6 +40,15 @@ h5 {
   margin: 0 0 8px 0;
 }
 
+p {
+  margin: 0 0 15px 0;
+}
+
+ul {
+  margin: 0 0 15px 0;
+  list-style: disc;
+}
+
 a {
   color: $cAction;
   text-decoration: none;
@@ -51,21 +60,47 @@ a {
   }
 }
 
-.button,
-button {
-  background-color: $cAction;
-  color: $cW;
-  border: none;
-  outline: none;
-  padding: 5px 8px;
-  text-align: center;
-  cursor: pointer;
-  transition: background-color 0.5s;
+body button[type=button] {
+  border-radius: 0;
+  margin: 15px 0;
 
-  &:hover,
-  &:focus {
-    background: $cAction2;
-    color: $cW;
+  span {
+    font-size: 1.2rem;
+  }
+}
+
+//.button,
+//button {
+//  background-color: $cAction;
+//  color: $cW;
+//  border: none;
+//  outline: none;
+//  padding: 5px 8px;
+//  text-align: center;
+//  cursor: pointer;
+//  transition: background-color 0.5s;
+//
+//  &:hover,
+//  &:focus {
+//    background: $cAction2;
+//    color: $cW;
+//  }
+//}
+
+footer {
+  text-align: center;
+  position: relative;
+  padding: 5px;
+  background: $cW repeating-linear-gradient(45deg, rgba($cSecondaryText, 0.3) 0%, rgba($cSecondaryText, 0.3) 10%, rgba(#ffffff, 0.3) 0%, rgba(#ffffff, 0.3) 50%) 0 / 15px 15px;
+
+  .footer-container {
+    background: rgba(#fff, 0.9);
+    padding: 10px;
+  }
+
+  p {
+    margin: 0;
+    padding: 0;
   }
 }
 
