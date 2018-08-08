@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import {
-  Link
+  Link,
+  NavLink
 } from 'react-router-dom';
 import logo from '../images/a2uned_solutions_logo.svg';
+import ContactForm from './ContactForm'
 
 class Header extends Component {
   render() {
@@ -16,18 +18,19 @@ class Header extends Component {
         <nav>
           <ul>
             <li>
-              <Link to="/services">Services</Link>
+              <NavLink to="/services" activeClassName="active">Services</NavLink>
             </li>
             <li>
-              <Link to="/clients">Clients</Link>
+              <NavLink to="/clients" activeClassName="active">Clients</NavLink>
             </li>
             <li>
-              <Link to="/about-us">About Us</Link>
+              <NavLink to="/about-us" activeClassName="active">About Us</NavLink>
             </li>
             <li>
               <a href={'/'}>
                 <i className="fas fa-envelope"></i>
               </a>
+              {/*<ContactForm/>*/}
             </li>
           </ul>
         </nav>

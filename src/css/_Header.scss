@@ -11,6 +11,7 @@
   height: 78px;
   overflow: hidden;
   z-index: 999;
+  border-bottom: 1px solid rgba($cPrimary, 0.2);
 
   .branding {
     background: $cW;

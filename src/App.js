@@ -3,14 +3,12 @@ import {
   BrowserRouter as Router,
   Route,
   Switch,
-  Redirect
 } from 'react-router-dom';
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 
 import './css/app.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import ContactFrom from './components/ContactForm';
 
 import Home from './components/Home';
 import Clients from './components/Clients';
@@ -23,7 +21,6 @@ class ScrollToTop extends Component {
       window.scrollTo(0, 0)
     }
   }
-
   render() {
     return this.props.children
   }
@@ -35,7 +32,6 @@ class App extends Component {
 
     return (
       <Router>
-        <ScrollToTop>
           <Route
             render={({ location }) => (
               <div>
@@ -43,12 +39,12 @@ class App extends Component {
                   exact
                   path="/"
                 />
+                <ScrollToTop location={location}>
                   <div className="app">
-                    {/*<ContactFrom />*/}
                     <Header />
                     <main>
                       <TransitionGroup>
-                        <CSSTransition key={location.key} classNames="fade" timeout={300}>
+                        <CSSTransition key={location.key} classNames="fade" timeout={800}>
                           <Switch location={location}>
                             <Route exact path="/" component={Home} />
                             <Route exact path="/clients" component={Clients} />
@@ -61,10 +57,10 @@ class App extends Component {
                     </main>
                     <Footer/>
                   </div>
+                </ScrollToTop>
               </div>
             )}
           />
-        </ScrollToTop>
       </Router>
     );
   }

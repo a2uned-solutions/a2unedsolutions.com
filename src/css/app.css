@@ -49,18 +49,24 @@ body button[type=button] {
   body button[type=button] span {
     font-size: 1.2rem; }
 
-footer {
-  text-align: center;
-  position: relative;
-  padding: 5px;
-  background: #ffffff repeating-linear-gradient(45deg, rgba(210, 210, 210, 0.3) 0%, rgba(210, 210, 210, 0.3) 10%, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.3) 50%) 0/15px 15px; }
-  footer .footer-container {
-    background: rgba(255, 255, 255, 0.9);
-    padding: 10px; }
-  footer p {
-    margin: 0;
-    padding: 0; }
+section.sub-page {
+  margin: 100px 30px; }
 
+.fade-enter {
+  opacity: 0;
+  z-index: 1; }
+
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity 750ms ease-in; }
+
+/*
+
+fade-enter-done
+fade-exit
+fade-exit-active
+
+*/
 .block {
   display: block; }
 
@@ -114,7 +120,8 @@ footer {
   width: 100%;
   height: 78px;
   overflow: hidden;
-  z-index: 999; }
+  z-index: 999;
+  border-bottom: 1px solid rgba(63, 64, 65, 0.2); }
   .app-header .branding {
     background: #ffffff;
     padding: 15px 25px 12px 25px;
@@ -143,6 +150,14 @@ footer {
         font-size: 1.2rem;
         text-transform: uppercase;
         padding: 33px 25px; }
+
+footer {
+  background: #fff;
+  text-align: center;
+  padding: 30px;
+  position: relative; }
+  footer .footer-container p {
+    margin: 0; }
 
 .home .service-intro {
   position: relative;

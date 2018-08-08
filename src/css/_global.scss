@@ -69,40 +69,28 @@ body button[type=button] {
   }
 }
 
-//.button,
-//button {
-//  background-color: $cAction;
-//  color: $cW;
-//  border: none;
-//  outline: none;
-//  padding: 5px 8px;
-//  text-align: center;
-//  cursor: pointer;
-//  transition: background-color 0.5s;
-//
-//  &:hover,
-//  &:focus {
-//    background: $cAction2;
-//    color: $cW;
-//  }
-//}
-
-footer {
-  text-align: center;
-  position: relative;
-  padding: 5px;
-  background: $cW repeating-linear-gradient(45deg, rgba($cSecondaryText, 0.3) 0%, rgba($cSecondaryText, 0.3) 10%, rgba(#ffffff, 0.3) 0%, rgba(#ffffff, 0.3) 50%) 0 / 15px 15px;
-
-  .footer-container {
-    background: rgba(#fff, 0.9);
-    padding: 10px;
-  }
-
-  p {
-    margin: 0;
-    padding: 0;
-  }
+section.sub-page {
+  margin: 100px 30px;
 }
+
+//// Animations
+.fade-enter {
+  opacity: 0;
+  z-index: 1;
+}
+
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity 750ms ease-in;
+}
+
+/*
+
+fade-enter-done
+fade-exit
+fade-exit-active
+
+*/
 
 //-------------------------//
 //-----> Helper Classes
