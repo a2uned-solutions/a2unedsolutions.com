@@ -72,12 +72,11 @@ body button[type=button] {
 section.sub-page {
   margin: 78px 0;
   position: relative;
+  background: $cW;
 
   .page-progress {
-    position: absolute;
     height: 3px;
-    top: 0;
-    left: 0;
+    margin: 20px 0 0 0;
     width: 100%;
   }
 
@@ -86,7 +85,7 @@ section.sub-page {
     line-height: 1.4;
     margin: $defaultSpace;
     border-bottom: 1px solid rgba($cSecondaryText, 0.3);
-    padding: 20px 0;
+    padding: 20px 0 0 0;
 
     span.delim {
       color: rgba($cSecondaryText, 0.3);
@@ -112,6 +111,11 @@ section.sub-page {
 
   .page-content {
     opacity: 0;
+    text-align: center;
+
+    .content-intro {
+      margin: 0 $defaultSpace $defaultSpace;
+    }
   }
 }
 
@@ -119,7 +123,14 @@ section.sub-page.loaded {
 
   .page-progress {
     height: 0;
-    transition: height 0.7s;
+    background: none;
+    transition: height 0.6s;
+
+    > div {
+      border-top: rgba($cSecondaryText, 0.3);
+      background: none;
+      transition: all 0.8s;
+    }
   }
 
   .page-content {
@@ -128,7 +139,36 @@ section.sub-page.loaded {
   }
 }
 
+
+// Grid List
+
+.grid-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+
+  li {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    width: 29%;
+    min-height: 300px;
+    padding: 20px;
+    margin: 0 10px 20px 10px;
+    border: 1px solid $cSecondary;
+  }
+}
+
 //// Animations
+
+.fade-exit {
+  display: none;
+}
+
 .fade-enter {
   z-index: 1;
   opacity: 1;

@@ -51,19 +51,18 @@ body button[type=button] {
 
 section.sub-page {
   margin: 78px 0;
-  position: relative; }
+  position: relative;
+  background: #ffffff; }
   section.sub-page .page-progress {
-    position: absolute;
     height: 3px;
-    top: 0;
-    left: 0;
+    margin: 20px 0 0 0;
     width: 100%; }
   section.sub-page .page-header {
     font-weight: 400;
     line-height: 1.4;
     margin: 30px;
     border-bottom: 1px solid rgba(210, 210, 210, 0.3);
-    padding: 20px 0; }
+    padding: 20px 0 0 0; }
     section.sub-page .page-header span.delim {
       color: rgba(210, 210, 210, 0.3);
       font-size: 2.8rem;
@@ -80,14 +79,43 @@ section.sub-page {
       bottom: -3px;
       position: relative; }
   section.sub-page .page-content {
-    opacity: 0; }
+    opacity: 0;
+    text-align: center; }
+    section.sub-page .page-content .content-intro {
+      margin: 0 30px 30px; }
 
 section.sub-page.loaded .page-progress {
   height: 0;
-  transition: height 0.7s; }
+  background: none;
+  transition: height 0.6s; }
+  section.sub-page.loaded .page-progress > div {
+    border-top: rgba(210, 210, 210, 0.3);
+    background: none;
+    transition: all 0.8s; }
 section.sub-page.loaded .page-content {
   opacity: 1;
-  transition: opacity 70ms ease-in; }
+  transition: opacity 700ms ease-in; }
+
+.grid-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap; }
+  .grid-list li {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    width: 29%;
+    min-height: 300px;
+    padding: 20px;
+    margin: 0 10px 20px 10px;
+    border: 1px solid #f5f6f7; }
+
+.fade-exit {
+  display: none; }
 
 .fade-enter {
   z-index: 1;

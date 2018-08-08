@@ -18,7 +18,7 @@ class Clients extends Component {
     setTimeout(
       function() {
         this.setState({ loaded: true });
-      }.bind(this), 1300
+      }.bind(this), 1100
     );
   }
 
@@ -31,7 +31,7 @@ class Clients extends Component {
     if (completed > 100) {
       return;
     } else {
-      const diff = Math.random() * 12;
+      const diff = Math.random() * 20;
       this.setState({ completed: Math.min(completed + diff, 100) });
     }
   };
@@ -42,16 +42,17 @@ class Clients extends Component {
 
     return (
       <section className={`clients sub-page ${loaded && 'loaded'}`}>
-        <LinearProgress className="page-progress" variant="determinate" value={completed} />
         <header className="page-header">
           <Link to="/" title="Home">
             <i className="fas fa-home"></i>
           </Link>
           <span className="delim"> / </span>
           <h1>Clients</h1>
+          <LinearProgress className="page-progress" variant="determinate" value={completed} />
         </header>
         <div className="page-content">
-          <ul>
+          <p className="content-intro">We aren't even a year old yet and we already have some amazing clients.</p>
+          <ul className="grid-list">
             <li>Lakewares</li>
             <li>Disrupting Nate</li>
             <li>Metzger's</li>
