@@ -1,62 +1,71 @@
 import React, { Component } from 'react';
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Redirect
+} from 'react-router-dom';
+import { TransitionGroup, CSSTransition } from "react-transition-group";
+
 import './css/app.css';
 import Header from './components/Header';
-import Home from './components/Home';
+import Footer from './components/Footer';
 import ContactFrom from './components/ContactForm';
+
+import Home from './components/Home';
+import Clients from './components/Clients';
+import AboutUs from './components/AboutUs';
+import Services from './components/Services';
+
+class ScrollToTop extends Component {
+  componentDidUpdate(prevProps) {
+    if (this.props.location !== prevProps.location) {
+      window.scrollTo(0, 0)
+    }
+  }
+
+  render() {
+    return this.props.children
+  }
+}
 
 class App extends Component {
 
   render() {
+
     return (
-      <div className="app">
-        <Header />
-        <main>
-          <Home />
-          {/*<ContactFrom />*/}
-          {/*<section>*/}
-            {/*<h2>Services</h2>*/}
-            {/*<ul>*/}
-              {/*<li>Engaging User Interfaces</li>*/}
-              {/*<li>Custom Content Management</li>*/}
-              {/*<li>Search Engine Optimization</li>*/}
-            {/*</ul>*/}
-            {/*<h3>Deliverables</h3>*/}
-            {/*<ul>*/}
-              {/*<li>SEO Audit</li>*/}
-              {/*<li>Accessibility Audit</li>*/}
-            {/*</ul>*/}
-            {/*<h4>Heuristic evaluation, user research, personas, competitive analysis. Design: Wireframes, annotations and specifications, sitemap, prototype, user testing, a/b testing</h4>*/}
-          {/*</section>*/}
-          {/*<section>*/}
-            {/*<h2>Clients</h2>*/}
-            {/*<ul>*/}
-              {/*<li>Lakewares</li>*/}
-              {/*<li>Disrupting Nate</li>*/}
-              {/*<li>Metzger's</li>*/}
-              {/*<li>Fraza</li>*/}
-              {/*<li>Artline</li>*/}
-              {/*<li>HL7</li>*/}
-            {/*</ul>*/}
-          {/*</section>*/}
-          {/*<section>*/}
-            {/*<h2>About Us</h2>*/}
-            {/*<p>Over ten years of experience designing and developing web applications. We enjoy bringing interactive single page applications to life.</p>*/}
-            {/*<ul>*/}
-              {/*<li>*/}
-                {/*<h3>Nathan Olmstead</h3>*/}
-              {/*</li>*/}
-              {/*<li>*/}
-                {/*<h3>Micah Lunt</h3>*/}
-              {/*</li>*/}
-            {/*</ul>*/}
-          {/*</section>*/}
-        </main>
-        <footer>
-          <div className="footer-container">
-            <p>&copy; A2uned Solutions LLC</p>
-          </div>
-        </footer>
-      </div>
+      <Router>
+        <ScrollToTop>
+          <Route
+            render={({ location }) => (
+              <div>
+                <Route
+                  exact
+                  path="/"
+                />
+                  <div className="app">
+                    {/*<ContactFrom />*/}
+                    <Header />
+                    <main>
+                      <TransitionGroup>
+                        <CSSTransition key={location.key} classNames="fade" timeout={300}>
+                          <Switch location={location}>
+                            <Route exact path="/" component={Home} />
+                            <Route exact path="/clients" component={Clients} />
+                            <Route exact path="/services" component={Services} />
+                            <Route exact path="/about-us" component={AboutUs} />
+                            <Route render={() => <div>Not Found</div>} />
+                          </Switch>
+                        </CSSTransition>
+                      </TransitionGroup>
+                    </main>
+                    <Footer/>
+                  </div>
+              </div>
+            )}
+          />
+        </ScrollToTop>
+      </Router>
     );
   }
 }

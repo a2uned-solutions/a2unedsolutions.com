@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import {
+  Link
+} from 'react-router-dom';
 import logo from '../images/a2uned_solutions_logo.svg';
 
 class Header extends Component {
@@ -6,18 +9,20 @@ class Header extends Component {
     return (
       <header className="app-header">
         <p className="branding">
-          <img src={logo} className="logo" alt="A2uned Solutions" />
+          <Link to="/">
+            <img src={logo} className="logo" alt="A2uned Solutions" />
+          </Link>
         </p>
         <nav>
           <ul>
             <li>
-              <a href={'/'}>Services</a>
+              <Link to="/services">Services</Link>
             </li>
             <li>
-              <a href={'/'}>Clients</a>
+              <Link to="/clients">Clients</Link>
             </li>
             <li>
-              <a href={'/'}>About Us</a>
+              <Link to="/about-us">About Us</Link>
             </li>
             <li>
               <a href={'/'}>
