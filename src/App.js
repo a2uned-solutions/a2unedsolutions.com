@@ -11,9 +11,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 
 import Home from './components/Home';
-import Clients from './components/Clients';
-import AboutUs from './components/AboutUs';
-import Services from './components/Services';
+import SubPage from './components/SubPage';
 
 class ScrollToTop extends Component {
   componentDidUpdate(prevProps) {
@@ -47,9 +45,9 @@ class App extends Component {
                         <CSSTransition key={location.key} classNames="fade" timeout={800}>
                           <Switch location={location}>
                             <Route exact path="/" component={Home} />
-                            <Route exact path="/clients" component={Clients} />
-                            <Route exact path="/services" component={Services} />
-                            <Route exact path="/about-us" component={AboutUs} />
+                            <Route exact path="/clients" component={SubPage} />
+                            <Route exact path="/services" component={SubPage} />
+                            <Route exact path="/about-us" component={SubPage} />
                             <Route render={() => <div>Not Found</div>} />
                           </Switch>
                         </CSSTransition>
