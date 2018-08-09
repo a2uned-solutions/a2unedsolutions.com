@@ -49,53 +49,6 @@ body button[type=button] {
   body button[type=button] span {
     font-size: 1.2rem; }
 
-section.sub-page {
-  margin: 78px 0;
-  position: relative;
-  background: #ffffff; }
-  section.sub-page .page-progress {
-    height: 3px;
-    margin: 20px 0 0 0;
-    width: 100%; }
-  section.sub-page .page-header {
-    font-weight: 400;
-    line-height: 1.4;
-    margin: 30px;
-    border-bottom: 1px solid rgba(210, 210, 210, 0.3);
-    padding: 20px 0 0 0; }
-    section.sub-page .page-header span.delim {
-      color: rgba(210, 210, 210, 0.3);
-      font-size: 2.8rem;
-      margin: 0 5px 0 6px;
-      position: relative;
-      top: 3px;
-      font-weight: 300; }
-    section.sub-page .page-header a {
-      font-size: 2rem; }
-    section.sub-page .page-header h1 {
-      display: inline-block;
-      font-weight: 600;
-      font-size: 3rem;
-      bottom: -3px;
-      position: relative; }
-  section.sub-page .page-content {
-    opacity: 0;
-    text-align: center; }
-    section.sub-page .page-content .content-intro {
-      margin: 0 30px 30px; }
-
-section.sub-page.loaded .page-progress {
-  height: 0;
-  background: none;
-  transition: height 0.6s; }
-  section.sub-page.loaded .page-progress > div {
-    border-top: rgba(210, 210, 210, 0.3);
-    background: none;
-    transition: all 0.8s; }
-section.sub-page.loaded .page-content {
-  opacity: 1;
-  transition: opacity 700ms ease-in; }
-
 .grid-list {
   list-style: none;
   margin: 0;
@@ -330,5 +283,42 @@ footer {
     left: 0;
     width: 100%;
     z-index: 0; }
+
+section.sub-page {
+  margin: 78px 0;
+  position: relative;
+  background: #ffffff; }
+  section.sub-page .page-header {
+    line-height: 1.4;
+    margin: 30px;
+    padding: 20px 0 0 0;
+    text-align: center; }
+    section.sub-page .page-header h1 {
+      display: inline-block;
+      font-weight: 900;
+      font-size: 4.5vw;
+      text-transform: uppercase;
+      bottom: -3px;
+      position: relative; }
+    section.sub-page .page-header span.border {
+      width: 100%;
+      height: 6px;
+      background: #86be40;
+      display: block;
+      margin: 20px auto 0 auto; }
+  section.sub-page .page-content {
+    opacity: 0;
+    text-align: center; }
+    section.sub-page .page-content .content-intro {
+      margin: 0 30px 30px; }
+
+section.sub-page.loaded .page-header span.border {
+  height: 2px;
+  background: rgba(210, 210, 210, 0.3);
+  transition: all 700ms;
+  width: 200px; }
+section.sub-page.loaded .page-content {
+  opacity: 1;
+  transition: opacity 800ms ease-in; }
 
 /*# sourceMappingURL=app.css.map */

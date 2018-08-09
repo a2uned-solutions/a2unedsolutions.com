@@ -1,0 +1,56 @@
+section.sub-page {
+  margin: 78px 0;
+  position: relative;
+  background: $cW;
+
+  .page-header {
+    line-height: 1.4;
+    margin: $defaultSpace;
+    padding: 20px 0 0 0;
+    text-align: center;
+
+    h1 {
+      display: inline-block;
+      font-weight: 900;
+      font-size: 4.5vw;
+      text-transform: uppercase;
+      bottom: -3px;
+      position: relative;
+    }
+
+    span.border {
+      width: 100%;
+      height: 6px;
+      background: $cAction2;
+      display: block;
+      margin: 20px auto 0 auto;
+    }
+  }
+
+  .page-content {
+    opacity: 0;
+    text-align: center;
+
+    .content-intro {
+      margin: 0 $defaultSpace $defaultSpace;
+    }
+  }
+}
+
+section.sub-page.loaded {
+
+  .page-header {
+
+    span.border {
+      height: 2px;
+      background: rgba($cSecondaryText, 0.3);
+      transition: all 700ms;
+      width: 200px;
+    }
+  }
+
+  .page-content {
+    opacity: 1;
+    transition: opacity 800ms ease-in;
+  }
+}
