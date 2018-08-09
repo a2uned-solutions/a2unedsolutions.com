@@ -1,0 +1,82 @@
+.sub-page.services {
+
+  .page-intro {
+    max-width: 760px;
+    width: 90%;
+    margin: 0 auto 40px auto;
+
+    p {
+
+      strong {
+        //display: block;
+      }
+    }
+  }
+}
+
+.service-listings {
+  padding: $defaultSpace;
+
+  .listing-heading {
+    position: relative;
+
+    > h2 {
+      font-weight: 300;
+      text-transform: uppercase;
+      font-size: 2rem;
+      margin: 0 0 $defaultSpace 0;
+      padding: 0 0 10px 0;
+      border-bottom: 1px solid rgba($cSecondaryText, 0.3);
+    }
+
+    p.key {
+      font-size: 1.2rem;
+      color: $cAction2;
+      position: absolute;
+      top: 3px;
+      right: 0;
+      line-height: 1;
+
+      i {
+        font-size: 1.6rem;
+        position: relative;
+        top: 2px;
+      }
+    }
+  }
+
+  .grid-list {
+
+    li {
+      align-items: normal;
+      justify-content: normal;
+      display: block;
+
+      ul {
+        text-align: left;
+        margin: 0;
+        padding: 0;
+
+        li {
+          border: none;
+          padding: 10px;
+          margin: 0;
+          width: auto;
+          min-height: inherit;
+          text-align: left;
+          display: flex;
+          justify-content: space-between;
+
+          &:nth-child(odd) {
+            background: rgba($cSecondaryText, 0.2);
+          }
+
+          i {
+            text-align: right;
+            color: rgba($cAction2, 0.25);
+          }
+        }
+      }
+    }
+  }
+}

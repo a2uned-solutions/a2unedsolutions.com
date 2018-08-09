@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
-import Clients from './Clients';
-import Services from './Services';
-import AboutUs from './AboutUs';
+import Clients from './SubPages/Clients';
+import Services from './SubPages/Services';
+import AboutUs from './SubPages/AboutUs';
 
 class SubPage extends Component {
 
@@ -34,7 +34,7 @@ class SubPage extends Component {
     if (page === '/clients') {
       this.setState({
         title: 'Clients',
-        classNames: 'client ',
+        classNames: 'clients',
         component: <Clients/>
       });
     }
@@ -42,7 +42,7 @@ class SubPage extends Component {
     if (page === '/services') {
       this.setState({
         title: 'Services',
-        classNames: 'services ',
+        classNames: 'services',
         component: <Services/>
       });
     }
@@ -50,7 +50,7 @@ class SubPage extends Component {
     if (page === '/about-us') {
       this.setState({
         title: 'About Us',
-        classNames: 'about-us ',
+        classNames: 'about-us',
         component: <AboutUs/>
       });
     }
