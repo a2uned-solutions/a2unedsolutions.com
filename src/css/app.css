@@ -214,6 +214,22 @@ fade-exit-active
         .app-header nav li a.active {
           background: rgba(82, 116, 53, 0.6);
           color: #ffffff; }
+      .app-header nav li aside {
+        display: block;
+        line-height: 1;
+        font-weight: 400;
+        z-index: 5;
+        position: relative;
+        border-left: 1px solid rgba(82, 116, 53, 0.6);
+        background: #ffffff;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        padding: 33px 25px; }
+      .app-header nav li button {
+        margin: 0;
+        padding: 0;
+        min-width: inherit;
+        min-height: inherit; }
 
 footer {
   background: #fff;

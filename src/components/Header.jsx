@@ -27,10 +27,7 @@ class Header extends Component {
               <NavLink to="/about-us" activeClassName="active">About Us</NavLink>
             </li>
             <li>
-              <a href={'/'}>
-                <i className="fas fa-envelope"></i>
-              </a>
-              {/*<ContactForm/>*/}
+              <ContactForm/>
             </li>
           </ul>
         </nav>

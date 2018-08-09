@@ -24,7 +24,9 @@ class ContactForm extends Component {
   render() {
     return (
       <aside>
-        <Button onClick={this.toggleDrawer('right', true)}>Open Right</Button>
+        <Button onClick={this.toggleDrawer('right', true)}>
+          <i className="fas fa-envelope"></i>
+        </Button>
         <Drawer anchor="right" open={this.state.right} onClose={this.toggleDrawer('right', false)}>
           <div
             tabIndex={0}

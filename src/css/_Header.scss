@@ -80,6 +80,26 @@
           color: $cW;
         }
       }
+
+      aside {
+        display: block;
+        line-height: 1;
+        font-weight: 400;
+        z-index: 5;
+        position: relative;
+        border-left: 1px solid rgba($cAction, 0.6);
+        background: $cW;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        padding: 33px 25px;
+      }
+
+      button {
+        margin: 0;
+        padding: 0;
+        min-width: inherit;
+        min-height: inherit;
+      }
     }
   }
 }
