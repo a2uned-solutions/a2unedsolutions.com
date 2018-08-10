@@ -1,17 +1,5 @@
 .sub-page.services {
 
-  .page-intro {
-    max-width: 760px;
-    width: 90%;
-    margin: 0 auto 40px auto;
-
-    p {
-
-      strong {
-        //display: block;
-      }
-    }
-  }
 }
 
 .service-listings {
@@ -47,15 +35,34 @@
 
   .grid-list {
 
+    h2 {
+      text-transform: uppercase;
+      font-size: 1.3vw;
+      font-weight: 600;
+      line-height: 1.4;
+      border-bottom: 1px solid rgba(210, 210, 210, 0.3);
+      padding: 0 0 8px 0;
+      margin: 0 0 10px 0;
+    }
+
+    .second-level-list {
+      margin-top: 30px;
+    }
+
     li {
       align-items: normal;
       justify-content: normal;
       display: block;
+      border: none;
+      padding: 0;
+      margin: 0 15px 40px 15px;
+      width: 47%;
 
       ul {
         text-align: left;
         margin: 0;
         padding: 0;
+
 
         li {
           border: none;
@@ -73,7 +80,7 @@
 
           i {
             text-align: right;
-            color: rgba($cAction2, 0.25);
+            color: rgba($cAction2, 0.5);
           }
         }
       }

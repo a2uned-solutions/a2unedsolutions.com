@@ -16,8 +16,10 @@ h1 {
   margin: 0; }
 
 h2 {
-  font-size: 2.8rem;
-  margin: 0 0 20px 0; }
+  text-transform: uppercase;
+  font-size: 1.3vw;
+  font-weight: 600;
+  line-height: 1.4; }
 
 h3 {
   font-size: 2rem; }
@@ -55,7 +57,7 @@ body button[type=button] {
   padding: 0;
   display: flex;
   flex-wrap: wrap; }
-  .grid-list li {
+  .grid-list > li {
     display: flex;
     text-align: center;
     align-items: center;
@@ -311,6 +313,10 @@ section.sub-page {
     text-align: center; }
     section.sub-page .page-content .content-intro {
       margin: 0 30px 30px; }
+    section.sub-page .page-content .page-intro {
+      max-width: 760px;
+      width: 90%;
+      margin: 0 auto 40px auto; }
 
 section.sub-page.loaded .page-header span.border {
   height: 2px;
@@ -320,11 +326,6 @@ section.sub-page.loaded .page-header span.border {
 section.sub-page.loaded .page-content {
   opacity: 1;
   transition: opacity 800ms ease-in; }
-
-.sub-page.services .page-intro {
-  max-width: 760px;
-  width: 90%;
-  margin: 0 auto 40px auto; }
 
 .service-listings {
   padding: 30px; }
@@ -348,10 +349,24 @@ section.sub-page.loaded .page-content {
         font-size: 1.6rem;
         position: relative;
         top: 2px; }
+  .service-listings .grid-list h2 {
+    text-transform: uppercase;
+    font-size: 1.3vw;
+    font-weight: 600;
+    line-height: 1.4;
+    border-bottom: 1px solid rgba(210, 210, 210, 0.3);
+    padding: 0 0 8px 0;
+    margin: 0 0 10px 0; }
+  .service-listings .grid-list .second-level-list {
+    margin-top: 30px; }
   .service-listings .grid-list li {
     align-items: normal;
     justify-content: normal;
-    display: block; }
+    display: block;
+    border: none;
+    padding: 0;
+    margin: 0 15px 40px 15px;
+    width: 47%; }
     .service-listings .grid-list li ul {
       text-align: left;
       margin: 0;
@@ -369,6 +384,6 @@ section.sub-page.loaded .page-content {
           background: rgba(210, 210, 210, 0.2); }
         .service-listings .grid-list li ul li i {
           text-align: right;
-          color: rgba(134, 190, 64, 0.25); }
+          color: rgba(134, 190, 64, 0.5); }
 
 /*# sourceMappingURL=app.css.map */

@@ -26,7 +26,7 @@ const Services = () => {
             </ul>
           </li>
           <li>
-            <h2>Branding &amp; Design</h2>
+            <h2>Branding <span className="thin">&amp;</span> Design</h2>
             <ul>
               <li>Application Interface Design</li>
               <li>Site Interface Design</li>
@@ -39,7 +39,7 @@ const Services = () => {
           <li>
             <h2>User Experience (UX)</h2>
             <ul>
-              <li>Heuristic evaluation <i className="far fa-file-alt"></i></li>
+              <li>Heuristic Evaluation <i className="far fa-file-alt"></i></li>
               <li>User Research <i className="far fa-file-alt"></i></li>
               <li>Personas <i className="far fa-file-alt"></i></li>
               <li>Competitive Analysis <i className="far fa-file-alt"></i></li>
@@ -52,17 +52,18 @@ const Services = () => {
             </ul>
           </li>
           <li>
-            <h2>Testing &amp; Site Audits</h2>
+            <h2>Testing <span className="thin">&amp;</span> Site Audits</h2>
             <ul>
               <li>Quality Assurance Testing</li>
               <li>Quality Assurance Audit <i className="far fa-file-alt"></i></li>
               <li>SEO Audit <i className="far fa-file-alt"></i></li>
               <li>Accessibility Audit <i className="far fa-file-alt"></i></li>
             </ul>
-            <h2>DevOps</h2>
+            <h2 className="second-level-list">DevOps</h2>
             <ul>
               <li>Cloud based Hosting</li>
               <li>Site Monitoring</li>
+              <li>Analytics</li>
             </ul>
           </li>
         </ul>
