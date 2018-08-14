@@ -189,10 +189,28 @@ fade-exit-active
 footer {
   background: #fff;
   text-align: center;
-  padding: 30px;
-  position: relative; }
+  padding: 20px;
+  position: relative;
+  border-top: 1px solid rgba(63, 64, 65, 0.2); }
   footer .footer-container p {
-    margin: 0; }
+    margin: 0;
+    font-size: 1.3rem; }
+  footer .footer-container .social {
+    position: absolute;
+    top: 17px;
+    left: 20px; }
+    footer .footer-container .social li {
+      display: inline-block;
+      font-size: 2rem;
+      margin: 0 15px 0 0; }
+  footer .footer-container .notice {
+    position: absolute;
+    top: 20px;
+    right: 20px; }
+    footer .footer-container .notice a {
+      color: #86be40;
+      padding: 0 0 0 4px;
+      font-weight: 700; }
 
 .home .service-intro {
   position: relative;

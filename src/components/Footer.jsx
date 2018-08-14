@@ -5,7 +5,7 @@ class Footer extends Component {
     return (
       <footer>
         <div className="footer-container">
-          <ul className="social">
+          <ul className="social no-list">
             <li>
               <a href="https://twitter.com/a2uned" target="_blank" rel="noopener noreferrer"  title="Twitter">
                 <i className="fab fa-twitter" aria-hidden="true"></i>
@@ -18,6 +18,9 @@ class Footer extends Component {
             </li>
           </ul>
           <p className="copy-creds">&copy; A2uned Solutions LLC</p>
+          <p className="notice">Interested in Blockchain Technology?
+            <a href="https://a2uned.io" target="_blank" rel="noopener noreferrer">So are we</a>
+          </p>
         </div>
       </footer>
     );
