@@ -94,6 +94,67 @@ body button[type=button] {
   }
 }
 
+.image-grid {
+  margin: 100px auto $defaultSpace auto;
+  max-width: 1200px;
+
+  > li {
+    position: relative;
+    border: none;
+    padding: 0;
+    margin: 0 0 60px 0;
+    min-height: inherit;
+    width: 45%;
+
+    img {
+      max-width: 350px;
+      display: block;
+    }
+
+    h2 {
+      position: absolute;
+      bottom: -14px;
+      left: 0;
+      padding: 10px 0;
+      background: $cSecondaryText;
+      color: $cW;
+      width: 100%;
+    }
+
+    a {
+      display: flex;
+      position: relative;
+      width: 100%;
+      height: 100%;
+      min-height: 250px;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid $cSecondary;
+      padding: 20px;
+      margin: 0 10px 20px 10px;
+      box-shadow: 0px 0px 8px 1px rgba(0,0,0,0.08);
+      overflow: hidden;
+      background: $cW;
+
+      &:hover {
+        box-shadow: none;
+
+        img {
+          -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+          transition: all 0.5s;
+        }
+
+        h2 {
+          background: $cAction;
+          transition: all 0.5s;
+        }
+      }
+    }
+  }
+}
+
 //// Animations
 
 .fade-exit {
