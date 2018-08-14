@@ -38,46 +38,46 @@
     li {
       display: inline-block;
 
-      //&:after {
-      //  display: block;
-      //  content: '';
-      //  border-top: 1px solid rgba($cAction, 0.3);
-      //  border-bottom: 1px solid rgba($cW, 0.3);
-      //  height: 1px;
-      //  position: relative;
-      //  top: -18px;
-      //}
-      //
-      //&:last-child {
-      //
-      //  &:after {
-      //    border: none;
-      //  }
-      //
-      //  a {
-      //    margin-right: 0;
-      //  }
-      //}
-
       a {
         display: block;
         line-height: 1;
         font-weight: 400;
         z-index: 5;
         position: relative;
-        border-left: 1px solid rgba($cAction, 0.6);
-        //border-right: 1px solid rgba($cW, 0.6);
-        //border-top: 1px solid rgba($cAction, 0.6);
-        //border-top: 1px solid rgba($cAction, 0.6);
         background: $cW;
         font-size: 1.2rem;
         text-transform: uppercase;
         padding: 33px 25px;
-        //margin-right: 20px;
+
+        &:after {
+          position: absolute;
+          content: '';
+          display: table;
+          height: 3px;
+          width: 101%;
+          background: rgba($cAction, 0.1);
+          bottom: -10px;
+          left: 0;
+          transition: all 0.5s;
+        }
+
+        &:hover {
+          color: $cAction2;
+
+          &:after {
+            bottom: 0;
+            background: $cAction2;
+          }
+        }
 
         &.active {
-          background: rgba($cAction, 0.6);
-          color: $cW;
+          cursor: default;
+          color: $cAction;
+
+          &:after {
+            bottom: 0;
+            background: $cAction;
+          }
         }
       }
 
@@ -87,7 +87,6 @@
         font-weight: 400;
         z-index: 5;
         position: relative;
-        border-left: 1px solid rgba($cAction, 0.6);
         background: $cW;
         font-size: 1.2rem;
         text-transform: uppercase;
@@ -99,6 +98,7 @@
         padding: 0;
         min-width: inherit;
         min-height: inherit;
+        color: $cAction;
       }
     }
   }

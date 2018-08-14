@@ -27,15 +27,16 @@ class ContactForm extends Component {
         <Button onClick={this.toggleDrawer('right', true)}>
           <i className="fas fa-envelope"></i>
         </Button>
-        <Drawer anchor="right" open={this.state.right} onClose={this.toggleDrawer('right', false)}>
+        <Drawer anchor="right" className="drawer" open={this.state.right} onClose={this.toggleDrawer('right', false)}>
           <div
             tabIndex={0}
             role="button"
             onClick={this.toggleDrawer('right', false)}
             onKeyDown={this.toggleDrawer('right', false)}
+            className="form-drawer"
           >
             <form>
-              <ul>
+              <ul className="no-list form-list">
                 <li>
                   <TextField
                     id="name"

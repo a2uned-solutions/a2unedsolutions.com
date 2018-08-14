@@ -1,0 +1,23 @@
+.drawer form {
+  font-size: 1.4rem;
+
+  label {
+    font-size: 1.4rem;
+  }
+
+  input {
+    font-size: 1.4rem;
+  }
+}
+
+.form-list {
+
+  li > div {
+    width: 100%;
+  }
+}
+
+.form-drawer {
+  min-width: 300px;
+  padding: 13px $defaultSpace $defaultSpace;
+}
