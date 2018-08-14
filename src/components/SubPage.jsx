@@ -20,7 +20,7 @@ class SubPage extends Component {
     setTimeout(
       function() {
         this.setState({ loaded: true });
-      }.bind(this), 400
+      }.bind(this), 300
     );
   }
 

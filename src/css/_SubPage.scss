@@ -50,13 +50,13 @@ section.sub-page.loaded {
     span.border {
       height: 2px;
       background: rgba($cSecondaryText, 0.3);
-      transition: all 700ms;
+      transition: all 600ms;
       width: 200px;
     }
   }
 
   .page-content {
     opacity: 1;
-    transition: opacity 800ms ease-in;
+    transition: opacity 700ms ease-in;
   }
 }

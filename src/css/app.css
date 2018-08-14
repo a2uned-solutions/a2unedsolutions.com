@@ -321,11 +321,50 @@ section.sub-page {
 section.sub-page.loaded .page-header span.border {
   height: 2px;
   background: rgba(210, 210, 210, 0.3);
-  transition: all 700ms;
+  transition: all 600ms;
   width: 200px; }
 section.sub-page.loaded .page-content {
   opacity: 1;
-  transition: opacity 800ms ease-in; }
+  transition: opacity 700ms ease-in; }
+
+.about-us .grid-list {
+  max-width: 1200px;
+  margin: 0 auto; }
+  .about-us .grid-list > li {
+    padding: 0;
+    box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.08);
+    align-items: initial;
+    justify-content: initial;
+    min-height: inherit; }
+    .about-us .grid-list > li .member-image {
+      width: 40%; }
+      .about-us .grid-list > li .member-image img {
+        width: 100%;
+        display: block; }
+    .about-us .grid-list > li .member-info {
+      width: 55%;
+      text-align: left;
+      padding: 15px 25px;
+      font-size: 1.3rem; }
+    .about-us .grid-list > li h2 {
+      padding: 0;
+      margin: 0; }
+    .about-us .grid-list > li h3 {
+      padding: 0;
+      margin: 0 0 15px 0;
+      color: #d2d2d2; }
+    .about-us .grid-list > li ul.social {
+      list-style: none;
+      font-size: 2rem;
+      margin: 0;
+      padding: 0; }
+      .about-us .grid-list > li ul.social li {
+        display: inline-block;
+        margin: 0 20px 0 0; }
+.about-us .secondary-content {
+  max-width: 1000px;
+  margin: 80px auto;
+  padding: 0 20px; }
 
 .service-listings {
   padding: 30px; }
