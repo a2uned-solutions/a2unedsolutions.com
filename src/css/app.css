@@ -119,6 +119,25 @@ body button[type=button] {
           background: #527435;
           transition: all 0.5s; }
 
+.highlight-content {
+  max-width: 1000px;
+  margin: 10px auto;
+  padding: 10px;
+  line-height: 1.8;
+  position: relative;
+  background: repeating-linear-gradient(45deg, rgba(210, 210, 210, 0.15) 0%, rgba(210, 210, 210, 0.15) 10%, rgba(245, 246, 247, 0.15) 0%, rgba(245, 246, 247, 0.15) 50%) 0/15px 15px; }
+  .highlight-content .background {
+    background: rgba(255, 255, 255, 0.85);
+    padding: 30px 20px; }
+  .highlight-content .text {
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    color: #777777; }
+  .highlight-content button[type=button] {
+    display: inline-block;
+    margin: 0 0 0 25px; }
+
 .fade-exit {
   display: none; }
 
@@ -126,13 +145,6 @@ body button[type=button] {
   z-index: 1;
   opacity: 1; }
 
-/*
-
-fade-enter-done
-fade-exit
-fade-exit-active
-
-*/
 .block {
   display: block; }
 
@@ -160,30 +172,6 @@ fade-exit-active
   text-transform: uppercase;
   display: block; }
 
-.blue,
-.green,
-.red {
-  width: 150px;
-  height: 150px;
-  background: blue;
-  display: inline-block;
-  margin: 0 20px 0 0; }
-
-.green {
-  background: green; }
-
-.red {
-  background: red; }
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px; }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg); }
-  to {
-    transform: rotate(360deg); } }
 .app-header {
   z-index: 9;
   position: absolute;
@@ -600,7 +588,7 @@ section.sub-page.loaded .page-content {
 .about-us .secondary-content {
   max-width: 1000px;
   margin: 60px auto;
-  padding: 15px;
+  padding: 10px;
   line-height: 1.8;
   position: relative;
   background: repeating-linear-gradient(45deg, rgba(210, 210, 210, 0.15) 0%, rgba(210, 210, 210, 0.15) 10%, rgba(245, 246, 247, 0.15) 0%, rgba(245, 246, 247, 0.15) 50%) 0/15px 15px; }

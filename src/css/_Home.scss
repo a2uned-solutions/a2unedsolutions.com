@@ -219,12 +219,6 @@
   }
 }
 
-$background1: $cPrimary;
-
-$background2: $cAction3;
-
-$diameter: 6em;
-
 %circle {
   border-radius: 100%;
 }
@@ -244,7 +238,7 @@ $diameter: 6em;
 
   &:before, &:after {
     content: " ";
-    background: rgba($background1, 0.8);
+    background: rgba($cPrimary, 0.8);
     @extend %circle;
     position: absolute;
     top: 50%;
@@ -265,7 +259,7 @@ $diameter: 6em;
   $seal-diameter: $diameter + 1em;
   @extend %circle;
   @extend %centering;
-  background: $background1;
+  background: $cPrimary;
   margin-top: -($seal-diameter/2); margin-left: -($seal-diameter/2);
   width: $seal-diameter; height: $seal-diameter;
   transform: rotate(0deg);
@@ -274,7 +268,7 @@ $diameter: 6em;
     @extend %centering;
     $width: $diameter * 1.75;
     $height: 1.25em;
-    background: $background2;
+    background: $cAction3;
     content: '';
     margin-top: -($height);
     margin-left: -($width/2);

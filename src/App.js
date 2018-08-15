@@ -7,9 +7,9 @@ import {
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 
 import './css/app.css';
+
 import Header from './components/Header';
 import Footer from './components/Footer';
-
 import Home from './components/Home';
 import SubPage from './components/SubPage';
 

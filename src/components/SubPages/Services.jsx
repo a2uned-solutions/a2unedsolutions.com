@@ -68,7 +68,12 @@ const Services = () => {
             </ul>
           </li>
         </ul>
-        <h3 className="small-title">Looking for a service that isn't listed here? <Button variant="contained" color="primary">We might be able to help</Button></h3>
+        <div className="highlight-content">
+          <div className="background">
+            <h2 className="small-title text">Looking for a service that isn't listed here?</h2>
+            <Button variant="contained" color="primary">We might be able to help</Button>
+          </div>
+        </div>
       </div>
     </div>
   )

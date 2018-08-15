@@ -160,7 +160,34 @@ body button[type=button] {
   }
 }
 
-//// Animations
+// Highlight Content
+.highlight-content {
+  max-width: 1000px;
+  margin: 10px auto;
+  padding: 10px;
+  line-height: 1.8;
+  position: relative;
+  background: repeating-linear-gradient(45deg, rgba($cSecondaryText, 0.15) 0%, rgba($cSecondaryText, 0.15) 10%, rgba($cSecondary, 0.15) 0%, rgba($cSecondary, 0.15) 50%) 0 / 15px 15px;
+
+  .background {
+    background: rgba($cW, 0.85);
+    padding: 30px 20px;
+  }
+
+  .text {
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    color: $cHighlightText;
+  }
+
+  button[type=button] {
+    display: inline-block;
+    margin: 0 0 0 25px;
+  }
+}
+
+// Animations
 
 .fade-exit {
   display: none;
@@ -169,28 +196,8 @@ body button[type=button] {
 .fade-enter {
   z-index: 1;
   opacity: 1;
-
-  //.page-content {
-  //  opacity: 0;
-  //}
 }
 
-.fade-enter.fade-enter-active {
-
-  //.page-content {
-  //  opacity: 1;
-  //  transition: opacity 750ms ease-in;
-  //}
-}
-
-
-/*
-
-fade-enter-done
-fade-exit
-fade-exit-active
-
-*/
 
 //-------------------------//
 //-----> Helper Classes
@@ -228,35 +235,4 @@ fade-exit-active
   font-size: 1.6rem;
   text-transform: uppercase;
   display: block;
-}
-
-/////////////////////////
-
-.blue,
-.green,
-.red {
-  width: 150px;
-  height: 150px;
-  background: blue;
-  display: inline-block;
-  margin: 0 20px 0 0;
-}
-
-.green {
-  background: green;
-}
-
-.red {
-  background: red;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
 }

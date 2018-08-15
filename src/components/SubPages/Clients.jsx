@@ -11,7 +11,12 @@ const Clients = () => {
   return (
     <div className="page-content" id="main-content">
       <p className="content-intro">We aren't even a year old yet and we already have some amazing clients.</p>
-      <h2 className="small-title">Have an interesting project? <Button variant="contained" color="primary">Let's Talk</Button></h2>
+      <div className="highlight-content">
+        <div className="background">
+          <h2 className="small-title text">Have an interesting project?</h2>
+          <Button variant="contained" color="primary">Let's Talk</Button>
+        </div>
+      </div>
       <ul className="grid-list image-grid">
         <li>
           <a href="/">
