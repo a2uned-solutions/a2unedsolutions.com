@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import TextField from '@material-ui/core/TextField';
-import Drawer from '@material-ui/core/Drawer';
 import Button from '@material-ui/core/Button';
 
 class ContactForm extends Component {
@@ -23,34 +22,19 @@ class ContactForm extends Component {
 
   render() {
     return (
-      <aside>
-        <Button onClick={this.toggleDrawer('right', true)}>
-          <i className="fas fa-envelope"></i>
-        </Button>
-        <Drawer anchor="right" className="drawer" open={this.state.right} onClose={this.toggleDrawer('right', false)}>
-          <div
-            tabIndex={0}
-            role="button"
-            onClick={this.toggleDrawer('right', false)}
-            onKeyDown={this.toggleDrawer('right', false)}
-            className="form-drawer drawer-container"
-          >
-            <form>
-              <ul className="no-list form-list">
-                <li>
-                  <TextField
-                    id="name"
-                    label="Name"
-                    value={this.state.name}
-                    onChange={this.handleChange('name')}
-                    margin="normal"
-                  />
-                </li>
-              </ul>
-            </form>
-          </div>
-        </Drawer>
-      </aside>
+      <form>
+        <ul className="no-list form-list">
+          <li>
+            <TextField
+              id="name"
+              label="Name"
+              value={this.state.name}
+              onChange={this.handleChange('name')}
+              margin="normal"
+            />
+          </li>
+        </ul>
+      </form>
     );
   }
 }

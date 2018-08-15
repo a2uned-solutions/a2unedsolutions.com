@@ -2,9 +2,8 @@ import React, { Component } from 'react';
 import Drawer from '@material-ui/core/Drawer';
 import Button from '@material-ui/core/Button';
 import ContactForm from './ContactForm';
-import { NavLink } from 'react-router-dom'
 
-class MobileMenu extends Component {
+class ContactFormDrawer extends Component {
 
   state = {
     name : 'Your name'
@@ -24,9 +23,9 @@ class MobileMenu extends Component {
 
   render() {
     return (
-      <aside className="mobile-menu">
+      <aside>
         <Button onClick={this.toggleDrawer('right', true)}>
-          <i className="fas fa-ellipsis-v"></i>
+          <i className="fas fa-envelope"></i>
         </Button>
         <Drawer anchor="right" className="drawer" open={this.state.right} onClose={this.toggleDrawer('right', false)}>
           <div
@@ -34,26 +33,9 @@ class MobileMenu extends Component {
             role="button"
             onClick={this.toggleDrawer('right', false)}
             onKeyDown={this.toggleDrawer('right', false)}
-            className="nav-drawer drawer-container"
+            className="form-drawer drawer-container"
           >
-            <h2>Navigation</h2>
-            <nav>
-              <ul className="no-list">
-                <li>
-                  <NavLink to="/services" activeClassName="active">Services</NavLink>
-                </li>
-                <li>
-                  <NavLink to="/clients" activeClassName="active">Clients</NavLink>
-                </li>
-                <li>
-                  <NavLink to="/about-us" activeClassName="active">About Us</NavLink>
-                </li>
-              </ul>
-            </nav>
-            <h2>Contact Us</h2>
-            <div className="contact-form-mobile">
-              <ContactForm/>
-            </div>
+            <ContactForm />
           </div>
         </Drawer>
       </aside>
@@ -61,4 +43,4 @@ class MobileMenu extends Component {
   }
 }
 
-export default MobileMenu;
+export default ContactFormDrawer;

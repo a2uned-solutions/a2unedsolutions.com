@@ -4,7 +4,7 @@ import {
   NavLink
 } from 'react-router-dom';
 import logo from '../images/a2uned_solutions_logo.svg';
-import ContactForm from './ContactForm';
+import ContactFormDrawer from './ContactFormDrawer';
 import MobileMenu from './MobileMenu';
 
 class Header extends Component {
@@ -28,9 +28,9 @@ class Header extends Component {
             <li>
               <NavLink to="/about-us" activeClassName="active">About Us</NavLink>
             </li>
-            {/*<li>*/}
-              {/*<ContactForm/>*/}
-            {/*</li>*/}
+            <li>
+              <ContactFormDrawer />
+            </li>
           </ul>
         </nav>
         <MobileMenu/>

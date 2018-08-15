@@ -575,6 +575,8 @@ section.sub-page.loaded .page-content {
     .nav-drawer li a.active {
       background: rgba(119, 119, 119, 0.6);
       font-weight: 700; }
+  .nav-drawer .contact-form-mobile {
+    padding: 0 20px 20px 20px; }
 
 .about-us .grid-list {
   max-width: 1200px;
