@@ -9,7 +9,7 @@ import hl7 from '../../images/hlz.gif';
 
 const Clients = () => {
   return (
-    <div className="page-content">
+    <div className="page-content" id="main-content">
       <p className="content-intro">We aren't even a year old yet and we already have some amazing clients.</p>
       <h2 className="small-title">Have an interesting project? <Button variant="contained" color="primary">Let's Talk</Button></h2>
       <ul className="grid-list image-grid">

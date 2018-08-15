@@ -29,7 +29,7 @@ class Home extends Component {
     const { animationCount } = this.state;
 
     return (
-      <section className={`home animation-step-${animationCount}`}>
+      <section className={`home animation-step-${animationCount}`} id="main-content">
         <div className="hero">
           <h1>
             <span className="title"><span className="thin">We</span> Design <span className="thin small">+</span> Develop</span>

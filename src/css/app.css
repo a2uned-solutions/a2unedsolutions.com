@@ -260,6 +260,10 @@ fade-exit-active
         min-height: inherit;
         color: #527435; }
 
+.skip-nav {
+  position: absolute;
+  top: -2000px; }
+
 footer {
   background: #fff;
   text-align: center;

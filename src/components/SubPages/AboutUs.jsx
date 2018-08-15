@@ -7,7 +7,7 @@ import nathan from '../../images/nathan.jpg';
 
 const AboutUs = () => {
   return (
-    <div className="page-content">
+    <div className="page-content" id="main-content">
       <div className="page-intro">
         <p>Over ten years of experience in the Information Technology industry. We've worked with Fortune 500 companies, medium sized businesses, and Ma & Pa Shops. <strong>Founded in 2017.</strong></p>
         <p>There isn't much we can't handle or provide a solution for. We're willing to go the distance for great clients.</p>

@@ -15,6 +15,7 @@ class Header extends Component {
             <img src={logo} className="logo" alt="A2uned Solutions" />
           </Link>
         </p>
+        <a href="#main-content" className="skip-nav">Go to main page content</a>
         <nav>
           <ul>
             <li>

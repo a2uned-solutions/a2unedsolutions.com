@@ -3,7 +3,7 @@ import Button from '@material-ui/core/Button'
 
 const Services = () => {
   return (
-    <div className="page-content">
+    <div className="page-content" id="main-content">
       <div className="page-intro">
         <p>We offer a variety of professional services. But our bread and butter is user interface design and development. We are passionate about aesthetically pleasing, enjoyable user experiences.</p>
         <p>From full site redesigns to single feature requests, logo designs to cloud hosting, testing to deliverable documents. <strong>Our Team is here to Provide Value to your Businesses Online Presence.</strong></p>
