@@ -62,6 +62,11 @@
       background: rgba($cW, 0.85);
       padding: 60px 20px;
       margin: 0;
+
+      button {
+        display: block;
+        margin: 40px auto 0;
+      }
     }
   }
 }

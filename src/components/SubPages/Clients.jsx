@@ -1,4 +1,7 @@
 import React from 'react';
+
+import Button from '@material-ui/core/Button';
+
 import lakewares from '../../images/lakewares.png';
 import fraza from '../../images/fraza.png';
 import metzgers from '../../images/metzgers.png';
@@ -8,6 +11,7 @@ const Clients = () => {
   return (
     <div className="page-content">
       <p className="content-intro">We aren't even a year old yet and we already have some amazing clients.</p>
+      <h2 className="small-title">Have an interesting project? <Button variant="contained" color="primary">Let's Talk</Button></h2>
       <ul className="grid-list image-grid">
         <li>
           <a href="/">

@@ -11,7 +11,7 @@
   height: 78px;
   overflow: hidden;
   z-index: 999;
-  border-bottom: 1px solid rgba($cPrimary, 0.2);
+  border-bottom: 1px solid $cSecondary;
 
   .branding {
     background: $cW;
@@ -58,25 +58,25 @@
           background: rgba($cAction, 0.1);
           bottom: -10px;
           left: 0;
-          transition: all 0.5s;
+          transition: all 0.4s;
         }
 
         &:hover {
-          color: $cAction2;
-
-          &:after {
-            bottom: 0;
-            background: $cAction2;
-          }
-        }
-
-        &.active {
-          cursor: default;
           color: $cAction;
 
           &:after {
             bottom: 0;
             background: $cAction;
+          }
+        }
+
+        &.active {
+          cursor: default;
+          color: $cAction2;
+
+          &:after {
+            bottom: 0;
+            background: $cAction2;
           }
         }
       }

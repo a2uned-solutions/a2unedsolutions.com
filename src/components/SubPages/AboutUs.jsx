@@ -1,4 +1,7 @@
 import React from 'react';
+
+import Button from '@material-ui/core/Button';
+
 import micah from '../../images/micah.jpg';
 import nathan from '../../images/nathan.jpg';
 
@@ -57,7 +60,7 @@ const AboutUs = () => {
         </li>
       </ul>
       <div className="secondary-content">
-        <p>We are a of team of two partners with a track record of delivering quality products & services for some amazing businesses. Modern design and development patterns make us tick. We also work with a variety of industry subject matter experts; Art Directors, Information Architects, DevOps, and Quality Assurance. All trusted individuals we've worked with for many years.</p>
+        <p>We are a of team of two partners with a track record of delivering quality products & services for some amazing businesses. Modern design and development patterns make us tick. We also work with a variety of industry subject matter experts; Art Directors, Information Architects, DevOps, and Quality Assurance. All trusted individuals we've worked with for many years. <Button variant="contained" color="primary">Contact Us</Button></p>
       </div>
     </div>
   )

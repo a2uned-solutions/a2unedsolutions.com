@@ -5,23 +5,31 @@ import Button from '@material-ui/core/Button';
 class Home extends Component {
 
   state = {
-    loaded: false,
+    animationCount: 3
   };
 
   componentDidMount() {
-    setTimeout(
-      function() {
-        this.setState({ loaded: true });
-      }.bind(this), 750
-    );
+    this.intervalId = setInterval(this.timer.bind(this), 700);
+  }
+  componentWillUnmount(){
+    clearInterval(this.intervalId);
+  }
+
+  timer() {
+    this.setState({
+      animationCount: this.state.animationCount - 1
+    })
+    if(this.state.animationCount < 1) {
+      clearInterval(this.intervalId);
+    }
   }
 
   render() {
 
-    const { loaded } = this.state;
+    const { animationCount } = this.state;
 
     return (
-      <section className={`home ${loaded && 'loaded'}`}>
+      <section className={`home animation-step-${animationCount}`}>
         <div className="hero">
           <h1>
             <span className="title"><span className="thin">We</span> Design <span className="thin small">+</span> Develop</span>
@@ -54,10 +62,22 @@ class Home extends Component {
           </ul>
         </div>
         <div className="about-intro">
-          <div className="content-right">
-            <h2>New company. <strong>Grown Up Experience.</strong></h2>
-            <p>Over a decade of experience designing and developing web applications. Our team has worked with many large corporations with recognizable brands. The majority of our time was spent on large scale eCommerce builds.</p>
-            <p>Our focus is on memorable user experiences and clean design. We've worked with enough platforms and frameworks over the years to be comfortable in any situation.</p>
+          <div className="about-container">
+            <div className="content-left">
+              <div className="rivets">
+                <div className="seal">
+                  <div className="type">
+                    <h3>Founded In</h3>
+                    <em>2017</em>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="content-right">
+              <h2>New company. <strong>Grown Up Experience.</strong></h2>
+              <p>Over a decade of experience designing and developing web applications. Our team has worked with many large corporations with recognizable brands. The majority of our time was spent on large scale eCommerce builds.</p>
+              <p>Our focus is on memorable user experiences and clean design. We've worked with enough platforms and frameworks over the years to be comfortable in any situation.</p>
+            </div>
           </div>
         </div>
       </section>

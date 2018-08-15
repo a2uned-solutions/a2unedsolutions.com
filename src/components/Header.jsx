@@ -26,9 +26,9 @@ class Header extends Component {
             <li>
               <NavLink to="/about-us" activeClassName="active">About Us</NavLink>
             </li>
-            <li>
-              <ContactForm/>
-            </li>
+            {/*<li>*/}
+              {/*<ContactForm/>*/}
+            {/*</li>*/}
           </ul>
         </nav>
       </header>
