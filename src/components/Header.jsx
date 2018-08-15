@@ -4,7 +4,8 @@ import {
   NavLink
 } from 'react-router-dom';
 import logo from '../images/a2uned_solutions_logo.svg';
-import ContactForm from './ContactForm'
+import ContactForm from './ContactForm';
+import MobileMenu from './MobileMenu';
 
 class Header extends Component {
   render() {
@@ -16,7 +17,7 @@ class Header extends Component {
           </Link>
         </p>
         <a href="#main-content" className="skip-nav">Go to main page content</a>
-        <nav>
+        <nav className="desktop-nav">
           <ul>
             <li>
               <NavLink to="/services" activeClassName="active">Services</NavLink>
@@ -32,6 +33,7 @@ class Header extends Component {
             {/*</li>*/}
           </ul>
         </nav>
+        <MobileMenu/>
       </header>
     );
   }

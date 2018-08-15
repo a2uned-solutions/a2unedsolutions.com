@@ -1,0 +1,383 @@
+// iOS Double Tap Bug Fix
+@media screen and (min-width: $bpLarge) {
+
+  //footer .connect li a:hover .connect-info {
+  //  left: 0;
+  //}
+  //
+  //.at-bottom footer .connect li a:hover .connect-info {
+  //  background: #fff;
+  //}
+}
+
+@media screen and (max-width: $bpLarge) {
+
+  .highlight-content {
+    margin: 10px 20px;
+
+    .text {
+      font-size: 1.8rem;
+    }
+  }
+
+  .image-grid {
+    margin: 30px 20px;
+
+    li {
+      margin: 0 0 20px 0;
+
+      &:nth-child(odd) {
+        margin: 0 20px 20px 0;
+      }
+    }
+  }
+
+  .service-listings {
+
+    .grid-list {
+
+      li {
+        width: 45%;
+      }
+    }
+  }
+
+  .about-us {
+
+    .grid-list {
+      margin: 0 20px;
+
+      > li {
+        width: 45%;
+        margin: 0 0 20px 0;
+
+        &:nth-child(odd) {
+          margin: 0 20px 20px 0;
+        }
+      }
+    }
+
+    .secondary-content {
+      margin: 40px 20px 0 20px;
+    }
+  }
+
+  footer {
+
+    .footer-container {
+
+      p {
+        font-size: 1.1rem;
+      }
+    }
+  }
+
+}
+
+@media screen and (max-width: $bpMedium) {
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  .app-header {
+    height: 50px;
+
+    .branding {
+      max-width: 100px;
+    }
+
+    nav {
+
+      li {
+
+        a {
+          padding: 19px;
+        }
+      }
+    }
+  }
+
+  .home {
+
+    .service-intro {
+
+      h2 {
+        font-size: 1.8rem;
+      }
+
+      > ul {
+        flex-wrap: wrap;
+        margin: 0 20px;
+        padding: 0;
+        width: 100%;
+
+        > li {
+          width: 42%;
+          margin: 0 20px 0 0;
+
+          &:nth-child(2) {
+            margin: 0;
+          }
+
+          &:nth-child(3) {
+            margin: 20px 0 0 0;
+            width: 91%;
+            display: block;
+
+            i.fas {
+              font-size: 150px;
+              bottom: -3px;
+              right: -30px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .service-listings {
+
+    .grid-list {
+
+      h2 {
+        font-size: 1.8rem;
+      }
+    }
+  }
+
+}
+
+@media screen and (max-width: $bpSmall) {
+
+  .home .service-intro > ul {
+    width: 98%;
+
+    > li {
+      width: 41%;
+    }
+
+    > li:nth-child(3) {
+      width: 90%;
+    }
+  }
+
+  .about-us {
+
+    .grid-list {
+
+      > li {
+
+        .member-image {
+          width: 35%;
+        }
+
+        .member-info {
+          width: 60%;
+
+          p {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Mobile
+@media screen and (max-width: $bpSmaller) {
+
+  .app-header {
+    background: $cW;
+    height: 41px;
+
+    .branding {
+      padding: 10px;
+      margin: 0;
+    }
+
+    .desktop-nav {
+      display: none;
+    }
+
+    .mobile-menu {
+      display: block;
+      position: absolute;
+      top: 3px;
+      right: -10px;
+
+      button[type=button] {
+        margin: 0;
+        padding: 5px;
+        box-shadow: none;
+
+        span {
+          color: $cAction;
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+
+  footer {
+
+    .footer-container {
+      padding: 20px 0 70px 0;
+
+      .social {
+        left: 0;
+      }
+
+      .notice {
+        right: 0;
+        top: 27px;
+      }
+
+      .copy-creds {
+        position: absolute;
+        bottom: 10px;
+        width: 100%;
+        text-align: center;
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .image-grid {
+
+    li {
+      width: 100% !important;
+      margin: 0 0 20px 0 !important;
+    }
+  }
+
+  section.sub-page {
+    margin: 25px 0;
+
+    .page-header {
+
+      h1 {
+        font-size: 6rem;
+      }
+
+      span.border {
+        margin: 15px auto 0 auto;
+      }
+    }
+
+    .page-content {
+
+      .page-intro {
+        margin: 0 auto 25px auto;
+      }
+    }
+  }
+
+  .home {
+
+    .hero {
+      padding: 80px 15px 100px 15px;
+
+      h1 {
+        padding: 0;
+
+        .thin {
+
+          &.small {
+            top: -8px;
+          }
+        }
+      }
+
+      .hero-img {
+        width: 115%;
+      }
+    }
+
+    .service-intro {
+
+      > ul {
+        margin: 0;
+        width: 100%;
+
+        > li {
+          width: 100% !important;
+          margin: 0 15px 15px 15px !important;
+        }
+      }
+    }
+
+    .about-intro {
+      padding: 30px 20px 200px 20px;
+
+      .about-container {
+        display: block;
+        position: relative;
+
+        .content-left {
+          position: absolute;
+          bottom: -150px;
+          left: 10px;
+        }
+
+        .content-right {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .about-us {
+
+    .grid-list {
+
+      > li {
+        width: 100% !important;
+        margin: 0 0 20px 0 !important;
+
+        .member-info {
+          width: 50%;
+          padding: 20px 15px;
+        }
+
+        .member-image {
+          width: 45%;
+        }
+      }
+    }
+
+    .secondary-content {
+      margin: 20px;
+
+      p {
+        padding: 20px;
+        font-size: 1.4rem;
+      }
+    }
+  }
+
+  .service-listings {
+    padding: 30px 15px;
+
+    .listing-heading {
+
+      h2 {
+        margin: 0 0 10px 0;
+      }
+
+      p.key {
+        position: relative;
+        margin: 0 0 30px 0;
+      }
+    }
+
+    .grid-list {
+
+      > li {
+        width: 100%;
+        margin: 0 0 20px 0;
+      }
+    }
+  }
+
+}
