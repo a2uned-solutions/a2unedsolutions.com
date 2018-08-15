@@ -3,9 +3,25 @@ import hero from '../images/hero.jpg';
 import Button from '@material-ui/core/Button';
 
 class Home extends Component {
+
+  state = {
+    loaded: false,
+  };
+
+  componentDidMount() {
+    setTimeout(
+      function() {
+        this.setState({ loaded: true });
+      }.bind(this), 750
+    );
+  }
+
   render() {
+
+    const { loaded } = this.state;
+
     return (
-      <section className="home">
+      <section className={`home ${loaded && 'loaded'}`}>
         <div className="hero">
           <h1>
             <span className="title"><span className="thin">We</span> Design <span className="thin small">+</span> Develop</span>

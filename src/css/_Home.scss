@@ -30,12 +30,13 @@
 
         &:last-child {
           background: $cSecondary;
+          overflow: hidden;
 
           i.fas {
             position: absolute;
-            font-size: 104px;
-            bottom: 0;
-            right: 35%;
+            font-size: 304px;
+            bottom: -8px;
+            right: -99px;
             color: #fff;
             z-index: 0;
           }
@@ -98,25 +99,30 @@
 
     .thin {
       font-weight: 300;
+      opacity: 0;
 
       &.small {
         font-size: 4vw;
         position: relative;
         top: -15px;
         color: $cAction2;
+        opacity: 1;
       }
     }
 
     .action {
       text-transform: uppercase;
       color: $cW;
-      background: rgba($cAction2, 0.8);
+      background: none;
       padding: 5px 15px;
       line-height: 1;
       display: inline-block;
       margin: 0px 0 -8px 12px;
       font-size: 7vw;
       font-weight: 400;
+      position: relative;
+      background: rgba($cAction2, 0.8);
+      opacity: 0;
     }
   }
 
@@ -126,5 +132,21 @@
     left: 0;
     width: 100%;
     z-index: 0;
+  }
+}
+
+
+.home.loaded {
+
+  .hero {
+
+    h1 {
+
+      .thin,
+      .action {
+        opacity: 1;
+        transition: all 2s;
+      }
+    }
   }
 }

@@ -300,12 +300,13 @@ footer {
         z-index: 9;
         position: relative; }
       .home .service-intro > ul > li:last-child {
-        background: #f5f6f7; }
+        background: #f5f6f7;
+        overflow: hidden; }
         .home .service-intro > ul > li:last-child i.fas {
           position: absolute;
-          font-size: 104px;
-          bottom: 0;
-          right: 35%;
+          font-size: 304px;
+          bottom: -8px;
+          right: -99px;
           color: #fff;
           z-index: 0; }
   .home .service-intro h2 {
@@ -345,28 +346,38 @@ footer {
       .hero h1 .sub-title .thin {
         margin: 0 10px 0 15px; }
     .hero h1 .thin {
-      font-weight: 300; }
+      font-weight: 300;
+      opacity: 0; }
       .hero h1 .thin.small {
         font-size: 4vw;
         position: relative;
         top: -15px;
-        color: #86be40; }
+        color: #86be40;
+        opacity: 1; }
     .hero h1 .action {
       text-transform: uppercase;
       color: #ffffff;
-      background: rgba(134, 190, 64, 0.8);
+      background: none;
       padding: 5px 15px;
       line-height: 1;
       display: inline-block;
       margin: 0px 0 -8px 12px;
       font-size: 7vw;
-      font-weight: 400; }
+      font-weight: 400;
+      position: relative;
+      background: rgba(134, 190, 64, 0.8);
+      opacity: 0; }
   .hero .hero-img {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 0; }
+
+.home.loaded .hero h1 .thin,
+.home.loaded .hero h1 .action {
+  opacity: 1;
+  transition: all 2s; }
 
 section.sub-page {
   margin: 78px 0;
