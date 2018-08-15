@@ -12,18 +12,16 @@
       min-height: inherit;
 
       .member-image {
-        width: 40%;
-
-        img {
-          width: 100%;
-          display: block;
-        }
+        width: 35%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
       }
 
       .member-info {
-        width: 55%;
+        width: 60%;
         text-align: left;
-        padding: 15px 25px;
+        padding: 25px;
         font-size: 1.3rem;
       }
 
@@ -54,7 +52,16 @@
 
   .secondary-content {
     max-width: 1000px;
-    margin: 80px auto;
-    padding: 0 20px;
+    margin: 60px auto;
+    padding: 15px;
+    line-height: 1.8;
+    position: relative;
+    background: repeating-linear-gradient(45deg, rgba($cSecondaryText, 0.15) 0%, rgba($cSecondaryText, 0.15) 10%, rgba($cSecondary, 0.15) 0%, rgba($cSecondary, 0.15) 50%) 0 / 15px 15px;
+
+    p {
+      background: rgba($cW, 0.85);
+      padding: 60px 20px;
+      margin: 0;
+    }
   }
 }

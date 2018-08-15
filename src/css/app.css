@@ -66,7 +66,7 @@ body button[type=button] {
     width: 29%;
     min-height: 300px;
     padding: 20px;
-    margin: 0 10px 20px 10px;
+    margin: 0 15px 30px 15px;
     border: 1px solid #f5f6f7; }
 
 .image-grid {
@@ -76,12 +76,13 @@ body button[type=button] {
     position: relative;
     border: none;
     padding: 0;
-    margin: 0 0 60px 0;
+    margin: 0 15px 30px 15px;
     min-height: inherit;
     width: 45%; }
     .image-grid > li img {
-      max-width: 350px;
-      display: block; }
+      max-width: 160px;
+      display: block;
+      padding-bottom: 20px; }
     .image-grid > li h2 {
       position: absolute;
       bottom: -14px;
@@ -89,7 +90,8 @@ body button[type=button] {
       padding: 10px 0;
       background: #d2d2d2;
       color: #ffffff;
-      width: 100%; }
+      width: 100%;
+      font-size: 1.6rem; }
     .image-grid > li a {
       display: flex;
       position: relative;
@@ -100,8 +102,6 @@ body button[type=button] {
       align-items: center;
       justify-content: center;
       border: 1px solid #f5f6f7;
-      padding: 20px;
-      margin: 0 10px 20px 10px;
       box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.08);
       overflow: hidden;
       background: #ffffff; }
@@ -110,6 +110,7 @@ body button[type=button] {
         .image-grid > li a:hover img {
           -webkit-filter: grayscale(1);
           filter: grayscale(1);
+          opacity: 0.5;
           transition: all 0.5s; }
         .image-grid > li a:hover h2 {
           background: #527435;
@@ -215,7 +216,7 @@ fade-exit-active
           position: absolute;
           content: '';
           display: table;
-          height: 3px;
+          height: 4px;
           width: 101%;
           background: rgba(82, 116, 53, 0.1);
           bottom: -10px;
@@ -397,7 +398,7 @@ section.sub-page {
     section.sub-page .page-content .page-intro {
       max-width: 760px;
       width: 90%;
-      margin: 0 auto 40px auto; }
+      margin: 0 auto 80px auto; }
 
 section.sub-page.loaded .page-header span.border {
   height: 2px;
@@ -432,14 +433,14 @@ section.sub-page.loaded .page-content {
     justify-content: initial;
     min-height: inherit; }
     .about-us .grid-list > li .member-image {
-      width: 40%; }
-      .about-us .grid-list > li .member-image img {
-        width: 100%;
-        display: block; }
+      width: 35%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center; }
     .about-us .grid-list > li .member-info {
-      width: 55%;
+      width: 60%;
       text-align: left;
-      padding: 15px 25px;
+      padding: 25px;
       font-size: 1.3rem; }
     .about-us .grid-list > li h2 {
       padding: 0;
@@ -458,8 +459,15 @@ section.sub-page.loaded .page-content {
         margin: 0 20px 0 0; }
 .about-us .secondary-content {
   max-width: 1000px;
-  margin: 80px auto;
-  padding: 0 20px; }
+  margin: 60px auto;
+  padding: 15px;
+  line-height: 1.8;
+  position: relative;
+  background: repeating-linear-gradient(45deg, rgba(210, 210, 210, 0.15) 0%, rgba(210, 210, 210, 0.15) 10%, rgba(245, 246, 247, 0.15) 0%, rgba(245, 246, 247, 0.15) 50%) 0/15px 15px; }
+  .about-us .secondary-content p {
+    background: rgba(255, 255, 255, 0.85);
+    padding: 60px 20px;
+    margin: 0; }
 
 .service-listings {
   padding: 30px; }

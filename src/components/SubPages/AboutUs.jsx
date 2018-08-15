@@ -11,9 +11,7 @@ const AboutUs = () => {
       </div>
       <ul className="grid-list">
         <li>
-          <div className="member-image">
-            <img src={nathan} alt="Nathan Olmstead" />
-          </div>
+          <div className="member-image" style={{ backgroundImage: `url(${nathan})` }} />
           <div className="member-info">
             <h2>Nathan Olmstead</h2>
             <h3>Partner</h3>
@@ -38,9 +36,7 @@ const AboutUs = () => {
           </div>
         </li>
         <li>
-          <div className="member-image">
-            <img src={micah} alt="Micah Lunt" />
-          </div>
+          <div className="member-image" style={{ backgroundImage: `url(${micah})` }} />
           <div className="member-info">
             <h2>Micah Lunt</h2>
             <h3>Partner</h3>
@@ -60,7 +56,9 @@ const AboutUs = () => {
           </div>
         </li>
       </ul>
-      <p className="secondary-content">We are a of team of two partners with a track record of delivering quality products & services for some amazing businesses. Modern design and development patterns make us tick. We also work with a variety of industry subject matter experts; Art Directors, Information Architects, DevOps, and Quality Assurance. All trusted individuals we've worked with for many years.</p>
+      <div className="secondary-content">
+        <p>We are a of team of two partners with a track record of delivering quality products & services for some amazing businesses. Modern design and development patterns make us tick. We also work with a variety of industry subject matter experts; Art Directors, Information Architects, DevOps, and Quality Assurance. All trusted individuals we've worked with for many years.</p>
+      </div>
     </div>
   )
 };
