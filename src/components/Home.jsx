@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import history from '../utils/history';
 import hero from '../images/hero.jpg';
 import Button from '@material-ui/core/Button';
 
@@ -22,6 +23,10 @@ class Home extends Component {
     if(this.state.animationCount < 1) {
       clearInterval(this.intervalId);
     }
+  }
+
+  handleServicesClick() {
+    history.push('/services')
   }
 
   render() {
@@ -52,7 +57,7 @@ class Home extends Component {
                 <li>Search Engine Optimization (SEO)</li>
                 <li>User Interface Specifications</li>
               </ul>
-              <Button variant="contained" color="secondary">More services we offer</Button>
+              <Button variant="contained" color="secondary" onClick={this.handleServicesClick}>All of our services</Button>
             </li>
             <li>
               <h2>Take Control of Your Content</h2>

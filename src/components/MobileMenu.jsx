@@ -40,6 +40,9 @@ class MobileMenu extends Component {
             <nav>
               <ul className="no-list">
                 <li>
+                  <NavLink to="/" exact={true} activeClassName="active">Home</NavLink>
+                </li>
+                <li>
                   <NavLink to="/services" activeClassName="active">Services</NavLink>
                 </li>
                 <li>

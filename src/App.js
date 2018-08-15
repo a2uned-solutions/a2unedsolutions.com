@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import {
-  BrowserRouter as Router,
+  Router,
   Route,
   Switch,
 } from 'react-router-dom';
 import { TransitionGroup, CSSTransition } from "react-transition-group";
+import history from './utils/history';
 
 import './css/app.css';
 
@@ -29,7 +30,7 @@ class App extends Component {
   render() {
 
     return (
-      <Router>
+      <Router history={history}>
           <Route
             render={({ location }) => (
               <div>

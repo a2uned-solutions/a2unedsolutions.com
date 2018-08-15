@@ -840,6 +840,8 @@ section.sub-page.loaded .page-content {
   .image-grid li {
     width: 100% !important;
     margin: 0 0 20px 0 !important; }
+    .image-grid li h2 {
+      background: #527435; }
 
   section.sub-page {
     margin: 40px 0; }
