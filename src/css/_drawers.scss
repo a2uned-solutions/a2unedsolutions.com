@@ -1,0 +1,55 @@
+.drawer form {
+  font-size: 1.4rem;
+
+  label {
+    font-size: 1.4rem;
+  }
+
+  input {
+    font-size: 1.4rem;
+  }
+}
+
+.form-list {
+
+  li > div {
+    width: 100%;
+  }
+}
+
+.drawer-container {
+   min-width: 300px;
+   padding: $defaultSpace;
+ }
+
+.form-drawer {
+  padding: 13px $defaultSpace $defaultSpace;
+}
+
+.nav-drawer {
+  padding: 0;
+
+  h2 {
+    padding: 20px;
+    margin: 0;
+  }
+
+  li {
+
+    a {
+      display: block;
+      width: 100%;
+      padding: 20px;
+      color: $cW;
+      background: $cAction;
+      border-bottom: 1px solid $cW;
+      font-weight: 900;
+
+
+      &.active {
+        background: rgba($cHighlightText, 0.6);
+        font-weight: 700;
+      }
+    }
+  }
+}

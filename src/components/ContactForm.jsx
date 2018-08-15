@@ -33,7 +33,7 @@ class ContactForm extends Component {
             role="button"
             onClick={this.toggleDrawer('right', false)}
             onKeyDown={this.toggleDrawer('right', false)}
-            className="form-drawer"
+            className="form-drawer drawer-container"
           >
             <form>
               <ul className="no-list form-list">

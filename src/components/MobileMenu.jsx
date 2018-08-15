@@ -33,10 +33,11 @@ class MobileMenu extends Component {
             role="button"
             onClick={this.toggleDrawer('right', false)}
             onKeyDown={this.toggleDrawer('right', false)}
-            className="nav-drawer"
+            className="nav-drawer drawer-container"
           >
+            <h2>Navigation</h2>
             <nav>
-              <ul>
+              <ul className="no-list">
                 <li>
                   <NavLink to="/services" activeClassName="active">Services</NavLink>
                 </li>
@@ -46,11 +47,12 @@ class MobileMenu extends Component {
                 <li>
                   <NavLink to="/about-us" activeClassName="active">About Us</NavLink>
                 </li>
-                {/*<li>*/}
-                {/*<ContactForm/>*/}
-                {/*</li>*/}
               </ul>
             </nav>
+            <h2>Contact Us</h2>
+            {/*<li>*/}
+            {/*<ContactForm/>*/}
+            {/*</li>*/}
           </div>
         </Drawer>
       </aside>

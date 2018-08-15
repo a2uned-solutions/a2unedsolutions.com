@@ -133,7 +133,9 @@ body button[type=button] {
     padding: 0;
     margin: 0;
     display: inline-block;
-    color: #777777; }
+    color: #777777;
+    font-weight: 900;
+    text-transform: uppercase; }
   .highlight-content button[type=button] {
     display: inline-block;
     margin: 0 0 0 25px; }
@@ -550,9 +552,29 @@ section.sub-page.loaded .page-content {
 .form-list li > div {
   width: 100%; }
 
-.form-drawer {
+.drawer-container {
   min-width: 300px;
+  padding: 30px; }
+
+.form-drawer {
   padding: 13px 30px 30px; }
+
+.nav-drawer {
+  padding: 0; }
+  .nav-drawer h2 {
+    padding: 20px;
+    margin: 0; }
+  .nav-drawer li a {
+    display: block;
+    width: 100%;
+    padding: 20px;
+    color: #ffffff;
+    background: #527435;
+    border-bottom: 1px solid #ffffff;
+    font-weight: 900; }
+    .nav-drawer li a.active {
+      background: rgba(119, 119, 119, 0.6);
+      font-weight: 700; }
 
 .about-us .grid-list {
   max-width: 1200px;
@@ -741,18 +763,20 @@ section.sub-page.loaded .page-content {
       display: none; } }
 @media screen and (max-width: 620px) {
   .app-header {
+    position: fixed;
     background: #ffffff;
-    height: 41px; }
+    height: 50px;
+    box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.05); }
     .app-header .branding {
-      padding: 10px;
+      padding: 15px;
       margin: 0; }
     .app-header .desktop-nav {
       display: none; }
     .app-header .mobile-menu {
       display: block;
       position: absolute;
-      top: 3px;
-      right: -10px; }
+      top: 9px;
+      right: -5px; }
       .app-header .mobile-menu button[type=button] {
         margin: 0;
         padding: 5px;
@@ -775,18 +799,22 @@ section.sub-page.loaded .page-content {
       text-align: center;
       font-size: 1rem; }
 
+  .highlight-content .text {
+    margin: 0 0 20px 0; }
+
   .image-grid li {
     width: 100% !important;
     margin: 0 0 20px 0 !important; }
 
   section.sub-page {
-    margin: 25px 0; }
+    margin: 40px 0; }
     section.sub-page .page-header h1 {
       font-size: 6rem; }
     section.sub-page .page-header span.border {
       margin: 15px auto 0 auto; }
     section.sub-page .page-content .page-intro {
-      margin: 0 auto 25px auto; }
+      margin: 0 auto 25px auto;
+      text-align: left; }
 
   .home .hero {
     padding: 80px 15px 100px 15px; }
@@ -794,6 +822,9 @@ section.sub-page.loaded .page-content {
       padding: 0; }
       .home .hero h1 .thin.small {
         top: -8px; }
+      .home .hero h1 .action {
+        margin: 0px 0 -8px 0px;
+        padding: 2px 10px; }
     .home .hero .hero-img {
       width: 115%; }
   .home .service-intro > ul {
@@ -814,14 +845,16 @@ section.sub-page.loaded .page-content {
       .home .about-intro .about-container .content-right {
         width: 100%; }
 
-  .about-us .grid-list > li {
-    width: 100% !important;
-    margin: 0 0 20px 0 !important; }
-    .about-us .grid-list > li .member-info {
-      width: 50%;
-      padding: 20px 15px; }
-    .about-us .grid-list > li .member-image {
-      width: 45%; }
+  .about-us .grid-list {
+    margin-top: 40px; }
+    .about-us .grid-list > li {
+      width: 100% !important;
+      margin: 0 0 20px 0 !important; }
+      .about-us .grid-list > li .member-info {
+        width: 50%;
+        padding: 20px 15px; }
+      .about-us .grid-list > li .member-image {
+        width: 45%; }
   .about-us .secondary-content {
     margin: 20px; }
     .about-us .secondary-content p {
@@ -837,6 +870,8 @@ section.sub-page.loaded .page-content {
       margin: 0 0 30px 0; }
     .service-listings .grid-list > li {
       width: 100%;
-      margin: 0 0 20px 0; } }
+      margin: 0 0 20px 0; }
+      .service-listings .grid-list > li h2 {
+        margin-top: 20px; } }
 
 /*# sourceMappingURL=app.css.map */
