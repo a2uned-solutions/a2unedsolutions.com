@@ -140,6 +140,30 @@ body button[type=button] {
     display: inline-block;
     margin: 0 0 0 25px; }
 
+.expansion-panel {
+  display: none;
+  width: 100%;
+  position: absolute !important;
+  bottom: -41px;
+  border: 1px solid rgba(245, 246, 247, 0.5);
+  box-shadow: 0px 2px 8px 1px rgba(0, 0, 0, 0.08) !important; }
+  .expansion-panel .expansion-title {
+    padding: 0;
+    margin: 0;
+    min-height: 20px;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #527435; }
+    .expansion-panel .expansion-title > div {
+      padding: 10px;
+      margin: 0; }
+    .expansion-panel .expansion-title svg {
+      fill: #527435; }
+  .expansion-panel .expansion-details {
+    text-align: left;
+    font-size: 1.4rem;
+    padding: 0 10px 22px; }
+
 .fade-exit {
   display: none; }
 
@@ -757,12 +781,21 @@ section.sub-page.loaded .page-content {
     .home .service-intro > ul > li:nth-child(3) {
       width: 90%; }
 
-  .about-us .grid-list > li .member-image {
-    width: 35%; }
-  .about-us .grid-list > li .member-info {
-    width: 60%; }
-    .about-us .grid-list > li .member-info p {
-      display: none; } }
+  .about-us .grid-list > li {
+    flex-wrap: wrap;
+    position: relative;
+    margin: 0 20px 60px 0 !important; }
+    .about-us .grid-list > li .member-image {
+      width: 35%; }
+    .about-us .grid-list > li .member-info {
+      width: 50%;
+      padding: 15px; }
+      .about-us .grid-list > li .member-info h2 {
+        font-size: 1.6rem; }
+      .about-us .grid-list > li .member-info p {
+        display: none; }
+    .about-us .grid-list > li .expansion-panel {
+      display: block; } }
 @media screen and (max-width: 620px) {
   .app-header {
     position: fixed;
@@ -851,12 +884,12 @@ section.sub-page.loaded .page-content {
     margin-top: 40px; }
     .about-us .grid-list > li {
       width: 100% !important;
-      margin: 0 0 20px 0 !important; }
+      margin: 0 0 60px 0 !important; }
       .about-us .grid-list > li .member-info {
-        width: 50%;
+        width: 55%;
         padding: 20px 15px; }
       .about-us .grid-list > li .member-image {
-        width: 45%; }
+        width: 35%; }
   .about-us .secondary-content {
     margin: 20px; }
     .about-us .secondary-content p {

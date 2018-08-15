@@ -167,17 +167,29 @@
     .grid-list {
 
       > li {
+        flex-wrap: wrap;
+        position: relative;
+        margin: 0 20px 60px 0 !important;
 
         .member-image {
           width: 35%;
         }
 
         .member-info {
-          width: 60%;
+          width: 50%;
+          padding: 15px;
+
+          h2 {
+            font-size: 1.6rem;
+          }
 
           p {
             display: none;
           }
+        }
+
+        .expansion-panel {
+          display: block;
         }
       }
     }
@@ -349,15 +361,15 @@
 
       > li {
         width: 100% !important;
-        margin: 0 0 20px 0 !important;
+        margin: 0 0 60px 0 !important;
 
         .member-info {
-          width: 50%;
+          width: 55%;
           padding: 20px 15px;
         }
 
         .member-image {
-          width: 45%;
+          width: 35%;
         }
       }
     }

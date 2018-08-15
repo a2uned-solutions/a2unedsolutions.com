@@ -1,6 +1,10 @@
 import React from 'react';
 
 import Button from '@material-ui/core/Button';
+import ExpansionPanel from '@material-ui/core/ExpansionPanel';
+import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
+import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 import micah from '../../images/micah.jpg';
 import nathan from '../../images/nathan.jpg';
@@ -37,6 +41,12 @@ const AboutUs = () => {
               </li>
             </ul>
           </div>
+          <ExpansionPanel className="expansion-panel">
+            <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />} className="expansion-title">More About Nathan</ExpansionPanelSummary>
+            <ExpansionPanelDetails className="expansion-details">
+              Designer, developer, and chef are his favorite hats to wear. Attempting to keep up with the pace of change Nathan is always eager to learn and peak into the next rabbit hole.
+            </ExpansionPanelDetails>
+          </ExpansionPanel>
         </li>
         <li>
           <div className="member-image" style={{ backgroundImage: `url(${micah})` }} />
@@ -57,6 +67,12 @@ const AboutUs = () => {
               </li>
             </ul>
           </div>
+          <ExpansionPanel className="expansion-panel">
+            <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />} className="expansion-title">More About Micah</ExpansionPanelSummary>
+            <ExpansionPanelDetails className="expansion-details">
+              Engineer, database wrangler, and point guard are just a few of his skills. A former project manager who developed a passion for learning new technologies and building things.
+            </ExpansionPanelDetails>
+          </ExpansionPanel>
         </li>
       </ul>
       <div className="secondary-content">

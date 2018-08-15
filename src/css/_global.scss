@@ -189,6 +189,39 @@ body button[type=button] {
   }
 }
 
+.expansion-panel {
+  display: none;
+  width: 100%;
+  position: absolute !important;
+  bottom: -41px;
+  border: 1px solid rgba($cSecondary, 0.5);
+  box-shadow: 0px 2px 8px 1px rgba(0, 0, 0, 0.08) !important;
+
+  .expansion-title {
+    padding: 0;
+    margin: 0;
+    min-height: 20px;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: $cAction;
+
+    > div {
+      padding: 10px;
+      margin: 0;
+    }
+
+    svg {
+      fill: $cAction;
+    }
+  }
+
+  .expansion-details {
+    text-align: left;
+    font-size: 1.4rem;
+    padding: 0 10px 22px;
+  }
+}
+
 // Animations
 
 .fade-exit {
