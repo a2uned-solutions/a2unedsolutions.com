@@ -27,7 +27,22 @@ class ScrollToTop extends Component {
 
 class App extends Component {
 
+  constructor(props) {
+    super(props);
+    this.state = {
+      contactDrawerOpen : false
+    };
+  }
+
+  toggleContactDrawer = (drawerName, open) => () => {
+    this.setState({
+      [drawerName]: open,
+    });
+  };
+
   render() {
+
+    const { contactDrawerOpen } = this.state;
 
     return (
       <Router history={history}>
@@ -39,8 +54,10 @@ class App extends Component {
                   path="/"
                 />
                 <ScrollToTop location={location}>
-                  <div className="app">
-                    <Header />
+                  <div className={`app ${location.pathname === '/' && 'root'}`}>
+                    <Header
+                      toggleContactDrawer={this.toggleContactDrawer}
+                      contactDrawerOpen={contactDrawerOpen} />
                     <main>
                       <TransitionGroup>
                         <CSSTransition key={location.key} classNames="fade" timeout={800}>

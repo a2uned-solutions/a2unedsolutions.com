@@ -45,6 +45,13 @@ a {
   a:hover, a:focus {
     color: #86be40; }
 
+input,
+textarea {
+  font-size: 1.4rem !important; }
+
+textarea {
+  line-height: 1.6 !important; }
+
 body button[type=button] {
   border-radius: 0;
   margin: 15px 0;
@@ -273,6 +280,10 @@ body button[type=button] {
         min-width: inherit;
         min-height: inherit;
         color: #527435; }
+
+.root .app-header {
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.5); }
 
 .mobile-menu {
   display: none; }

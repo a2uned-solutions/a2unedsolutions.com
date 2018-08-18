@@ -104,6 +104,14 @@
   }
 }
 
+.root {
+
+  .app-header {
+    background: none;
+    border: 1px solid rgba($cW, 0.5);
+  }
+}
+
 .mobile-menu {
   display: none;
 }

@@ -9,6 +9,9 @@ import MobileMenu from './MobileMenu';
 
 class Header extends Component {
   render() {
+
+    const { toggleContactDrawer, contactDrawerOpen } = this.props;
+
     return (
       <header className="app-header">
         <p className="branding">
@@ -29,7 +32,9 @@ class Header extends Component {
               <NavLink to="/about-us" activeClassName="active">About Us</NavLink>
             </li>
             <li>
-              <ContactFormDrawer />
+              <ContactFormDrawer
+                toggleContactDrawer={toggleContactDrawer}
+                contactDrawerOpen={contactDrawerOpen} />
             </li>
           </ul>
         </nav>

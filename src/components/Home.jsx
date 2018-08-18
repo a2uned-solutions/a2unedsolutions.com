@@ -80,7 +80,7 @@ class Home extends Component {
             </div>
             <div className="content-right">
               <h2>New company. <strong>Grown Up Experience.</strong></h2>
-              <p>Over a decade of experience designing and developing web applications. Our team has worked with many large corporations with recognizable brands. The majority of our time was spent on large scale eCommerce builds.</p>
+              <p>Over a decade of experience designing and developing web applications. Our team has worked with many large corporations with recognizable brands. The majority of our time was spent on large scale eCommerce builds. We're located in South East Michigan.</p>
               <p>Our focus is on memorable user experiences and clean design. We've worked with enough platforms and frameworks over the years to be comfortable in any situation.</p>
             </div>
           </div>
