@@ -273,13 +273,17 @@ body button[type=button] {
         background: #ffffff;
         font-size: 1.2rem;
         text-transform: uppercase;
-        padding: 33px 25px; }
+        padding: 30px 25px; }
       .app-header nav li button {
         margin: 0;
         padding: 0;
         min-width: inherit;
         min-height: inherit;
-        color: #527435; }
+        color: #527435;
+        box-shadow: none;
+        border: none; }
+        .app-header nav li button i {
+          font-size: 2rem; }
 
 .root .app-header {
   background: none;
@@ -593,16 +597,24 @@ section.sub-page.loaded .page-content {
 
 .form-drawer {
   padding: 13px 30px 30px; }
+  .form-drawer p {
+    font-size: 1.4rem !important; }
+  .form-drawer label {
+    font-size: 1.6rem !important; }
+  .form-drawer .submit-container {
+    margin: 20px 0 10px 0; }
+    .form-drawer .submit-container button {
+      width: 100%; }
 
 .nav-drawer {
   padding: 0; }
   .nav-drawer h2 {
-    padding: 20px;
+    padding: 15px;
     margin: 0; }
   .nav-drawer li a {
     display: block;
     width: 100%;
-    padding: 20px;
+    padding: 15px;
     color: #ffffff;
     background: #527435;
     border-bottom: 1px solid #ffffff;
@@ -760,6 +772,10 @@ section.sub-page.loaded .page-content {
       max-width: 100px; }
     .app-header nav li a {
       padding: 19px; }
+    .app-header nav li aside {
+      padding: 18px 25px; }
+      .app-header nav li aside i {
+        font-size: 1.6rem; }
 
   .home .service-intro h2 {
     font-size: 1.8rem; }
@@ -810,7 +826,7 @@ section.sub-page.loaded .page-content {
 @media screen and (max-width: 620px) {
   .app-header {
     position: fixed;
-    background: #ffffff;
+    background: #ffffff !important;
     height: 50px;
     box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.05); }
     .app-header .branding {

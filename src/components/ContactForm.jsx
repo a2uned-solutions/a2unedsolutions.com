@@ -1,70 +1,111 @@
 import React, { Component } from 'react';
-import TextField from '@material-ui/core/TextField';
+import { ValidatorForm, TextValidator } from 'react-material-ui-form-validator';
 import Button from '@material-ui/core/Button';
 
 class ContactForm extends Component {
 
-  state = {
-    name : '',
-    company : '',
-    email : '',
-    message : ''
+  constructor() {
+    super();
+    this.state = {
+      formData : {
+        name: '',
+        company: '',
+        email: '',
+        message: ''
+      },
+      submitted : false,
+      submitting : false
+    };
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleChange = name => event => {
-    this.setState({
-      [name]: event.target.value,
-    });
-  };
+  handleChange(event) {
+    const { formData } = this.state;
+    formData[event.target.name] = event.target.value;
+    this.setState({ formData });
+  }
+
+  handleSubmit() {
+    const { formData } = this.state;
+
+    console.log(formData);
+
+    this.setState({ submitted : true });
+
+    // fetch('/api/form-submit-url', {
+    //   method: 'POST',
+    //   body: formData,
+    // });
+  }
 
   render() {
+    const { formData, submitted } = this.state;
     return (
-      <form>
+      <ValidatorForm
+        onSubmit={this.handleSubmit}
+        instantValidate={false}
+      >
         <ul className="no-list form-list">
           <li>
-            <TextField
-              id="name"
+            <TextValidator
+              ref="name"
               label="Name"
-              value={this.state.name}
-              onChange={this.handleChange('name')}
+              onChange={this.handleChange}
+              name="name"
+              value={formData.name}
+              validators={['required']}
+              errorMessages={['this field is required']}
+              required={true}
               margin="normal"
             />
           </li>
           <li>
-            <TextField
-              id="company"
+            <TextValidator
+              ref="company"
               label="Company"
-              value={this.state.company}
-              onChange={this.handleChange('company')}
+              onChange={this.handleChange}
+              name="company"
+              value={formData.company}
               margin="normal"
             />
           </li>
           <li>
-            <TextField
-              id="email"
+            <TextValidator
+              ref="email"
               label="Email"
-              value={this.state.email}
-              onChange={this.handleChange('email')}
+              onChange={this.handleChange}
+              name="email"
+              value={formData.email}
+              validators={['required', 'isEmail']}
+              errorMessages={['this field is required', 'email is not valid']}
+              required={true}
               margin="normal"
             />
           </li>
           <li>
-            <TextField
-              id="message"
-              label="How can we help you?"
-              value={this.state.message}
-              onChange={this.handleChange('message')}
-              margin="normal"
+            <TextValidator
+              ref="message"
+              label="How can we help?"
+              onChange={this.handleChange}
+              name="message"
+              value={formData.message}
+              validators={['required']}
+              errorMessages={['this field is required']}
               multiline
-              rowsMax="8"
-              rows="4"
+              rowsMax="5"
+              rows="3"
+              required={true}
+              margin="normal"
             />
           </li>
-          <li>
-            <Button variant="raised" color="primary">Submit</Button>
+          <li className="submit-container">
+            <Button variant="raised" color="primary" type="submit">Submit</Button>
           </li>
         </ul>
-      </form>
+        {(submitted && 'Your form is submitted!') ||
+        (!submitted && '')}
+      </ValidatorForm>
     );
   }
 }
