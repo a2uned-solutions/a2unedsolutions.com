@@ -19,7 +19,7 @@ class ContactFormDrawer extends Component {
             className="form-drawer drawer-container"
           >
             <h2>How can we help?</h2>
-            <ContactForm />
+            <ContactForm toggleContactDrawer={toggleContactDrawer} />
           </div>
         </Drawer>
       </aside>

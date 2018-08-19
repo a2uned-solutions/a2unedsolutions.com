@@ -617,6 +617,27 @@ section.sub-page.loaded .page-content {
     .form-drawer .success-check svg {
       fill: #ffffff;
       padding: 8px; }
+  .form-drawer .success-content {
+    opacity: 1;
+    text-align: center; }
+    .form-drawer .success-content h3 {
+      padding: 0;
+      margin: 10px 0 5px 0; }
+    .form-drawer .success-content p {
+      margin: 0;
+      line-height: 1.4; }
+    .form-drawer .success-content em {
+      display: block;
+      margin: 10px 0; }
+  .form-drawer .form-container .form-inner {
+    max-height: 600px; }
+  .form-drawer .form-container.success-true .form-inner {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.8s; }
+  .form-drawer .form-container.success-true .success-content {
+    opacity: 1;
+    transition: opacity 1.2s; }
 
 .nav-drawer {
   padding: 0; }
@@ -699,7 +720,7 @@ section.sub-page.loaded .page-content {
       border-bottom: 1px solid rgba(210, 210, 210, 0.3); }
     .service-listings .listing-heading p.key {
       font-size: 1.2rem;
-      color: #86be40;
+      color: #000;
       position: absolute;
       top: 3px;
       right: 0;
@@ -743,7 +764,7 @@ section.sub-page.loaded .page-content {
           background: rgba(210, 210, 210, 0.2); }
         .service-listings .grid-list li ul li i {
           text-align: right;
-          color: rgba(134, 190, 64, 0.5);
+          color: #000;
           padding-top: 3px; }
 
 @media screen and (max-width: 1050px) {

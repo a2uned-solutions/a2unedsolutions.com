@@ -55,8 +55,45 @@
     }
   }
 
+  .success-content {
+    opacity: 1;
+    text-align: center;
+
+    h3 {
+      padding: 0;
+      margin: 10px 0 5px 0;
+    }
+
+    p {
+      margin: 0;
+      line-height: 1.4;
+    }
+
+    em {
+      display: block;
+      margin: 10px 0;
+    }
+  }
+
   .form-container {
 
+    .form-inner {
+      max-height: 600px;
+    }
+
+    &.success-true {
+
+      .form-inner {
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height 0.8s;
+      }
+
+      .success-content {
+        opacity: 1;
+        transition: opacity 1.2s;
+      }
+    }
   }
 }
 

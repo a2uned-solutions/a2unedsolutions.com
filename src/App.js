@@ -35,6 +35,8 @@ class App extends Component {
   }
 
   toggleContactDrawer = (drawerName, open) => () => {
+    console.log('wtf');
+    console.log(drawerName, open);
     this.setState({
       [drawerName]: open,
     });

@@ -6,10 +6,10 @@ import CheckIcon from '@material-ui/icons/Check';
 
 class ContactForm extends Component {
 
-  timer = null;
+  submittingTimer = null;
 
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       formData : {
         name: '',
@@ -20,13 +20,30 @@ class ContactForm extends Component {
       submitting : false,
       success : false,
       error : false,
+      timeToClosing : 6
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+  componentDidMount() {
+    this.intervalId = setInterval(this.closingTimer.bind(this), 1000);
+  }
+
   componentWillUnmount() {
-    clearTimeout(this.timer);
+    clearTimeout(this.submittingTimer);
+    clearInterval(this.intervalId);
+  }
+
+  closingTimer() {
+    this.setState({
+      timeToClosing: this.state.timeToClosing - 1
+    })
+    if(this.state.timeToClosing < 1) {
+      console.log('wtffff')
+      clearInterval(this.intervalId);
+      this.props.toggleContactDrawer('contactDrawerOpen', false);
+    }
   }
 
   handleChange(event) {
@@ -47,12 +64,13 @@ class ContactForm extends Component {
           success: false,
         },
         () => {
-          this.timer = setTimeout(() => {
+          this.submittingTimer = setTimeout(() => {
             this.setState({
               submitting: false,
               success: true,
             });
           }, 2000);
+          // this.intervalId = setInterval(this.closingTimer.bind(this), 1000);
         },
       );
     }
@@ -64,90 +82,97 @@ class ContactForm extends Component {
   }
 
   render() {
-    const { formData, success, error, submitting } = this.state;
+
+    const { formData, success, error, submitting, timeToClosing } = this.state;
+    const { toggleContactDrawer } = this.props;
+
     return (
       <ValidatorForm
         onSubmit={this.handleSubmit}
         instantValidate={false}
       >
         <div className={`form-container success-${success}`}>
-          <ul className="no-list form-list">
-            <li>
-              <TextValidator
-                ref="name"
-                label="Name"
-                onChange={this.handleChange}
-                name="name"
-                value={formData.name}
-                validators={['required']}
-                errorMessages={['this field is required']}
-                required={true}
-                margin="normal"
-              />
-            </li>
-            <li>
-              <TextValidator
-                ref="company"
-                label="Company"
-                onChange={this.handleChange}
-                name="company"
-                value={formData.company}
-                margin="normal"
-              />
-            </li>
-            <li>
-              <TextValidator
-                ref="email"
-                label="Email"
-                onChange={this.handleChange}
-                name="email"
-                value={formData.email}
-                validators={['required', 'isEmail']}
-                errorMessages={['this field is required', 'email is not valid']}
-                required={true}
-                margin="normal"
-              />
-            </li>
-            <li>
-              <TextValidator
-                ref="message"
-                label="Message"
-                onChange={this.handleChange}
-                name="message"
-                value={formData.message}
-                validators={['required']}
-                errorMessages={['this field is required']}
-                multiline
-                rowsMax="5"
-                rows="3"
-                required={true}
-                margin="normal"
-              />
-            </li>
-            <li className="submit-container">
-              {!success && !submitting && (
-                <Button variant="raised" color="primary" type="submit">Submit</Button>
-              )}
-              {error && (
-                <p>Error processing the form</p>
-              )}
-              {submitting && !error && (
-                <CircularProgress color={`primary`} size={40} />
-              )}
-            </li>
-          </ul>
-        </div>
-        {success && !error && (
-          <div className="success-message">
-            {/*<div className="success-content">*/}
-              {/*<h3>Thank You.</h3>*/}
-              {/*<p></p>*/}
-            {/*</div>*/}
-            <div className="success-check">
-              <CheckIcon />
-            </div>
+          <div className="form-inner">
+            <ul className="no-list form-list">
+              <li>
+                <TextValidator
+                  ref="name"
+                  label="Name"
+                  onChange={this.handleChange}
+                  name="name"
+                  value={formData.name}
+                  validators={['required']}
+                  errorMessages={['this field is required']}
+                  required={true}
+                  margin="normal"
+                />
+              </li>
+              <li>
+                <TextValidator
+                  ref="company"
+                  label="Company"
+                  onChange={this.handleChange}
+                  name="company"
+                  value={formData.company}
+                  margin="normal"
+                />
+              </li>
+              <li>
+                <TextValidator
+                  ref="email"
+                  label="Email"
+                  onChange={this.handleChange}
+                  name="email"
+                  value={formData.email}
+                  validators={['required', 'isEmail']}
+                  errorMessages={['this field is required', 'email is not valid']}
+                  required={true}
+                  margin="normal"
+                />
+              </li>
+              <li>
+                <TextValidator
+                  ref="message"
+                  label="Message"
+                  onChange={this.handleChange}
+                  name="message"
+                  value={formData.message}
+                  validators={['required']}
+                  errorMessages={['this field is required']}
+                  multiline
+                  rowsMax="5"
+                  rows="3"
+                  required={true}
+                  margin="normal"
+                />
+              </li>
+              <li className="submit-container">
+                {!success && !submitting && (
+                  <Button variant="raised" color="primary" type="submit">Submit</Button>
+                )}
+                {error && (
+                  <p>Error processing the form. Please try again.</p>
+                )}
+                {submitting && !error && (
+                  <CircularProgress color={`primary`} size={40} />
+                )}
+              </li>
+            </ul>
           </div>
-        )}
+          {success && !error && (
+            <div className="success-message">
+              <div className="success-check">
+                <CheckIcon />
+              </div>
+              <div className="success-content">
+                <h3>Thank You.</h3>
+                <p>We'll get back to you as soon as possible.</p>
+                {/*<p>This form will close in <strong>{timeToClosing}</strong> seconds <em>or</em></p>*/}
+                <Button variant="raised" color="secondary" onClick={toggleContactDrawer('contactDrawerOpen', false)}>Close Now</Button>
+              </div>
+            </div>
+          )}
+        </div>
       </ValidatorForm>
     );
   }
