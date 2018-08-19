@@ -52,11 +52,13 @@ textarea {
 textarea {
   line-height: 1.6 !important; }
 
-body button[type=button] {
+body button[type=button],
+body button[type=submit] {
   border-radius: 0;
   margin: 15px 0;
   box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.1), 0px 2px 2px 0px rgba(0, 0, 0, 0.1), 0px 3px 1px -2px rgba(0, 0, 0, 0.08); }
-  body button[type=button] span {
+  body button[type=button] span,
+  body button[type=submit] span {
     font-size: 1.2rem;
     font-weight: 700;
     letter-spacing: 0.05em; }
@@ -602,9 +604,19 @@ section.sub-page.loaded .page-content {
   .form-drawer label {
     font-size: 1.6rem !important; }
   .form-drawer .submit-container {
-    margin: 20px 0 10px 0; }
+    margin: 20px 0 10px 0;
+    text-align: center; }
     .form-drawer .submit-container button {
       width: 100%; }
+  .form-drawer .success-check {
+    background: #527435;
+    border-radius: 30px;
+    width: 40px;
+    height: 40px;
+    margin: 0 auto; }
+    .form-drawer .success-check svg {
+      fill: #ffffff;
+      padding: 8px; }
 
 .nav-drawer {
   padding: 0; }

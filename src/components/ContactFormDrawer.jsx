@@ -18,7 +18,7 @@ class ContactFormDrawer extends Component {
             tabIndex={0}
             className="form-drawer drawer-container"
           >
-            <h2>Contact Us</h2>
+            <h2>How can we help?</h2>
             <ContactForm />
           </div>
         </Drawer>

@@ -35,10 +35,28 @@
 
   .submit-container {
     margin: 20px 0 10px 0;
+    text-align: center;
 
     button {
       width: 100%;
     }
+  }
+
+  .success-check {
+    background: $cAction;
+    border-radius: 30px;
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+
+    svg {
+      fill: $cW;
+      padding: 8px;
+    }
+  }
+
+  .form-container {
+
   }
 }
 
