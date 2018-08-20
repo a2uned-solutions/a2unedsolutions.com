@@ -76,7 +76,7 @@ const AboutUs = (props) => {
         </li>
       </ul>
       <div className="secondary-content">
-        <p>We are a of team of two partners with a track record of delivering quality products & services for some amazing businesses. Modern design and development patterns make us tick. We also work with a variety of industry subject matter experts; Art Directors, Information Architects, DevOps, and Quality Assurance. All trusted individuals we've worked with for many years. <Button variant="contained" color="primary" onClick={props.toggleContactDrawer('contactDrawerOpen', true)}>Contact Us</Button></p>
+        <p>We are a of team of two partners with a track record of delivering quality products & services for some amazing businesses. Modern design and development patterns make us tick. We also work with a variety of industry subject matter experts; Art Directors, Information Architects, DevOps, and Quality Assurance. All trusted individuals we've worked with for many years. <Button variant="contained" color="primary" onClick={props.toggleDrawer('contactDrawer', true)}>Contact Us</Button></p>
       </div>
     </div>
   )

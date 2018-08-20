@@ -30,7 +30,8 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      contactDrawerOpen : false,
+      contactDrawer : false,
+      mobileDrawer : false,
       contactFormCompleted: false
     };
   }
@@ -41,7 +42,7 @@ class App extends Component {
     });
   };
 
-  toggleContactDrawer = (drawerName, open) => () => {
+  toggleDrawer = (drawerName, open) => () => {
     this.setState({
       [drawerName]: open,
     });
@@ -49,7 +50,7 @@ class App extends Component {
 
   render() {
 
-    const { contactDrawerOpen, contactFormCompleted } = this.state;
+    const { contactDrawer, mobileDrawer, contactFormCompleted } = this.state;
 
     return (
       <Router history={history}>
@@ -63,9 +64,10 @@ class App extends Component {
                 <ScrollToTop location={location}>
                   <div className={`app ${location.pathname === '/' && 'root'}`}>
                     <Header
-                      toggleContactDrawer={this.toggleContactDrawer}
+                      toggleDrawer={this.toggleDrawer}
                       toggleContactFormCompleted={this.toggleContactFormCompleted}
-                      contactDrawerOpen={contactDrawerOpen}
+                      contactDrawer={contactDrawer}
+                      mobileDrawer={mobileDrawer}
                       contactFormCompleted={contactFormCompleted} />
                     <main>
                       <TransitionGroup>
@@ -75,15 +77,15 @@ class App extends Component {
                             <Route
                               exact
                               path="/clients"
-                              render={(props) => <SubPage {...props} toggleContactDrawer={this.toggleContactDrawer} />} />
+                              render={(props) => <SubPage {...props} toggleDrawer={this.toggleDrawer} />} />
                             <Route
                               exact
                               path="/services"
-                              render={(props) => <SubPage {...props} toggleContactDrawer={this.toggleContactDrawer} />}/>
+                              render={(props) => <SubPage {...props} toggleDrawer={this.toggleDrawer} />}/>
                             <Route
                               exact
                               path="/about-us"
-                              render={(props) => <SubPage {...props} toggleContactDrawer={this.toggleContactDrawer} />} />
+                              render={(props) => <SubPage {...props} toggleDrawer={this.toggleDrawer} />} />
                             <Route
                               render={() => <div>Not Found</div>} />
                           </Switch>

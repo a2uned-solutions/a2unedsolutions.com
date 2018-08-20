@@ -11,30 +11,24 @@ class MobileMenu extends Component {
     this.state = {};
   }
 
-  toggleDrawer = (side, open) => () => {
-    this.setState({
-      [side]: open,
-    });
-  };
-
   render() {
 
-    const { toggleContactFormCompleted, contactFormCompleted } = this.props;
+    const { toggleDrawer, toggleContactFormCompleted, mobileDrawer, contactFormCompleted } = this.props;
 
     return (
       <aside className="mobile-menu">
-        <Button onClick={this.toggleDrawer('right', true)}>
+        <Button onClick={toggleDrawer('mobileDrawer', true)}>
           <i className="fas fa-ellipsis-v"></i>
         </Button>
-        <Drawer anchor="right" className="drawer" open={this.state.right} onClose={this.toggleDrawer('right', false)}>
+        <Drawer anchor="right" className="drawer" open={mobileDrawer} onClose={toggleDrawer('mobileDrawer', false)}>
           <div
             tabIndex={0}
             className="nav-drawer drawer-container"
           >
-            <i className="fas fa-times close" title="Close" onClick={this.toggleDrawer('right', false)}></i>
+            <i className="fas fa-times close" title="Close" onClick={toggleDrawer('mobileDrawer', false)}></i>
             <h2>Navigation</h2>
             <nav>
-              <ul className="no-list" onClick={this.toggleDrawer('right', false)}>
+              <ul className="no-list" onClick={toggleDrawer('mobileDrawer', false)}>
                 <li >
                   <NavLink to="/" exact={true} activeClassName="active">Home</NavLink>
                 </li>
@@ -52,7 +46,7 @@ class MobileMenu extends Component {
             <h2>Contact Us</h2>
             <div className="contact-form-mobile form-drawer">
               <ContactForm
-                toggleContactDrawer={this.toggleDrawer}
+                toggleDrawer={toggleDrawer}
                 toggleContactFormCompleted={toggleContactFormCompleted}
                 contactFormCompleted={contactFormCompleted}
                 isMobileForm={true} />

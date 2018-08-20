@@ -14,7 +14,7 @@ const Clients = (props) => {
       <div className="highlight-content">
         <div className="background">
           <h2 className="small-title text">Have an interesting project?</h2>
-          <Button variant="contained" color="primary" onClick={props.toggleContactDrawer('contactDrawerOpen', true)}>Let's Talk</Button>
+          <Button variant="contained" color="primary" onClick={props.toggleDrawer('contactDrawer', true)}>Let's Talk</Button>
         </div>
       </div>
       <ul className="grid-list image-grid">

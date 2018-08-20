@@ -39,7 +39,7 @@ class SubPage extends Component {
       this.setState({
         title: 'Clients',
         classNames: 'clients',
-        component: <Clients toggleContactDrawer={this.props.toggleContactDrawer} />
+        component: <Clients toggleDrawer={this.props.toggleDrawer} />
       });
     }
 
@@ -47,7 +47,7 @@ class SubPage extends Component {
       this.setState({
         title: 'Services',
         classNames: 'services',
-        component: <Services toggleContactDrawer={this.props.toggleContactDrawer} />
+        component: <Services toggleDrawer={this.props.toggleDrawer} />
       });
     }
 
@@ -55,7 +55,7 @@ class SubPage extends Component {
       this.setState({
         title: 'About Us',
         classNames: 'about-us',
-        component: <AboutUs toggleContactDrawer={this.props.toggleContactDrawer} />
+        component: <AboutUs toggleDrawer={this.props.toggleDrawer} />
       });
     }
   }

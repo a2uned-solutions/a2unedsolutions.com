@@ -71,7 +71,7 @@ const Services = (props) => {
         <div className="highlight-content">
           <div className="background">
             <h2 className="small-title text">Looking for a service that isn't listed here?</h2>
-            <Button variant="contained" color="primary" onClick={props.toggleContactDrawer('contactDrawerOpen', true)}>We might be able to help</Button>
+            <Button variant="contained" color="primary" onClick={props.toggleDrawer('contactDrawer', true)}>We might be able to help</Button>
           </div>
         </div>
       </div>

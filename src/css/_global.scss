@@ -280,3 +280,7 @@ body button[type=submit] {
   text-transform: uppercase;
   display: block;
 }
+
+.mobile-only {
+  display: none !important;
+}

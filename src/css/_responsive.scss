@@ -207,6 +207,14 @@
 // Mobile
 @media screen and (max-width: $bpSmaller) {
 
+  .mobile-only {
+    display: block;
+  }
+
+  .no-mobile {
+    display: none !important;
+  }
+
   .app-header {
     position: fixed;
     background: $cW !important;

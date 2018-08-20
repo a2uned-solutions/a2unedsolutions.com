@@ -87,7 +87,7 @@ class ContactForm extends Component {
   render() {
 
     const { formData, success, error, submitting } = this.state;
-    const { toggleContactDrawer, toggleContactFormCompleted, contactFormCompleted, isMobileForm } = this.props;
+    const { toggleDrawer, toggleContactFormCompleted, contactFormCompleted, isMobileForm } = this.props;
 
     return (
       <ValidatorForm
@@ -173,7 +173,7 @@ class ContactForm extends Component {
               <div className="success-content">
                 <h3>Thank You.</h3>
                 <p>We'll get back to you as soon as possible.</p>
-                <Button variant="raised" color="primary" onClick={toggleContactDrawer(isMobileForm ? 'right' : 'contactDrawerOpen', false)}>Close</Button>
+                <Button variant="raised" color="primary" onClick={toggleDrawer(isMobileForm ? 'mobileDrawer' : 'contactDrawer', false)}>Close</Button>
                 {!success && (
                 <div className="reset-form">
                   <Button variant="raised" color="secondary" onClick={toggleContactFormCompleted}>Reset Form</Button>
