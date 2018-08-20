@@ -6,20 +6,25 @@ import ContactForm from './ContactForm';
 class ContactFormDrawer extends Component {
   render() {
 
-    const { toggleContactDrawer, contactDrawerOpen } = this.props;
+    const { toggleContactDrawer, toggleContactFormCompleted, contactDrawerOpen, contactFormCompleted } = this.props;
 
     return (
       <aside>
         <Button onClick={toggleContactDrawer('contactDrawerOpen', true)}>
-          <i className="fas fa-envelope"></i>
+          {!contactFormCompleted && ( <i className="fas fa-envelope"></i> )}
+          {contactFormCompleted && (<i className="fas fa-check-circle" title="Thank you for contacting us"></i> )}
         </Button>
         <Drawer anchor="right" className="drawer" open={contactDrawerOpen} onClose={toggleContactDrawer('contactDrawerOpen', false)}>
           <div
             tabIndex={0}
             className="form-drawer drawer-container"
           >
-            <h2>How can we help?</h2>
-            <ContactForm toggleContactDrawer={toggleContactDrawer} />
+            <i className="fas fa-times close" title="Close" onClick={toggleContactDrawer('contactDrawerOpen', false)}></i>
+            {!contactFormCompleted && <h2>How can we help?</h2>}
+            <ContactForm
+              toggleContactDrawer={toggleContactDrawer}
+              toggleContactFormCompleted={toggleContactFormCompleted}
+              contactFormCompleted={contactFormCompleted} />
           </div>
         </Drawer>
       </aside>

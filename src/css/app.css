@@ -276,6 +276,21 @@ body button[type=submit] {
         font-size: 1.2rem;
         text-transform: uppercase;
         padding: 30px 25px; }
+        .app-header nav li aside:after {
+          position: absolute;
+          content: '';
+          display: table;
+          height: 4px;
+          width: 101%;
+          background: rgba(82, 116, 53, 0.1);
+          bottom: -10px;
+          left: 0;
+          transition: all 0.4s; }
+        .app-header nav li aside:hover {
+          color: #527435; }
+          .app-header nav li aside:hover:after {
+            bottom: 2px;
+            background: #527435; }
       .app-header nav li button {
         margin: 0;
         padding: 0;
@@ -284,6 +299,8 @@ body button[type=submit] {
         color: #527435;
         box-shadow: none;
         border: none; }
+        .app-header nav li button:hover {
+          background-color: transparent; }
         .app-header nav li button i {
           font-size: 2rem; }
 
@@ -598,7 +615,14 @@ section.sub-page.loaded .page-content {
   padding: 30px; }
 
 .form-drawer {
-  padding: 13px 30px 30px; }
+  padding: 13px 30px 30px;
+  position: relative; }
+  .form-drawer .close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    color: #527435; }
   .form-drawer p {
     font-size: 1.4rem !important; }
   .form-drawer label {
@@ -608,6 +632,8 @@ section.sub-page.loaded .page-content {
     text-align: center; }
     .form-drawer .submit-container button {
       width: 100%; }
+  .form-drawer .success-message {
+    margin-top: 20px; }
   .form-drawer .success-check {
     background: #527435;
     border-radius: 30px;
@@ -630,14 +656,16 @@ section.sub-page.loaded .page-content {
       display: block;
       margin: 10px 0; }
   .form-drawer .form-container .form-inner {
-    max-height: 600px; }
+    height: 475px;
+    transition: height 0.8s; }
   .form-drawer .form-container.success-true .form-inner {
     overflow: hidden;
-    max-height: 0;
-    transition: max-height 0.8s; }
+    height: 0; }
   .form-drawer .form-container.success-true .success-content {
     opacity: 1;
     transition: opacity 1.2s; }
+  .form-drawer .form-container.completed-true .form-inner {
+    height: 0; }
 
 .nav-drawer {
   padding: 0; }

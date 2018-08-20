@@ -91,6 +91,27 @@
         font-size: 1.2rem;
         text-transform: uppercase;
         padding: 30px 25px;
+
+        &:after {
+          position: absolute;
+          content: '';
+          display: table;
+          height: 4px;
+          width: 101%;
+          background: rgba($cAction, 0.1);
+          bottom: -10px;
+          left: 0;
+          transition: all 0.4s;
+        }
+
+        &:hover {
+          color: $cAction;
+
+          &:after {
+            bottom: 2px;
+            background: $cAction;
+          }
+        }
       }
 
       button {
@@ -101,6 +122,10 @@
         color: $cAction;
         box-shadow: none;
         border: none;
+
+        &:hover {
+          background-color: transparent;
+        }
 
         i {
           font-size: 2rem;

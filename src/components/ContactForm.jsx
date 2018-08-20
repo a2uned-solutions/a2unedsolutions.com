@@ -69,7 +69,9 @@ class ContactForm extends Component {
               submitting: false,
               success: true,
             });
+            this.props.toggleContactFormCompleted();
           }, 2000);
+
           // this.intervalId = setInterval(this.closingTimer.bind(this), 1000);
         },
       );
@@ -84,15 +86,16 @@ class ContactForm extends Component {
   render() {
 
     const { formData, success, error, submitting, timeToClosing } = this.state;
-    const { toggleContactDrawer } = this.props;
+    const { toggleContactDrawer, toggleContactFormCompleted, contactFormCompleted } = this.props;
 
     return (
       <ValidatorForm
         onSubmit={this.handleSubmit}
         instantValidate={false}
       >
-        <div className={`form-container success-${success}`}>
+        <div className={`form-container success-${success} completed-${contactFormCompleted}`}>
           <div className="form-inner">
+            {!contactFormCompleted && (
             <ul className="no-list form-list">
               <li>
                 <TextValidator
@@ -128,6 +131,7 @@ class ContactForm extends Component {
                   errorMessages={['this field is required', 'email is not valid']}
                   required={true}
                   margin="normal"
+                  type="email"
                 />
               </li>
               <li>
@@ -158,8 +162,9 @@ class ContactForm extends Component {
                 )}
               </li>
             </ul>
+            )}
           </div>
-          {success && !error && (
+          {((success && !error) || contactFormCompleted) && (
             <div className="success-message">
               <div className="success-check">
                 <CheckIcon />
@@ -168,7 +173,12 @@ class ContactForm extends Component {
                 <h3>Thank You.</h3>
                 <p>We'll get back to you as soon as possible.</p>
                 {/*<p>This form will close in <strong>{timeToClosing}</strong> seconds <em>or</em></p>*/}
-                <Button variant="raised" color="secondary" onClick={toggleContactDrawer('contactDrawerOpen', false)}>Close Now</Button>
+                <Button variant="raised" color="primary" onClick={toggleContactDrawer('contactDrawerOpen', false)}>Close</Button>
+                {!success && (
+                <div className="reset-form">
+                  <Button variant="raised" color="secondary" onClick={toggleContactFormCompleted}>Reset Form</Button>
+                </div>
+                )}
               </div>
             </div>
           )}

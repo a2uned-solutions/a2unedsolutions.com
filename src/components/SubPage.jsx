@@ -6,12 +6,16 @@ import AboutUs from './SubPages/AboutUs';
 
 class SubPage extends Component {
 
-  state = {
-    loaded: false,
-    title: '',
-    classNames: '',
-    component: null
-  };
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      loaded: false,
+      title: '',
+      classNames: '',
+      component: null
+    };
+  }
 
   componentDidMount() {
 
@@ -35,7 +39,7 @@ class SubPage extends Component {
       this.setState({
         title: 'Clients',
         classNames: 'clients',
-        component: <Clients/>
+        component: <Clients toggleContactDrawer={this.props.toggleContactDrawer} />
       });
     }
 
@@ -43,7 +47,7 @@ class SubPage extends Component {
       this.setState({
         title: 'Services',
         classNames: 'services',
-        component: <Services/>
+        component: <Services toggleContactDrawer={this.props.toggleContactDrawer} />
       });
     }
 
@@ -51,7 +55,7 @@ class SubPage extends Component {
       this.setState({
         title: 'About Us',
         classNames: 'about-us',
-        component: <AboutUs/>
+        component: <AboutUs toggleContactDrawer={this.props.toggleContactDrawer} />
       });
     }
   }

@@ -7,14 +7,14 @@ import fraza from '../../images/fraza.png';
 import metzgers from '../../images/metzgers.png';
 import hl7 from '../../images/hlz.gif';
 
-const Clients = () => {
+const Clients = (props) => {
   return (
     <div className="page-content" id="main-content">
       <p className="content-intro">We aren't even a year old yet and we already have some amazing clients.</p>
       <div className="highlight-content">
         <div className="background">
           <h2 className="small-title text">Have an interesting project?</h2>
-          <Button variant="contained" color="primary">Let's Talk</Button>
+          <Button variant="contained" color="primary" onClick={props.toggleContactDrawer('contactDrawerOpen', true)}>Let's Talk</Button>
         </div>
       </div>
       <ul className="grid-list image-grid">

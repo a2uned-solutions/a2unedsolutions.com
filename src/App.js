@@ -30,9 +30,16 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      contactDrawerOpen : false
+      contactDrawerOpen : false,
+      contactFormCompleted: false
     };
   }
+
+  toggleContactFormCompleted = () => {
+    this.setState({
+      contactFormCompleted : !this.state.contactFormCompleted,
+    });
+  };
 
   toggleContactDrawer = (drawerName, open) => () => {
     console.log('wtf');
@@ -44,7 +51,7 @@ class App extends Component {
 
   render() {
 
-    const { contactDrawerOpen } = this.state;
+    const { contactDrawerOpen, contactFormCompleted } = this.state;
 
     return (
       <Router history={history}>
@@ -59,16 +66,28 @@ class App extends Component {
                   <div className={`app ${location.pathname === '/' && 'root'}`}>
                     <Header
                       toggleContactDrawer={this.toggleContactDrawer}
-                      contactDrawerOpen={contactDrawerOpen} />
+                      toggleContactFormCompleted={this.toggleContactFormCompleted}
+                      contactDrawerOpen={contactDrawerOpen}
+                      contactFormCompleted={contactFormCompleted} />
                     <main>
                       <TransitionGroup>
                         <CSSTransition key={location.key} classNames="fade" timeout={800}>
                           <Switch location={location}>
                             <Route exact path="/" component={Home} />
-                            <Route exact path="/clients" component={SubPage} />
-                            <Route exact path="/services" component={SubPage} />
-                            <Route exact path="/about-us" component={SubPage} />
-                            <Route render={() => <div>Not Found</div>} />
+                            <Route
+                              exact
+                              path="/clients"
+                              render={(props) => <SubPage {...props} toggleContactDrawer={this.toggleContactDrawer} />} />
+                            <Route
+                              exact
+                              path="/services"
+                              render={(props) => <SubPage {...props} toggleContactDrawer={this.toggleContactDrawer} />}/>
+                            <Route
+                              exact
+                              path="/about-us"
+                              render={(props) => <SubPage {...props} toggleContactDrawer={this.toggleContactDrawer} />} />
+                            <Route
+                              render={() => <div>Not Found</div>} />
                           </Switch>
                         </CSSTransition>
                       </TransitionGroup>

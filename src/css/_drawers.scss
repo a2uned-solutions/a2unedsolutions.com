@@ -24,6 +24,15 @@
 
 .form-drawer {
   padding: 13px $defaultSpace $defaultSpace;
+  position: relative;
+
+  .close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    color: $cAction;
+  }
 
   p {
     font-size: 1.4rem !important;
@@ -40,6 +49,10 @@
     button {
       width: 100%;
     }
+  }
+
+  .success-message {
+    margin-top: 20px;
   }
 
   .success-check {
@@ -78,20 +91,27 @@
   .form-container {
 
     .form-inner {
-      max-height: 600px;
+      height: 475px;
+      transition: height 0.8s;
     }
 
     &.success-true {
 
       .form-inner {
         overflow: hidden;
-        max-height: 0;
-        transition: max-height 0.8s;
+        height: 0;
       }
 
       .success-content {
         opacity: 1;
         transition: opacity 1.2s;
+      }
+    }
+
+    &.completed-true {
+
+      .form-inner {
+        height: 0;
       }
     }
   }
