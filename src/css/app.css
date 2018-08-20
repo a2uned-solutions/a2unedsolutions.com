@@ -651,7 +651,7 @@ section.sub-page.loaded .page-content {
       fill: #ffffff;
       padding: 8px; }
   .form-drawer .success-content {
-    opacity: 1;
+    opacity: 0;
     text-align: center; }
     .form-drawer .success-content h3 {
       padding: 0;
@@ -662,18 +662,14 @@ section.sub-page.loaded .page-content {
     .form-drawer .success-content em {
       display: block;
       margin: 10px 0; }
-  .form-drawer .form-container .form-inner {
-    height: 475px; }
   .form-drawer .form-container.success-true .form-inner {
     overflow: hidden;
-    height: 0;
-    transition-delay: 2s;
-    transition: height; }
+    display: none; }
   .form-drawer .form-container.success-true .success-content {
     opacity: 1;
     transition: opacity 0.5s; }
   .form-drawer .form-container.completed-true .form-inner {
-    height: 0; }
+    display: none; }
 
 .nav-drawer {
   padding: 0; }

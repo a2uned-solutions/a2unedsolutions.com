@@ -68,16 +68,20 @@ class ContactForm extends Component {
             });
             this.props.toggleContactFormCompleted();
           }, 2000);
-
-          // this.intervalId = setInterval(this.closingTimer.bind(this), 1000);
-        },
+        }
       );
     }
 
     // fetch('/api/form-submit-url', {
     //   method: 'POST',
-    //   body: formData,
-    // });
+    //   body: JSON.stringify(formData),
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //     // "Content-Type": "application/x-www-form-urlencoded",
+    //   }
+    // }).then(res => res.json())
+    //   .then(response => console.log('Success:', response))
+    //   .catch(error => console.error('Error:', error));
   }
 
   render() {
