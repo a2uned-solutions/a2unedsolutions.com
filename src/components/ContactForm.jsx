@@ -20,7 +20,6 @@ class ContactForm extends Component {
       submitting : false,
       success : false,
       error : false,
-      timeToClosing : 6
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -40,9 +39,7 @@ class ContactForm extends Component {
       timeToClosing: this.state.timeToClosing - 1
     })
     if(this.state.timeToClosing < 1) {
-      console.log('wtffff')
       clearInterval(this.intervalId);
-      this.props.toggleContactDrawer('contactDrawerOpen', false);
     }
   }
 
@@ -85,8 +82,8 @@ class ContactForm extends Component {
 
   render() {
 
-    const { formData, success, error, submitting, timeToClosing } = this.state;
-    const { toggleContactDrawer, toggleContactFormCompleted, contactFormCompleted } = this.props;
+    const { formData, success, error, submitting } = this.state;
+    const { toggleContactDrawer, toggleContactFormCompleted, contactFormCompleted, isMobileForm } = this.props;
 
     return (
       <ValidatorForm
@@ -172,8 +169,7 @@ class ContactForm extends Component {
               <div className="success-content">
                 <h3>Thank You.</h3>
                 <p>We'll get back to you as soon as possible.</p>
-                {/*<p>This form will close in <strong>{timeToClosing}</strong> seconds <em>or</em></p>*/}
-                <Button variant="raised" color="primary" onClick={toggleContactDrawer('contactDrawerOpen', false)}>Close</Button>
+                <Button variant="raised" color="primary" onClick={toggleContactDrawer(isMobileForm ? 'right' : 'contactDrawerOpen', false)}>Close</Button>
                 {!success && (
                 <div className="reset-form">
                   <Button variant="raised" color="secondary" onClick={toggleContactFormCompleted}>Reset Form</Button>

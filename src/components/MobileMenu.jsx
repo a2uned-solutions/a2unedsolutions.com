@@ -6,15 +6,10 @@ import { NavLink } from 'react-router-dom'
 
 class MobileMenu extends Component {
 
-  state = {
-    name : 'Your name'
+  constructor(props) {
+    super(props);
+    this.state = {};
   }
-
-  handleChange = name => event => {
-    this.setState({
-      [name]: event.target.value,
-    });
-  };
 
   toggleDrawer = (side, open) => () => {
     this.setState({
@@ -23,6 +18,9 @@ class MobileMenu extends Component {
   };
 
   render() {
+
+    const { toggleContactFormCompleted, contactFormCompleted } = this.props;
+
     return (
       <aside className="mobile-menu">
         <Button onClick={this.toggleDrawer('right', true)}>
@@ -31,15 +29,13 @@ class MobileMenu extends Component {
         <Drawer anchor="right" className="drawer" open={this.state.right} onClose={this.toggleDrawer('right', false)}>
           <div
             tabIndex={0}
-            role="button"
-            onClick={this.toggleDrawer('right', false)}
-            onKeyDown={this.toggleDrawer('right', false)}
             className="nav-drawer drawer-container"
           >
+            <i className="fas fa-times close" title="Close" onClick={this.toggleDrawer('right', false)}></i>
             <h2>Navigation</h2>
             <nav>
-              <ul className="no-list">
-                <li>
+              <ul className="no-list" onClick={this.toggleDrawer('right', false)}>
+                <li >
                   <NavLink to="/" exact={true} activeClassName="active">Home</NavLink>
                 </li>
                 <li>
@@ -54,8 +50,12 @@ class MobileMenu extends Component {
               </ul>
             </nav>
             <h2>Contact Us</h2>
-            <div className="contact-form-mobile">
-              <ContactForm/>
+            <div className="contact-form-mobile form-drawer">
+              <ContactForm
+                toggleContactDrawer={this.toggleDrawer}
+                toggleContactFormCompleted={toggleContactFormCompleted}
+                contactFormCompleted={contactFormCompleted}
+                isMobileForm={true} />
             </div>
           </div>
         </Drawer>

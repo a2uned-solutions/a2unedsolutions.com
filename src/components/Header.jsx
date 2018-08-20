@@ -6,6 +6,7 @@ import {
 import logo from '../images/a2uned_solutions_logo.svg';
 import ContactFormDrawer from './ContactFormDrawer';
 import MobileMenu from './MobileMenu';
+import ContactForm from './ContactForm'
 
 class Header extends Component {
   render() {
@@ -40,7 +41,9 @@ class Header extends Component {
             </li>
           </ul>
         </nav>
-        <MobileMenu/>
+        <MobileMenu
+          toggleContactFormCompleted={toggleContactFormCompleted}
+          contactFormCompleted={contactFormCompleted} />
       </header>
     );
   }

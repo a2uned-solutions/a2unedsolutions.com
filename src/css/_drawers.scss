@@ -20,7 +20,15 @@
 .drawer-container {
    min-width: 300px;
    padding: $defaultSpace;
- }
+}
+
+.close {
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  cursor: pointer;
+  color: $cAction;
+}
 
 .form-drawer {
   padding: 13px $defaultSpace $defaultSpace;
@@ -92,7 +100,6 @@
 
     .form-inner {
       height: 475px;
-      transition: height 0.8s;
     }
 
     &.success-true {
@@ -100,11 +107,13 @@
       .form-inner {
         overflow: hidden;
         height: 0;
+        transition-delay: 2s;
+        transition: height;
       }
 
       .success-content {
         opacity: 1;
-        transition: opacity 1.2s;
+        transition: opacity 0.5s;
       }
     }
 

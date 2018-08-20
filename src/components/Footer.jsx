@@ -18,8 +18,8 @@ class Footer extends Component {
             </li>
           </ul>
           <p className="copy-creds">&copy; A2uned Solutions LLC</p>
-          <p className="notice">Interested in Blockchain Technology?
-            <a href="https://a2uned.io" target="_blank" rel="noopener noreferrer">So are we</a>
+          <p className="notice">
+            <a href="https://a2uned.io" target="_blank" rel="noopener noreferrer">Interested in Blockchain Technology? So are we.</a>
           </p>
         </div>
       </footer>
