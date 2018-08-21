@@ -96,10 +96,13 @@
         }
 
         aside {
-          padding: 18px 25px;
 
           i {
             font-size: 1.6rem;
+          }
+
+          button {
+            padding: 18px 25px !important;
           }
         }
       }

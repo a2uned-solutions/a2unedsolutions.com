@@ -242,6 +242,32 @@ body button[type=submit] {
   opacity: 1;
 }
 
+.made-in-michigan {
+  margin: 40px 0;
+
+  strong {
+    position: relative;
+
+    span {
+      text-transform: uppercase;
+      font-weight: 900;
+      background: $cW;
+      padding: 5px;
+      position: relative;
+      z-index: 2;
+    }
+
+    img {
+      width: 70px;
+      opacity: 0.1;
+      transform: rotate(25deg);
+      position: absolute;
+      top: -23px;
+      right: -50px;
+      z-index: 1;
+    }
+  }
+}
 
 //-------------------------//
 //-----> Helper Classes

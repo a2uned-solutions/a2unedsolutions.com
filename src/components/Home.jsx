@@ -3,6 +3,9 @@ import history from '../utils/history';
 import hero from '../images/hero.jpg';
 import Button from '@material-ui/core/Button';
 
+import michigan from '../images/michigan.svg';
+import logo from '../images/a2uned_solutions_logo.svg'
+
 class Home extends Component {
 
   state = {
@@ -82,7 +85,12 @@ class Home extends Component {
               <h2>New company. <strong>Grown Up Experience.</strong></h2>
               <p>Over a decade of experience designing and developing web applications. Our team has worked with many large corporations with recognizable brands. The majority of our time was spent on large scale eCommerce builds.</p>
               <p>Our focus is on memorable user experiences and clean design. We've worked with enough platforms and frameworks over the years to be comfortable in any situation.</p>
-              <p><strong>Proudly Made In Michigan</strong></p>
+              <h3 className="made-in-michigan">
+                <strong>
+                  <span>Proudly Made In Michigan</span>
+                  <img src={michigan} alt="Ann Arbor, Michigan" />
+                </strong>
+              </h3>
             </div>
           </div>
         </div>

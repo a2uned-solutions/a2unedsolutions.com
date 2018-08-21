@@ -180,6 +180,26 @@ body button[type=submit] {
   z-index: 1;
   opacity: 1; }
 
+.made-in-michigan {
+  margin: 40px 0; }
+  .made-in-michigan strong {
+    position: relative; }
+    .made-in-michigan strong span {
+      text-transform: uppercase;
+      font-weight: 900;
+      background: #ffffff;
+      padding: 5px;
+      position: relative;
+      z-index: 2; }
+    .made-in-michigan strong img {
+      width: 70px;
+      opacity: 0.1;
+      transform: rotate(25deg);
+      position: absolute;
+      top: -23px;
+      right: -50px;
+      z-index: 1; }
+
 .error {
   color: #7d1b14; }
 
@@ -284,7 +304,7 @@ body button[type=submit] {
         background: #ffffff;
         font-size: 1.2rem;
         text-transform: uppercase;
-        padding: 30px 25px; }
+        padding: 0; }
         .app-header nav li aside:after {
           position: absolute;
           content: '';
@@ -302,7 +322,7 @@ body button[type=submit] {
             background: #527435; }
       .app-header nav li button {
         margin: 0;
-        padding: 0;
+        padding: 30px 25px !important;
         min-width: inherit;
         min-height: inherit;
         color: #527435;
@@ -850,10 +870,10 @@ section.sub-page.loaded .page-content {
       max-width: 100px; }
     .app-header nav li a {
       padding: 19px; }
-    .app-header nav li aside {
-      padding: 18px 25px; }
-      .app-header nav li aside i {
-        font-size: 1.6rem; }
+    .app-header nav li aside i {
+      font-size: 1.6rem; }
+    .app-header nav li aside button {
+      padding: 18px 25px !important; }
 
   .home .service-intro h2 {
     font-size: 1.8rem; }
