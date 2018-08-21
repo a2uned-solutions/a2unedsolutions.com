@@ -180,8 +180,14 @@ body button[type=submit] {
   z-index: 1;
   opacity: 1; }
 
+.error {
+  color: #7d1b14; }
+
 .block {
   display: block; }
+
+.no-show {
+  display: none; }
 
 .no-list {
   list-style: none;
@@ -329,6 +335,8 @@ footer {
     border-top: 1px solid #f5f6f7; }
     footer .footer-container p {
       margin: 0;
+      font-size: 1.3rem; }
+    footer .footer-container .copy-creds {
       font-size: 1.3rem; }
     footer .footer-container .social {
       position: absolute;
@@ -871,6 +879,11 @@ section.sub-page.loaded .page-content {
   .service-listings .grid-list h2 {
     font-size: 1.8rem; } }
 @media screen and (max-width: 768px) {
+  footer .footer-container .notice {
+    top: 23px; }
+  footer .footer-container .copy-creds {
+    margin: 40px 0 0 0; }
+
   .home .service-intro > ul {
     width: 98%; }
     .home .service-intro > ul > li {

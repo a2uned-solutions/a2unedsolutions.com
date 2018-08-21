@@ -246,8 +246,17 @@ body button[type=submit] {
 //-------------------------//
 //-----> Helper Classes
 //-------------------------//
+
+.error {
+  color: $cError;
+}
+
 .block {
   display: block;
+}
+
+.no-show {
+  display: none;
 }
 
 .no-list {

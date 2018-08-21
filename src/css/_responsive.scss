@@ -158,6 +158,20 @@
 
 @media screen and (max-width: $bpSmall) {
 
+  footer {
+
+    .footer-container {
+
+      .notice {
+        top: 23px;
+      }
+
+      .copy-creds {
+        margin: 40px 0 0 0;
+      }
+    }
+  }
+
   .home .service-intro > ul {
     width: 98%;
 

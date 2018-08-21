@@ -13,8 +13,9 @@ const AboutUs = (props) => {
   return (
     <div className="page-content" id="main-content">
       <div className="page-intro">
-        <p>Over ten years of experience in the Information Technology industry. We've worked with Fortune 500 companies, medium sized businesses, and Ma & Pa Shops. <strong>Founded in 2017.</strong></p>
+        <p>Over ten years of experience in the Information Technology industry. We've worked with Fortune 500 companies, medium sized businesses, and Ma & Pa Shops.</p>
         <p>There isn't much we can't handle or provide a solution for. We're willing to go the distance for great clients.</p>
+        <h2>Founded in 2017. Proudly Made In Michigan</h2>
       </div>
       <ul className="grid-list">
         <li>

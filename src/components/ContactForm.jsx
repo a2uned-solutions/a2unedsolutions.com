@@ -52,8 +52,6 @@ class ContactForm extends Component {
   handleSubmit() {
     const { formData } = this.state;
 
-    console.log(formData);
-
     if (!this.state.submitting) {
       this.setState(
         {
@@ -62,26 +60,33 @@ class ContactForm extends Component {
         },
         () => {
           this.submittingTimer = setTimeout(() => {
-            this.setState({
-              submitting: false,
-              success: true,
-            });
-            this.props.toggleContactFormCompleted();
-          }, 2000);
+            fetch('https://api.formbucket.com/f/buk_CYpxYEp4NrEWzTwbSKA2wyYN', {
+              method: 'POST',
+              body: JSON.stringify(formData),
+              headers: {
+                "Content-Type": "application/json",
+              }
+            }).then(res => res.json())
+              .then(response => {
+                this.setState({
+                  submitting: false,
+                  success: true,
+                  error: false
+                });
+                this.props.toggleContactFormCompleted();
+                console.log(response);
+              })
+              .catch(error => {
+                this.setState({
+                  submitting: false,
+                  error: true,
+                });
+                console.error(error)
+              });
+          }, 800);
         }
       );
     }
-
-    // fetch('/api/form-submit-url', {
-    //   method: 'POST',
-    //   body: JSON.stringify(formData),
-    //   headers: {
-    //     "Content-Type": "application/json",
-    //     // "Content-Type": "application/x-www-form-urlencoded",
-    //   }
-    // }).then(res => res.json())
-    //   .then(response => console.log('Success:', response))
-    //   .catch(error => console.error('Error:', error));
   }
 
   render() {
@@ -156,7 +161,7 @@ class ContactForm extends Component {
                   <Button variant="raised" color="primary" type="submit">Submit</Button>
                 )}
                 {error && (
-                  <p>Error processing the form. Please try again.</p>
+                  <p className="error">The message didn't go through. Please try again.</p>
                 )}
                 {submitting && !error && (
                   <CircularProgress color={`primary`} size={40} />
