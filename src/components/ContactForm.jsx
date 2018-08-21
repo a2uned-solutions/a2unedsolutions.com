@@ -3,6 +3,7 @@ import { ValidatorForm, TextValidator } from 'react-material-ui-form-validator';
 import Button from '@material-ui/core/Button';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import CheckIcon from '@material-ui/icons/Check';
+import ReCAPTCHA from "react-google-recaptcha";
 
 class ContactForm extends Component {
 
@@ -15,14 +16,16 @@ class ContactForm extends Component {
         name: '',
         company: '',
         email: '',
-        message: ''
+        message: '',
       },
+      recaptchaToken: false,
       submitting : false,
       success : false,
       error : false,
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.onCaptchaChange = this.onCaptchaChange.bind(this);
   }
 
   componentDidMount() {
@@ -47,6 +50,11 @@ class ContactForm extends Component {
     const { formData } = this.state;
     formData[event.target.name] = event.target.value;
     this.setState({ formData });
+  }
+
+  onCaptchaChange(value) {
+    // TODO: This needs to be handled better
+    this.setState({ recaptchaToken: value });
   }
 
   handleSubmit() {
@@ -91,7 +99,7 @@ class ContactForm extends Component {
 
   render() {
 
-    const { formData, success, error, submitting } = this.state;
+    const { formData, success, error, submitting, recaptchaToken } = this.state;
     const { toggleDrawer, toggleContactFormCompleted, contactFormCompleted, isMobileForm } = this.props;
 
     return (
@@ -156,9 +164,15 @@ class ContactForm extends Component {
                   margin="normal"
                 />
               </li>
+              <li>
+                <ReCAPTCHA
+                  sitekey="6LeO5UIUAAAAACCsW6qumjMSNLAouM1y9bdEDJnS"
+                  onChange={this.onCaptchaChange}
+                />
+              </li>
               <li className="submit-container">
                 {!success && !submitting && (
-                  <Button variant="raised" color="primary" type="submit">Submit</Button>
+                  <Button variant="raised" color="primary" type="submit" disabled={!recaptchaToken}>Submit</Button>
                 )}
                 {error && (
                   <p className="error">The message didn't go through. Please try again.</p>
