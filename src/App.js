@@ -87,7 +87,7 @@ class App extends Component {
                               path="/about-us"
                               render={(props) => <SubPage {...props} toggleDrawer={this.toggleDrawer} />} />
                             <Route
-                              render={() => <div>Not Found</div>} />
+                              render={() => <div style={{ margin: '90px 30px 50px', textAlign: 'center' }}><h1>404</h1><h2>Sorry this page doesn't exist.</h2></div>} />
                           </Switch>
                         </CSSTransition>
                       </TransitionGroup>
