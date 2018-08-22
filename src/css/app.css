@@ -785,12 +785,15 @@ section.sub-page.loaded .page-content {
       padding: 0 0 10px 0;
       border-bottom: 1px solid rgba(210, 210, 210, 0.3); }
     .service-listings .listing-heading p.key {
-      font-size: 1.2rem;
+      font-size: 1.4rem;
+      font-weight: 700;
       color: #000;
       position: absolute;
       top: 3px;
       right: 0;
-      line-height: 1; }
+      line-height: 1;
+      padding: 3px 5px 5px;
+      background: rgba(210, 210, 210, 0.4); }
       .service-listings .listing-heading p.key i {
         font-size: 1.6rem;
         position: relative;

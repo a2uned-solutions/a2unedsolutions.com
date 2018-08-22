@@ -18,12 +18,15 @@
     }
 
     p.key {
-      font-size: 1.2rem;
+      font-size: 1.4rem;
+      font-weight: 700;
       color: #000;
       position: absolute;
       top: 3px;
       right: 0;
       line-height: 1;
+      padding: 3px 5px 5px;
+      background: rgba($cSecondaryText, 0.4);
 
       i {
         font-size: 1.6rem;
