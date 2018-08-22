@@ -26,9 +26,9 @@ class Footer extends Component {
               <span itemProp="addressCountry">United States</span>
             </div>
           </div>
-          <p className="notice">
-            <a href="https://www.a2uned.io">Interested in Blockchain Technology? So are we.</a>
-          </p>
+          {/*<p className="notice">*/}
+            {/*<a href="https://www.a2uned.io">Interested in Blockchain Technology? So are we.</a>*/}
+          {/*</p>*/}
         </div>
       </footer>
     );
