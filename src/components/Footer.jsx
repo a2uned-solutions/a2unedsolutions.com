@@ -27,7 +27,7 @@ class Footer extends Component {
             </div>
           </div>
           <p className="notice">
-            <a href="https://a2uned.io">Interested in Blockchain Technology? So are we.</a>
+            <a href="https://www.a2uned.io">Interested in Blockchain Technology? So are we.</a>
           </p>
         </div>
       </footer>
