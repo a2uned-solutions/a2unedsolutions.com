@@ -20,31 +20,31 @@ const Clients = (props) => {
       </div>
       <ul className="grid-list image-grid">
         <li>
-          <a href="https://lakewares.com/" target="_blank" rel="noopener">
+          <a href="https://lakewares.com/">
             <img src={lakewares} alt="Lakewares" />
             <h2>Lake Apparel</h2>
           </a>
         </li>
         <li>
-          <a href="https://frazagroup.com/" target="_blank" rel="noopener">
+          <a href="https://frazagroup.com/">
             <img src={fraza} alt="Fraza Group" />
             <h2>Forklifts &amp; Training</h2>
           </a>
         </li>
         <li className="wip">
-          <a href="http://artlinegroup.com/" target="_blank" rel="noopener">
+          <a href="http://artlinegroup.com/">
             <img src={artline} alt="Artline Group" />
             <h2>Custom Art</h2>
           </a>
         </li>
         <li>
-          <a href="http://www.hl7.org/index.cfm" target="_blank" rel="noopener">
+          <a href="http://www.hl7.org/index.cfm">
             <img src={hl7} alt="Health Level Seven" />
             <h2>Health Level Seven</h2>
           </a>
         </li>
         <li>
-          <a href="https://metzgers.net" target="_blank" rel="noopener">
+          <a href="https://metzgers.net">
             <img src={metzgers} alt="Metzger's" />
             <h2>Ann Arbor Restaurant</h2>
           </a>

@@ -4,7 +4,6 @@ import hero from '../images/hero.jpg';
 import Button from '@material-ui/core/Button';
 
 import michigan from '../images/michigan.svg';
-import logo from '../images/a2uned_solutions_logo.svg'
 
 class Home extends Component {
 

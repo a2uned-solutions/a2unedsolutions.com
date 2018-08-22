@@ -71,7 +71,7 @@ class App extends Component {
                       contactFormCompleted={contactFormCompleted} />
                     <main>
                       <TransitionGroup>
-                        <CSSTransition key={location.key} classNames="fade" timeout={800}>
+                        <CSSTransition key={location.key} classNames="fade" timeout={0}>
                           <Switch location={location}>
                             <Route exact path="/" component={Home} />
                             <Route

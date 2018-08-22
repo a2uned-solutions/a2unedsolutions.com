@@ -32,17 +32,17 @@ const AboutUs = (props) => {
             <p>Designer, developer, and chef are his favorite hats to wear. Attempting to keep up with the pace of change Nathan is always eager to learn and peak into the next rabbit hole.</p>
             <ul className="social">
               <li>
-                <a href="https://www.linkedin.com/in/nathanolmstead/" target="_blank" rel="noopener"  title="LinkedIn">
+                <a href="https://www.linkedin.com/in/nathanolmstead/" title="LinkedIn">
                   <i className="fab fa-linkedin-in" aria-hidden="true"></i>
                 </a>
               </li>
               <li>
-                <a href="https://twitter.com/disruptingnate/" target="_blank" rel="noopener"  title="Twitter">
+                <a href="https://twitter.com/disruptingnate/" title="Twitter">
                   <i className="fab fa-twitter" aria-hidden="true"></i>
                 </a>
               </li>
               <li>
-                <a href="https://www.linkedin.com/in/nathanolmstead/" target="_blank" rel="noopener"  title="GitHub">
+                <a href="https://www.linkedin.com/in/nathanolmstead/" title="GitHub">
                   <i className="fab fa-github"></i>
                 </a>
               </li>
@@ -63,12 +63,12 @@ const AboutUs = (props) => {
             <p>Engineer, database wrangler, and point guard are just a few of his skills. A former project manager who developed a passion for learning new technologies and building things.</p>
             <ul className="social">
               <li>
-                <a href="https://www.linkedin.com/in/micah-lunt-8322a752/" target="_blank" rel="noopener"  title="LinkedIn">
+                <a href="https://www.linkedin.com/in/micah-lunt-8322a752/" title="LinkedIn">
                   <i className="fab fa-linkedin-in" aria-hidden="true"></i>
                 </a>
               </li>
               <li>
-                <a href="https://github.com/micahlunt" target="_blank" rel="noopener"  title="GitHub">
+                <a href="https://github.com/micahlunt" title="GitHub">
                   <i className="fab fa-github"></i>
                 </a>
               </li>
