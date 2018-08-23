@@ -1,4 +1,10 @@
 {
   "root": "build/",
-  "https_only": true
+  "https_only": true,
+  "redirects": {
+    "https://a2unedsolutions.com": {
+      "url": "/",
+      "status": 301
+    }
+  }
 }
