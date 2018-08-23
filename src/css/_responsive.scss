@@ -356,7 +356,8 @@
   .home {
 
     .hero {
-      padding: 80px 15px 100px 15px;
+      padding: 100px 15px 110px 15px;
+      overflow: hidden;
 
       h1 {
         padding: 0;
@@ -375,7 +376,8 @@
       }
 
       .hero-img {
-        width: 115%;
+        width: 130%;
+        position: absolute;
       }
     }
 

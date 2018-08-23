@@ -6,6 +6,7 @@ import {
 } from 'react-router-dom';
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 import history from './utils/history';
+import ReactGA from 'react-ga';
 
 import './css/app.css';
 
@@ -36,6 +37,15 @@ class App extends Component {
     };
   }
 
+  componentDidMount() {
+    ReactGA.initialize('UA-112084957-1');
+  }
+
+  fireTracking = () => {
+    console.log(window.location)
+    ReactGA.pageview(window.location.hash);
+  }
+
   toggleContactFormCompleted = () => {
     this.setState({
       contactFormCompleted : !this.state.contactFormCompleted,
@@ -53,7 +63,7 @@ class App extends Component {
     const { contactDrawer, mobileDrawer, contactFormCompleted } = this.state;
 
     return (
-      <Router history={history}>
+      <Router onChange={this.fireTracking} history={history}>
           <Route
             render={({ location }) => (
               <div>
@@ -73,7 +83,10 @@ class App extends Component {
                       <TransitionGroup>
                         <CSSTransition key={location.key} classNames="fade" timeout={0}>
                           <Switch location={location}>
-                            <Route exact path="/" component={Home} />
+                            <Route
+                              exact
+                              path="/"
+                              render={(props) => <Home {...props} toggleDrawer={this.toggleDrawer} />} />
                             <Route
                               exact
                               path="/clients"

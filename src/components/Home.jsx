@@ -34,6 +34,7 @@ class Home extends Component {
   render() {
 
     const { animationCount } = this.state;
+    const { toggleDrawer } = this.props;
 
     return (
       <section className={`home animation-step-${animationCount}`} id="main-content">
@@ -49,7 +50,7 @@ class Home extends Component {
             <li>
               <h2>Websites or Web Applications?</h2>
               <p><strong>Yes.</strong> We build websites that behave like apps. Single page applications (SPA) built with the latest front-end technology. <strong>Take your Users Experiences to the Next Level!</strong></p>
-              <Button variant="contained" color="primary">How can we help you</Button>
+              <Button variant="contained" color="primary" onClick={toggleDrawer('contactDrawer', true)}>How can we help you</Button>
             </li>
             <li>
               <h2>So Much More</h2>

@@ -424,7 +424,8 @@ footer {
     z-index: 10;
     margin: -40px 0 0 0;
     position: relative;
-    padding: 100px 4%; }
+    padding: 100px 4%;
+    overflow: hidden; }
     .home .about-intro .about-container {
       max-width: 1200px;
       display: flex; }
@@ -1009,7 +1010,8 @@ section.sub-page.loaded .page-content {
       text-align: left; }
 
   .home .hero {
-    padding: 80px 15px 100px 15px; }
+    padding: 100px 15px 110px 15px;
+    overflow: hidden; }
     .home .hero h1 {
       padding: 0; }
       .home .hero h1 .thin.small {
@@ -1018,7 +1020,8 @@ section.sub-page.loaded .page-content {
         margin: 0px 0 -8px 0px;
         padding: 2px 10px; }
     .home .hero .hero-img {
-      width: 115%; }
+      width: 130%;
+      position: absolute; }
   .home .service-intro > ul {
     margin: 0;
     width: 100%; }
