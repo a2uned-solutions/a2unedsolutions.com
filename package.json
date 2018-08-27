@@ -29,5 +29,16 @@
   },
   "devDependencies": {
     "react-snapshot": "^1.3.0"
+  },
+  "reactSnapshot": {
+    "include": [
+      "/about-us",
+      "/services",
+      "/clients"
+    ],
+    "exclude": [
+      "/admin"
+    ],
+    "snapshotDelay": 300
   }
 }
