@@ -1,5 +1,4 @@
 import React from "react";
-import config from "../../data/SiteConfig";
 import "font-awesome/scss/font-awesome.scss";
 import "./index.scss";
 import Header from "../components/Header";
