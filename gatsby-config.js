@@ -20,7 +20,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-favicon`,
       options: {
-        logo: "./src/favicon.png",
+        logo: "https://www.a2unedsolutions.com/favicon.png",
       }
     },
     "gatsby-plugin-sass",
