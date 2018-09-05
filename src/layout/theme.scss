@@ -1,0 +1,21 @@
+@import '~react-md/src/scss/react-md';
+
+$md-typography-extended: false;
+$md-tab-include-swipeable: false !default;
+
+$md-font-name: Nunito Sans !default;
+$md-font-family: Nunito Sans;
+
+$primary: #527435;
+$secondary: #f5f6f7;
+$background: #ffffff;
+
+$md-primary-color: $primary;
+$md-secondary-color: $secondary;
+$md-tertiary-color: $background;
+
+$md-switch-ball-fallback-color: $md-teal-900;
+$md-linear-progress-fallback-color: $md-teal-900;
+$md-data-table-contextual-fallback-color: $md-teal-900;
+
+

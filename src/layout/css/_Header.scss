@@ -1,0 +1,166 @@
+//-------------------------//
+//-----> Header
+//-------------------------//
+.app-header {
+  z-index: 9;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba($cW, 0.3);
+  width: 100%;
+  height: 78px;
+  overflow: hidden;
+  z-index: 1009;
+  border-bottom: 1px solid $cSecondary;
+
+  .branding {
+    background: $cW;
+    padding: 15px 25px 12px 25px;
+    margin: 0;
+    max-width: 267px;
+    height: 100%;
+  }
+
+  .logo {
+    width: 100%;
+  }
+
+  nav.desktop-nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+
+   > ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+
+     > li {
+       display: inline-block;
+     }
+    }
+
+    li {
+
+      a {
+        display: block;
+        line-height: 1;
+        font-weight: 400;
+        z-index: 5;
+        position: relative;
+        background: $cW;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        padding: 33px 25px;
+        width: 100%;
+
+        &:after {
+          position: absolute;
+          content: '';
+          display: table;
+          height: 4px;
+          width: 101%;
+          background: rgba($cAction, 0.1);
+          bottom: -10px;
+          left: 0;
+          transition: all 0.4s;
+        }
+
+        &:hover {
+          color: $cAction;
+
+          &:after {
+            bottom: 0px;
+            background: $cAction;
+          }
+        }
+
+        &.active {
+          cursor: default;
+          color: $cAction2;
+
+          &:after {
+            bottom: 0;
+            background: $cAction2;
+          }
+        }
+      }
+
+      .drawer-toggle {
+        display: block;
+        line-height: 1;
+        font-weight: 400;
+        z-index: 5;
+        position: relative;
+        background: $cW;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        padding: 0;
+
+        &:after {
+          position: absolute;
+          content: '';
+          display: table;
+          height: 4px;
+          width: 101%;
+          background: rgba($cAction, 0.1);
+          bottom: -10px;
+          left: 0;
+          transition: all 0.4s;
+        }
+
+        &:hover {
+          color: $cAction;
+
+          &:after {
+            bottom: 2px;
+            background: $cAction;
+          }
+        }
+      }
+
+      .toggle-btn {
+        margin: 0;
+        padding: 0;
+        width: inherit;
+        height: inherit;
+        color: $cAction;
+        box-shadow: none;
+        border: none;
+        cursor: pointer;
+        display: block;
+        height: inherit;
+        overflow: hidden;
+
+        &:hover {
+          background-color: transparent;
+        }
+
+        i {
+          font-size: 2rem;
+          padding: 30px;
+        }
+      }
+    }
+  }
+}
+
+.root {
+
+  .app-header {
+    background: none;
+    border-bottom: 1px solid rgba($cW, 0.5);
+  }
+}
+
+.mobile-menu {
+  display: none;
+}
+
+// Accessibility
+.skip-nav {
+  position: absolute;
+  top: -2000px;
+}
