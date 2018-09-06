@@ -349,7 +349,7 @@
     .page-header {
 
       h1 {
-        font-size: 6rem;
+        font-size: 4rem;
       }
 
       span.border {
@@ -358,6 +358,7 @@
     }
 
     .page-content {
+      overflow: hidden;
 
       .page-intro {
         margin: 0 auto 25px auto;
@@ -432,10 +433,11 @@
 
     .grid-list {
       margin-top: 40px;
+      overflow: hidden;
 
       > li {
         width: 100% !important;
-        margin: 0 0 60px 0 !important;
+        margin: 0 0 70px 0 !important;
 
         .member-info {
           width: 55%;
