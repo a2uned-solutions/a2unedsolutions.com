@@ -16,6 +16,7 @@ module.exports = {
   },
   plugins: [
     "gatsby-plugin-react-helmet",
+    "gatsby-plugin-remove-serviceworker",
     "gatsby-plugin-lodash",
     {
       resolve: `gatsby-plugin-favicon`,
