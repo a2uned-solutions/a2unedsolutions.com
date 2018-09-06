@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import SubPage from '../layout/subpage';
 import Layout from '../layout';
+import Services from '../components/SubPages/services';
 
 import config from "../../data/SiteConfig";
 
@@ -15,6 +16,7 @@ class ServicesPage extends Component {
       seoTitle: config.seo.services.title,
       seoDescription: config.seo.services.description,
       canonical: `${config.siteUrl}/services/`,
+      component: <Services/>
     };
   }
 

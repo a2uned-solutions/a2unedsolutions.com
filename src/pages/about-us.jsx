@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import SubPage from '../layout/subpage';
 import Layout from '../layout';
+import AboutUs from '../components/SubPages/about-us';
 
 import config from "../../data/SiteConfig";
 
@@ -15,6 +16,7 @@ class AboutPage extends Component {
       seoTitle: config.seo.aboutUs.title,
       seoDescription: config.seo.aboutUs.description,
       canonical: `${config.siteUrl}/about/`,
+      component: <AboutUs/>
     };
   }
 
