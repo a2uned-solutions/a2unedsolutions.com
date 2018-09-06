@@ -1,6 +1,10 @@
 import React, { Component } from "react";
 import Helmet from "react-helmet";
 
+import AboutUs from '../components/SubPages/about-us';
+import Clients from '../components/SubPages/clients';
+import Services from '../components/SubPages/services';
+
 class SubPage extends Component {
 
   constructor(props) {
@@ -8,7 +12,12 @@ class SubPage extends Component {
 
     this.state = {
       loaded: false,
+      component: null
     };
+  }
+
+  componentWillMount() {
+    this.getLocalTitle();
   }
 
   componentDidMount() {
@@ -19,10 +28,24 @@ class SubPage extends Component {
     );
   }
 
+  getLocalTitle() {
+    const pageKey = this.props.pageData.key
+      .replace("/", "");
+    if (pageKey === "") {
+        this.setState({ component: null });
+    } else if (pageKey === "services") {
+        this.setState({ component: <Services /> });
+    } else if (pageKey === "clients") {
+        this.setState({ component: <Clients /> });
+    } else if (pageKey === "about-us") {
+        this.setState({ component: <AboutUs /> });
+    }
+  }
+
   render() {
 
-    const { loaded } = this.state;
-    const { title, key, seoTitle, seoDescription, canonical, component } = this.props.pageData;
+    const { loaded, component } = this.state;
+    const { title, key, seoTitle, seoDescription, canonical } = this.props.pageData;
 
     return (
       <section className={`${key} sub-page ${loaded && 'loaded'}`}>
