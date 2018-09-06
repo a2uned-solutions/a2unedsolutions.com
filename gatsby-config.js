@@ -16,7 +16,6 @@ module.exports = {
   },
   plugins: [
     "gatsby-plugin-react-helmet",
-    "gatsby-plugin-remove-serviceworker",
     "gatsby-plugin-lodash",
     {
       resolve: `gatsby-plugin-favicon`,
@@ -78,7 +77,7 @@ module.exports = {
         name: config.seo.home.title,
         short_name: config.seo.home.titleShort,
         description: config.seo.home.description,
-        start_url: config.pathPrefix,
+        start_url: config.siteUrl,
         background_color: "#f5f6f7",
         theme_color: "#527435",
         display: "minimal-ui",
@@ -96,5 +95,6 @@ module.exports = {
         ]
       }
     },
+    "gatsby-plugin-offline"
   ]
 };

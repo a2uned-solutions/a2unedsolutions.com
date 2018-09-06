@@ -120,6 +120,8 @@
   .home {
 
     .service-intro {
+      overflow: hidden;
+      padding: 0 0 20px 0;
 
       h2 {
         font-size: 1.8rem;
@@ -127,22 +129,16 @@
 
       > ul {
         flex-wrap: wrap;
-        margin: 0 20px;
+        margin: 0;
         padding: 0;
         width: 100%;
 
         > li {
-          width: 42%;
-          margin: 0 20px 0 0;
-
-          &:nth-child(2) {
-            margin: 0;
-          }
+          width: 100%;
+          margin: 20px 0 0 0;
+          display: block;
 
           &:nth-child(3) {
-            margin: 20px 0 0 0;
-            width: 91%;
-            display: block;
 
             i.fas {
               font-size: 150px;
