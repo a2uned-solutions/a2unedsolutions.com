@@ -14,7 +14,7 @@ class Footer extends Component {
               </a>
             </li>
             <li>
-              <a href="https://github.com/micahlunt" title="GitHub">
+              <a href="https://github.com/a2uned-solutions" title="GitHub">
                 <i className="fa fa-github"></i>
               </a>
             </li>

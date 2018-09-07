@@ -12,7 +12,7 @@ class Services extends Component {
       <div className="service-listings">
         <header className="listing-heading">
           <h2>Services We Provide:</h2>
-          <p className="key"><i className="far fa-file-alt"></i>&nbsp; Deliverable Document</p>
+          <p className="key"><i className="fa fa-file"></i>&nbsp; Deliverable Document</p>
         </header>
         <ul className="grid-list">
           <li>
@@ -41,25 +41,25 @@ class Services extends Component {
           <li>
             <h2>User Experience (UX)</h2>
             <ul>
-              <li>Heuristic Evaluation <i className="far fa-file-alt"></i></li>
-              <li>User Research <i className="far fa-file-alt"></i></li>
-              <li>Personas <i className="far fa-file-alt"></i></li>
-              <li>Competitive Analysis <i className="far fa-file-alt"></i></li>
-              <li>Wireframes <i className="far fa-file-alt"></i></li>
-              <li>User Interface Specifications <i className="far fa-file-alt"></i></li>
-              <li>Sitemaps <i className="far fa-file-alt"></i></li>
+              <li>Heuristic Evaluation <i className="fa fa-file"></i></li>
+              <li>User Research <i className="fa fa-file"></i></li>
+              <li>Personas <i className="fa fa-file"></i></li>
+              <li>Competitive Analysis <i className="fa fa-file"></i></li>
+              <li>Wireframes <i className="fa fa-file"></i></li>
+              <li>User Interface Specifications <i className="fa fa-file"></i></li>
+              <li>Sitemaps <i className="fa fa-file"></i></li>
               <li>Prototypes</li>
-              <li>User Testing <i className="far fa-file-alt"></i></li>
-              <li>A/B Testing <i className="far fa-file-alt"></i></li>
+              <li>User Testing <i className="fa fa-file"></i></li>
+              <li>A/B Testing <i className="fa fa-file"></i></li>
             </ul>
           </li>
           <li>
             <h2>Testing <span className="thin">&amp;</span> Site Audits</h2>
             <ul>
               <li>Quality Assurance Testing</li>
-              <li>Quality Assurance Audit <i className="far fa-file-alt"></i></li>
-              <li>SEO Audit <i className="far fa-file-alt"></i></li>
-              <li>Accessibility Audit <i className="far fa-file-alt"></i></li>
+              <li>Quality Assurance Audit <i className="fa fa-file"></i></li>
+              <li>SEO Audit <i className="fa fa-file"></i></li>
+              <li>Accessibility Audit <i className="fa fa-file"></i></li>
             </ul>
             <h2 className="second-level-list">DevOps</h2>
             <ul>
