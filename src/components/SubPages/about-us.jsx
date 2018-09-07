@@ -38,7 +38,7 @@ class AboutUs extends Component {
                   </a>
                 </li>
                 <li>
-                  <a href="https://www.linkedin.com/in/nathanolmstead/" title="GitHub">
+                  <a href="https://github.com/nathanolmstead" title="GitHub">
                     <i className="fa fa-github"></i>
                   </a>
                 </li>
