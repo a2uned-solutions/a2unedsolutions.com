@@ -95,6 +95,13 @@ module.exports = {
         ]
       }
     },
+    {
+      resolve: "gatsby-plugin-google-tagmanager",
+      options: {
+        id: "GTM-PB4VDJ5",
+        includeInDevelopment: true
+      }
+    },
     "gatsby-plugin-offline"
   ]
 };
