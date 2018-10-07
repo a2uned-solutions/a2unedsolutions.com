@@ -115,7 +115,7 @@ class AboutUs extends Component {
         </ul>
         <div className="secondary-content">
           <p>
-            We are a of team of two partners with a track record of delivering quality products & services for some amazing businesses. Modern design and development patterns make us tick. We also work with a variety of industry subject matter experts; Art Directors, Information Architects, DevOps, and Quality Assurance. All trusted individuals we've worked with for many years.
+            We are an experienced team of industry leaders, with a track record of delivering quality products & services for some amazing businesses. This team has delivered multiple custom solutions. Including product configurators, advanced reporting interfaces, and highly branded interfaces. Modern design and development patterns make us tick. We also work with a variety of industry subject matter experts. Team Leaders, Art Directors, Information Architects, DevOps, and Quality Assurance. All trusted individuals we consider friends and have worked with for many years.
           </p>
           <ContactFormDrawer button="true" />
         </div>
