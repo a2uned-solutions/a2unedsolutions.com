@@ -93,7 +93,7 @@ class AboutUs extends Component {
             <ExpansionList>
               <ExpansionPanel className="expansion-panel" label="More About Bryan" footer={null}>
                 <p className="expansion-details">
-                  Front end code wrangler, Certified Scrum Master, and Grill Master are just a few of the items Bryan brings to the table. With dozens of ecommerce builds and countless features delivered his track record speaks for it's self.
+                  Front end code wrangler, Certified Scrum Master, and Grill Master are just a few of the items Bryan brings to the table. With dozens of ecommerce builds and countless features delivered his track record speaks for itself.
                 </p>
               </ExpansionPanel>
             </ExpansionList>
