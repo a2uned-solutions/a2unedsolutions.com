@@ -4,6 +4,7 @@ import ContactFormDrawer from '../ContactForm/index';
 import micah from '../../../static/assets/micah.jpg';
 import michigan from '../../../static/assets/michigan.svg';
 import nathan from '../../../static/assets/nathan.jpg';
+import contractors from '../../../static/assets/contractors.jpg';
 
 class AboutUs extends Component {
   render() {
@@ -25,7 +26,7 @@ class AboutUs extends Component {
             <div className="member-info">
               <h2>Nathan Olmstead</h2>
               <h3>Partner</h3>
-              <p>Designer, developer, and chef are his favorite hats to wear. Attempting to keep up with the pace of change Nathan is always eager to learn and peak into the next rabbit hole.</p>
+              <p>Designer, Developer, and Chef are his favorite hats to wear. Attempting to keep up with the pace of change Nathan is always eager to learn and peak into the next rabbit hole. He's built more UI configurators than you count on one hand.</p>
               <ul className="social">
                 <li>
                   <a href="https://www.linkedin.com/in/nathanolmstead/" title="LinkedIn">
@@ -47,7 +48,7 @@ class AboutUs extends Component {
             <ExpansionList>
               <ExpansionPanel className="expansion-panel" label="More About Nathan" footer={null}>
                 <p className="expansion-details">
-                  Designer, developer, and chef are his favorite hats to wear. Attempting to keep up with the pace of change Nathan is always eager to learn and peak into the next rabbit hole.
+                  Designer, Developer, and Chef are his favorite hats to wear. Attempting to keep up with the pace of change Nathan is always eager to learn and peak into the next rabbit hole.
                 </p>
               </ExpansionPanel>
             </ExpansionList>
@@ -55,21 +56,53 @@ class AboutUs extends Component {
           <li>
             <div className="member-image" style={{ backgroundImage: `url(${micah})` }} />
             <div className="member-info">
-              <h2>Micah Lunt</h2>
+              <h2>Dan Shields</h2>
               <h3>Partner</h3>
-              <p>Engineer, database wrangler, and point guard are just a few of his skills. A former project manager who developed a passion for learning new technologies and building things.</p>
+              <p>Technical Delivery Leader, Solution Architect, and Football Coach are some of this code whisperers skills. Dan has developed, managed, and delivered multiple large scale ecommerce builds and complex custom applications.</p>
               <ul className="social">
                 <li>
-                  <a href="https://www.linkedin.com/in/micah-lunt-8322a752/" title="LinkedIn">
+                  <a href="https://www.linkedin.com/in/danshields/" title="LinkedIn">
                     <i className="fa fa-linkedin" aria-hidden="true"></i>
                   </a>
                 </li>
+              </ul>
+            </div>
+            <ExpansionList>
+              <ExpansionPanel className="expansion-panel" label="More About Micah" footer={null}>
+                <p className="expansion-details">
+                  Engineer, database wrangler, and point guard are just a few of his skills. A former project manager who developed a passion for learning new technologies and building things.
+                </p>
+              </ExpansionPanel>
+            </ExpansionList>
+          </li>
+          <li>
+            <div className="member-image" style={{ backgroundImage: `url(${micah})` }} />
+            <div className="member-info">
+              <h2>Bryan Sabolich</h2>
+              <h3>Partner</h3>
+              <p>Front end code wrangler, Certified Scrum Master, and Grill Master are just a few of the items Bryan brings to the table. With dozens of ecommerce builds and countless features delivered his track record speaks for it's self.</p>
+              <ul className="social">
                 <li>
-                  <a href="https://github.com/micahlunt" title="GitHub">
-                    <i className="fa fa-github"></i>
+                  <a href="https://www.linkedin.com/in/bryansabolich/" title="LinkedIn">
+                    <i className="fa fa-linkedin" aria-hidden="true"></i>
                   </a>
                 </li>
               </ul>
+            </div>
+            <ExpansionList>
+              <ExpansionPanel className="expansion-panel" label="More About Micah" footer={null}>
+                <p className="expansion-details">
+                  Front end code wrangler, Certified Scrum Master, and Grill Master are just a few of the items Bryan brings to the table. With dozens of ecommerce builds and countless features delivered his track record speaks for it's self.
+                </p>
+              </ExpansionPanel>
+            </ExpansionList>
+          </li>
+          <li>
+            <div className="member-image" style={{ backgroundImage: `url(${contractors})` }} />
+            <div className="member-info">
+              <h2>Trusted Talented Local</h2>
+              <h3>Contractors</h3>
+              <p>Information Architects, Art Directors, User Experience Designers, SEO Analyst, Quality Assurance Analyst, Engineers, and more. <strong>We've met some amazing people over the years that we still love working with.</strong></p>
             </div>
             <ExpansionList>
               <ExpansionPanel className="expansion-panel" label="More About Micah" footer={null}>
