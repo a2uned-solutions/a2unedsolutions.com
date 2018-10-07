@@ -70,7 +70,7 @@ class AboutUs extends Component {
             <ExpansionList>
               <ExpansionPanel className="expansion-panel" label="More About Dan" footer={null}>
                 <p className="expansion-details">
-                  Engineer, database wrangler, and point guard are just a few of his skills. A former project manager who developed a passion for learning new technologies and building things.
+                  Technical Delivery Leader, Solution Architect, and Football Coach are some of this code whisperers skills. Dan has developed, managed, and delivered multiple large scale ecommerce builds and complex custom applications.
                 </p>
               </ExpansionPanel>
             </ExpansionList>
@@ -107,7 +107,7 @@ class AboutUs extends Component {
             <ExpansionList>
               <ExpansionPanel className="expansion-panel" label="More About Our Friends" footer={null}>
                 <p className="expansion-details">
-                  Engineer, database wrangler, and point guard are just a few of his skills. A former project manager who developed a passion for learning new technologies and building things.
+                  Information Architects, Art Directors, User Experience Designers, SEO Analyst, Quality Assurance Analyst, Engineers, and more. <strong>We've met some amazing people over the years that we still love working with.</strong>
                 </p>
               </ExpansionPanel>
             </ExpansionList>
