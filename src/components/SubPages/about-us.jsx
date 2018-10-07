@@ -68,7 +68,7 @@ class AboutUs extends Component {
               </ul>
             </div>
             <ExpansionList>
-              <ExpansionPanel className="expansion-panel" label="More About Micah" footer={null}>
+              <ExpansionPanel className="expansion-panel" label="More About Dan" footer={null}>
                 <p className="expansion-details">
                   Engineer, database wrangler, and point guard are just a few of his skills. A former project manager who developed a passion for learning new technologies and building things.
                 </p>
@@ -90,7 +90,7 @@ class AboutUs extends Component {
               </ul>
             </div>
             <ExpansionList>
-              <ExpansionPanel className="expansion-panel" label="More About Micah" footer={null}>
+              <ExpansionPanel className="expansion-panel" label="More About Bryan" footer={null}>
                 <p className="expansion-details">
                   Front end code wrangler, Certified Scrum Master, and Grill Master are just a few of the items Bryan brings to the table. With dozens of ecommerce builds and countless features delivered his track record speaks for it's self.
                 </p>
@@ -105,7 +105,7 @@ class AboutUs extends Component {
               <p>Information Architects, Art Directors, User Experience Designers, SEO Analyst, Quality Assurance Analyst, Engineers, and more. <strong>We've met some amazing people over the years that we still love working with.</strong></p>
             </div>
             <ExpansionList>
-              <ExpansionPanel className="expansion-panel" label="More About Micah" footer={null}>
+              <ExpansionPanel className="expansion-panel" label="More About Our Friends" footer={null}>
                 <p className="expansion-details">
                   Engineer, database wrangler, and point guard are just a few of his skills. A former project manager who developed a passion for learning new technologies and building things.
                 </p>
