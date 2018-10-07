@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { ExpansionList, ExpansionPanel } from 'react-md';
 import ContactFormDrawer from '../ContactForm/index';
 import bryan from '../../../static/assets/bryan.jpg';
+import micah from '../../../static/assets/micah.jpg';
 import michigan from '../../../static/assets/michigan.svg';
 import nathan from '../../../static/assets/nathan.jpg';
 import contractors from '../../../static/assets/contractors.jpg';
