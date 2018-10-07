@@ -100,7 +100,7 @@ class AboutUs extends Component {
           <li>
             <div className="member-image" style={{ backgroundImage: `url(${contractors})` }} />
             <div className="member-info">
-              <h2>Trusted Talented Local</h2>
+              <h2>Trusted, Talented, Local</h2>
               <h3>Contractors</h3>
               <p>Information Architects, Art Directors, User Experience Designers, SEO Analyst, Quality Assurance Analyst, Engineers, and more. <strong>We've met some amazing people over the years that we still love working with.</strong></p>
             </div>
