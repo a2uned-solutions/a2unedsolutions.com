@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { ExpansionList, ExpansionPanel } from 'react-md';
 import ContactFormDrawer from '../ContactForm/index';
 import bryan from '../../../static/assets/bryan.jpg';
-import micah from '../../../static/assets/micah.jpg';
+import dan from '../../../static/assets/dan.jpg';
 import michigan from '../../../static/assets/michigan.svg';
 import nathan from '../../../static/assets/nathan.jpg';
 import contractors from '../../../static/assets/contractors.jpg';
@@ -55,7 +55,7 @@ class AboutUs extends Component {
             </ExpansionList>
           </li>
           <li>
-            <div className="member-image" style={{ backgroundImage: `url(${micah})` }} />
+            <div className="member-image" style={{ backgroundImage: `url(${dan})` }} />
             <div className="member-info">
               <h2>Dan Shields</h2>
               <h3>Partner</h3>
