@@ -27,7 +27,7 @@ class AboutUs extends Component {
             <div className="member-info">
               <h2>Nathan Olmstead</h2>
               <h3>Partner</h3>
-              <p>Designer, Developer, and Chef are his favorite hats to wear. Attempting to keep up with the pace of change Nathan is always eager to learn and peak into the next rabbit hole. He's built more UI configurators than you count on one hand.</p>
+              <p>Designer, Developer, and Chef are his favorite hats to wear. Attempting to keep up with the pace of change Nathan is always eager to learn and peek into the next rabbit hole. He's built more UI configurators than you count on one hand.</p>
               <ul className="social">
                 <li>
                   <a href="https://www.linkedin.com/in/nathanolmstead/" title="LinkedIn">
@@ -49,7 +49,7 @@ class AboutUs extends Component {
             <ExpansionList>
               <ExpansionPanel className="expansion-panel" label="More About Nathan" footer={null}>
                 <p className="expansion-details">
-                  Designer, Developer, and Chef are his favorite hats to wear. Attempting to keep up with the pace of change Nathan is always eager to learn and peak into the next rabbit hole.
+                  Designer, Developer, and Chef are his favorite hats to wear. Attempting to keep up with the pace of change Nathan is always eager to learn and peek into the next rabbit hole. He's built more UI configurators than you count on one hand.
                 </p>
               </ExpansionPanel>
             </ExpansionList>
